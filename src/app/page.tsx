@@ -11,6 +11,7 @@ import { XyzTransition } from "@animxyz/react";
 
 import { test } from "./data/services";
 import Link from "next/link";
+import Popup from "./partials/popup-component";
 
 export default function Home() {
 
@@ -28,13 +29,13 @@ export default function Home() {
             perView: 3.3,
             spacing: 15,
           }
-        },  
+        },
       },
       loop: true,
       slides: {
         perView: 1.3,
         spacing: 15,
-      
+
 
       },
     },
@@ -77,8 +78,8 @@ export default function Home() {
           <div className="md:ml-8 lg:col-span-5">
             <h1 className="max-w-2xl mb-4 mt-10 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Product Development for Startups & Forward Thinking Companies</h1>
             <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-0 md:text-lg lg:text-xl lg:pt-8 dark:text-gray-400">
-            Our team embodies our vision, comprising passionate designers, ingenious developers, and imaginative thinkers. Each member brings their unique talents and perspectives, united by a common goal—to craft a brighter future.Through our collective efforts, we transform our vision into reality.
-              </p>
+              Our team embodies our vision, comprising passionate designers, ingenious developers, and imaginative thinkers. Each member brings their unique talents and perspectives, united by a common goal—to craft a brighter future.Through our collective efforts, we transform our vision into reality.
+            </p>
 
             <Link href="/about-us" className="inline-flex px-5 mt-8 py-2 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
               Read More
@@ -221,6 +222,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
 
     </div >
