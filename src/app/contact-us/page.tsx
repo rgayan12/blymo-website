@@ -1,19 +1,8 @@
 'use server';
-import Image from "next/image";
-import NavLinks from "./nav-links";
-import { Carousel } from "flowbite-react";
-import HomePageServiceCard from "./partials/home-page-service-card";
-import 'keen-slider/keen-slider.min.css'
-import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
 import "@animxyz/core";
-import { XyzTransition } from "@animxyz/react";
-import Header from "../partials/header";
-import { test } from "./data/services";
-import Testimonial from "../partials/testimonial";
-import LetsTalk from "../partials/lets-talk";
+
 import { teamMembers } from "../data/team-members";
-import StaffMember from "../partials/staffMember";
-import OurProcessAccordion from "../partials/our-process";
+
 import Link from "next/link";
 import ContactUsForm from "../partials/contactus-form";
 
@@ -30,11 +19,11 @@ export default async function ContactUs() {
                 <div className="py-5 lg:py-1 mx-auto max-w-screen-xl">
 
                     <p className="text-xl font-light leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-                    If you&apos;ve got a question for us, want to discuss business opportunities, or discover how BLYMO can assist you&apos; don&apos;t hesitate to get in touch.
+                        If you&apos;ve got a question for us, want to discuss business opportunities, or discover how BLYMO can assist you&apos; don&apos;t hesitate to get in touch.
                     </p>
 
-                    <h2 className="my-10 lg:mb-8 md:text-3xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white">Not a fan of emails? Schedule a meeting with us instead. 
-</h2>
+                    <h2 className="my-10 lg:mb-8 md:text-3xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white">Not a fan of emails? Schedule a meeting with us instead.
+                    </h2>
 
                     <div className="mt-4 pt-5">
                         <Link href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3P0OJv3HVyoqUOt4wxx7wrpNtCz-Mn8jWfvPB7WbOsnWsGMTzNDG3vkCQwxx0yLC1B9JHsihCx" target="_blank" className="bg-teal-500 hover:bg-teal-700 text-white font-normal text-2xl py-3 px-7 rounded-full">
@@ -49,11 +38,11 @@ export default async function ContactUs() {
                 <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
                     <div className="grid grid-cols-3 flex-row justify-center">
                         <div className="col-span-2">
-                        <h2 className="my-10 lg:mb-8 md:text-4xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white">Fill in your details and we&apos;ll be in touch</h2>
-                        <ContactUsForm />
-                        
+                            <h2 className="my-10 lg:mb-8 md:text-4xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white">Fill in your details and we&apos;ll be in touch</h2>
+                            <ContactUsForm />
+
                         </div>
-                       {/*  <div className="col-span-1 lg:ml-9">
+                        {/*  <div className="col-span-1 lg:ml-9">
                             <h3 className="my-10 lg:mb-8 md:text-2xl font-light tracking-tight leading-tight text-gray-900 dark:text-white">Connect with us on social media</h3>
 
                             <a href="#" className="text-teal-500 hover:text-gray-900 dark:hover:text-white">

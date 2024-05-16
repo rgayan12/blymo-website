@@ -1,14 +1,13 @@
 'use server';
 import Image from "next/image";
-import NavLinks from "./nav-links";
 import { Carousel } from "flowbite-react";
-import HomePageServiceCard from "./partials/home-page-service-card";
+
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
 import "@animxyz/core";
 import { XyzTransition } from "@animxyz/react";
 import Header from "../partials/header";
-import { test } from "./data/services";
+import { test } from "../data/services";
 import Testimonial from "../partials/testimonial";
 import LetsTalk from "../partials/lets-talk";
 import { teamMembers } from "../data/team-members";

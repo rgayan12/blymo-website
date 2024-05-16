@@ -9,7 +9,7 @@ export default function Testimonial() {
                 <figure className="mt-10">
                     <blockquote className="text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
                         <p>
-                            “Working with BLYMO; was an absolute pleasure. Their team's expertise and attention to detail transformed our vision into a stunning reality. From concept to launch, they guided us every step of the way, ensuring that our website not only met but exceeded our expectations.”
+                            “Working with BLYMO; was an absolute pleasure. Their team&apos;s expertise and attention to detail transformed our vision into a stunning reality. From concept to launch, they guided us every step of the way, ensuring that our website not only met but exceeded our expectations.”
                         </p>
                     </blockquote>
                     <figcaption className="mt-5">

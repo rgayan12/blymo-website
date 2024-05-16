@@ -11,7 +11,7 @@ import { XyzTransition } from "@animxyz/react";
 
 import { test } from "./data/services";
 import Link from "next/link";
-import Popup from "./partials/popup-component";
+
 
 export default function Home() {
 
@@ -101,7 +101,7 @@ export default function Home() {
           <div className="">
             <div ref={sliderRef} className="keen-slider">
               {services.map((service) => (
-                <div className="keen-slider__slide  max-w-80" key={service.name} >
+                <div className="keen-slider__slide  max-w-80" key={service.id} >
                   <HomePageServiceCard title={service.name} description={service.description} image={service.image} textColour={service.textColour} />
                 </div>
               ))}
@@ -194,18 +194,18 @@ export default function Home() {
 
       </section >
 
-      <section class="bg-gray-200 dark:bg-gray-900">
-        <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+      <section className="bg-gray-200 dark:bg-gray-900">
+        <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
 
 
           <div className="grid sm:grid-cols-2 gap-4">
 
             <div>
-              <h2 class="mb-8 lg:mb-8 text-3xl font-extrabold tracking-tight leading-tight text-gray-900 dark:text-white md:text-4xl">You’ll be in good company</h2>
+              <h2 className="mb-8 lg:mb-8 text-3xl font-extrabold tracking-tight leading-tight text-gray-900 dark:text-white md:text-4xl">You&apost;ll be in good company</h2>
               <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-1 dark:text-gray-400">Our community trusts us to bring their visions to life.</p>
             </div>
 
-            <div class=" text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
+            <div className=" text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
 
               <div className="grid grid-cols-3 gap-8">
                 <a href="#">
