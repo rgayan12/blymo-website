@@ -2,37 +2,43 @@ export const test = [
     {
         id: 1,
         name: 'Product Design',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/product-design.svg'
+        description: 'Converting Brilliant Ideas to Screens.',
+        image: '/product-design.svg',
+        textColour: 'text-gray-800 dark:text-white'
     },
     {
         id: 2,
         name: 'Proof of Concepts / MVP',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/phone-mockup.png'
+        description: 'Test the Waters with Speed and Precision',
+        image: '/mvp.jpeg',
+        textColour: 'text-gray-800 dark:text-white'
     },
     {
         id: 3,
         name: 'Production Applications',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/phone-mockup.png'
+        description: 'Build Applications that scale with your business',
+        image: '/production-apps.png',
+        textColour: 'text-gray-800 dark:text-white'
     },
     {
         id: 3,
         name: 'Data Visualisation',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/phone-mockup.png'
+        description: 'Gain insights from your data.',
+        image: '/data-visualisation.png',
+        textColour: 'text-white dark:text-white'
     },
     {
         id: 3,
         name: 'AI Integration',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/phone-mockup.png'
+        description: 'Elevating Customer Experiences with Cutting-Edge Technology.',
+        image: '/ai-integration.jpeg',
+        textColour: 'text-white dark:text-white'
     },
     {
         id: 3,
         name: 'Web Sites',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/phone-mockup.png'
+        description: 'Websites that are fast, secure and easy to manage.',
+        image: '/website.png',
+        textColour: 'text-gray-800 dark:text-white'
     }
 ]

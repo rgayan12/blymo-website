@@ -10,6 +10,7 @@ import "@animxyz/core";
 import { XyzTransition } from "@animxyz/react";
 
 import { test } from "./data/services";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -20,10 +21,20 @@ export default function Home() {
       slideChanged() {
         console.log('slide changed')
       },
+      breakpoints: {
+        '(min-width: 800px)': {
+          loop: false,
+          slides: {
+            perView: 3.3,
+            spacing: 15,
+          }
+        },  
+      },
+      loop: true,
       slides: {
-        perView: 3.3,
+        perView: 1.3,
         spacing: 15,
-
+      
 
       },
     },
@@ -40,9 +51,7 @@ export default function Home() {
 
       {/* Hero Area */}
       <section className="bg-gradient-to-r from-gray-50 to-gray-100 dark:bg-gray-900 mt-0">
-        <div className="py-10 px-4 mx-auto max-w-screen-xl lg:py-[160px] lg:px-12">
-
-
+        <div className="py-10 px-4 mx-auto max-w-screen-xl py-[160px] lg:px-12">
           <h1 className="mb-4 text-6xl tracking-tight shadow-blue-150 leading-30 text-gray-900 md:text-5xl lg:text-5xl dark:text-white line">Brilliantly Lighting
             <span className="mb-4 mt-9 text-2xl tracking-tight leading-30 transition delay-150 duration-300 ease-in-out text-gray-900 md:text-5xl lg:text-8xl dark:text-white line block">Your Mind&apos;s Opportunities</span>
           </h1>
@@ -65,15 +74,15 @@ export default function Home() {
             <Image src="/homepage-feature-image.svg" width={1900} height={1800} alt="hero image" />
           </div>
 
-          <div className="ml-8 lg:col-span-5">
-            <h1 className="max-w-2xl mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Product Development for Startups & Forward Thinking Companies</h1>
-            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-0 md:text-lg lg:text-xl lg:pt-8 dark:text-gray-400">From Web Development, Product Design to Development. We will provide you the technologies backing you need to launch an awesome startup. the technologies backing you need to launch an awesome startup
-              the technologies backing you need to launch an awesome startup
-              the technologies backing you need to launch an awesome startup</p>
+          <div className="md:ml-8 lg:col-span-5">
+            <h1 className="max-w-2xl mb-4 mt-10 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Product Development for Startups & Forward Thinking Companies</h1>
+            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-0 md:text-lg lg:text-xl lg:pt-8 dark:text-gray-400">
+            Our team embodies our vision, comprising passionate designers, ingenious developers, and imaginative thinkers. Each member brings their unique talents and perspectives, united by a common goal—to craft a brighter future.Through our collective efforts, we transform our vision into reality.
+              </p>
 
-            <a href="#" className="inline-flex px-5 mt-3 py-2 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+            <Link href="/about-us" className="inline-flex px-5 mt-8 py-2 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
               Read More
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -83,7 +92,7 @@ export default function Home() {
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
           <div className="mx-auto max-w-screen-xl text-left mb-8 lg:mb-16">
             <h2 className="max-w-2xl mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Our Services</h2>
-            <p className="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Learn more about our services. We are here to help you with all your needs realted to web</p>
+            <p className="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Discover what best suits your needs</p>
           </div>
 
           {/* Start of Card 1  */}
@@ -92,7 +101,7 @@ export default function Home() {
             <div ref={sliderRef} className="keen-slider">
               {services.map((service) => (
                 <div className="keen-slider__slide  max-w-80" key={service.name} >
-                  <HomePageServiceCard title={service.name} description={service.description} image={service.image} />
+                  <HomePageServiceCard title={service.name} description={service.description} image={service.image} textColour={service.textColour} />
                 </div>
               ))}
 
@@ -104,7 +113,7 @@ export default function Home() {
       <section className="bg-gray-100 dark:bg-gray-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Our Process</h2>
-          <p className="lg:mb-12 text-lg font-normal text-gray-500 lg:text-xl sm:px-1 dark:text-gray-400">Here at blymo we focus on markets where technology, innovation, and capital can unlock long-term value.</p>
+          <p className="lg:mb-12 text-lg font-normal text-gray-500 lg:text-xl sm:px-1 dark:text-gray-400">Our Process: Embracing a Strict, Agile Way of Working.</p>
 
           <div className="grid grid-cols-3">
             <div className="item">
@@ -114,7 +123,7 @@ export default function Home() {
               <div className="text-gray-400 mt-3 w-[300px]">
                 <h3>Research</h3>
                 <div></div>
-                <p className="mt-1">This is where we understand the project</p>
+                <p className="mt-1">In this stage, we dive deep into thorough research, engage in spirited brainstorming sessions, and carefully craft a strategic roadmap to pave the way for a successful project.</p>
               </div>
             </div>
 
@@ -125,7 +134,7 @@ export default function Home() {
               <div className="text-gray-400 mt-3 w-[300px]">
                 <h3>Design</h3>
                 <div></div>
-                <p className="mt-1">This is where we understand the project</p>
+                <p className="mt-1">Our creative team conceptualises and produces visually captivating and user-friendly designs.</p>
               </div>
             </div>
 
@@ -136,7 +145,7 @@ export default function Home() {
               <div className="text-gray-400 mt-3 w-[300px]">
                 <h3>Develop</h3>
                 <div></div>
-                <p className="mt-1">This is where we understand the project</p>
+                <p className="mt-1">Our developers breathe life into the designs using cutting-edge technologies.</p>
               </div>
             </div>
           </div>
@@ -146,9 +155,9 @@ export default function Home() {
                 <p className="text-white">06</p>
               </div>
               <div className="text-gray-400 mt-3 w-[300px]">
-                <h3>Research</h3>
+                <h3>Review</h3>
                 <div></div>
-                <p className="mt-1">This is where we understand the project</p>
+                <p className="mt-1">Post-deployment, we conduct a comprehensive project review to gather feedback, evaluate success, and anticipate future requirements to sustain the project.</p>
               </div>
             </div>
 
@@ -157,9 +166,9 @@ export default function Home() {
                 <p className="text-white">05</p>
               </div>
               <div className="text-gray-400 mt-3 w-[300px]">
-                <h3>Design</h3>
+                <h3>Deploy</h3>
                 <div></div>
-                <p className="mt-1">This is where we understand the project</p>
+                <p className="mt-1">After thorough testing, we deploy the product into the live environment.</p>
               </div>
             </div>
 
@@ -168,9 +177,9 @@ export default function Home() {
                 <p className="text-white">04</p>
               </div>
               <div className="text-gray-400 mt-3 w-[300px]">
-                <h3>Develop</h3>
+                <h3>Test</h3>
                 <div></div>
-                <p className="mt-1">This is where we understand the project</p>
+                <p className="mt-1">At this stage, we tirelessly test the product, hunting down those pesky bugs.</p>
               </div>
             </div>
           </div>
@@ -195,16 +204,13 @@ export default function Home() {
 
               <div className="grid grid-cols-3 gap-8">
                 <a href="#">
-                  <Image src="/logo1.png" width={500} height={1800} alt="hero image" style={{}} />
+                  <Image src="/logo4.svg" width={500} height={1800} alt="hero image" style={{}} />
                 </a>
                 <a href="#">
                   <Image src="/logo2.png" width={500} height={1800} alt="hero image" style={{}} />
                 </a>
                 <a href="#">
                   <Image src="/logo3.png" width={100} height={1800} alt="hero image" style={{}} />
-                </a>
-                <a href="#">
-                  <Image src="/logo4.svg" width={500} height={1800} alt="hero image" style={{}} />
                 </a>
 
               </div>

@@ -33,9 +33,9 @@ export default function NavLinks() {
             <li>
               <Link href="about-us" className={`block py-2 px-3 text-gray-900 ${pathname === '/about-us' ? 'text-teal-400' : ''}  rounded md:bg-transparent md:p-0 dark:text-white hover:text-teal-500`}>About Us</Link>
             </li>
-            <li>
+           {/*  <li>
               <Link href="services" className={`block py-2 px-3 text-gray-900 ${pathname === '/services' ? 'text-teal-400' : ''}  rounded md:bg-transparent md:p-0 dark:text-white hover:text-teal-500`}>Services</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="community" className={`block py-2 px-3 text-gray-900 ${pathname === '/community' ? 'text-teal-400' : ''}  rounded md:bg-transparent md:p-0 dark:text-white hover:text-teal-500`}>Community</Link>
             </li>
