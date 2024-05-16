@@ -2,8 +2,8 @@ import Image from 'next/image'
 
 export default function Footer() {
     return (
-        <footer className="bg-black dark:bg-gray-900">
-            <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <footer className="bg-gray-900 dark:bg-gray-900">
+            <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-14">
                 <div className="md:flex md:justify-between">
 
                     <div className="grid grid-cols-1 gap-8 sm:gap-2 sm:grid-cols-4">
@@ -44,7 +44,7 @@ export default function Footer() {
                                 height={500}
                                 alt="Logo"
                             />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BLYMO</span>
+                            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">BLYMO</span>
                         </a>
                     </div>
                 </div>

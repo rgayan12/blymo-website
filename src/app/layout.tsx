@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./partials/footer";
-
+import NavLinks from "./nav-links";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,8 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@animxyz/core"></link>
       </head>
       <body className={inter.className}>
+          <NavLinks />
           {children}
           <Footer />
         </body>
