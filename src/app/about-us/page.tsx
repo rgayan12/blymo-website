@@ -25,7 +25,7 @@ export default async function About() {
             <section className="bg-gradient-to-r from-gray-50 to-gray-100 dark:bg-gray-900 mt-0">
                 <div className="py-10 px-4 mx-auto max-w-screen-xl lg:py-[160px] lg:px-12">
                     <h1 className="mb-4 text-6xl tracking-tight shadow-blue-150 leading-30 text-gray-900 md:text-5xl lg:text-5xl dark:text-white line">Brilliantly Lighting
-                        <span className="mb-4 mt-9 text-2xl tracking-tight leading-30 transition delay-150 duration-300 ease-in-out text-gray-900 md:text-5xl lg:text-8xl dark:text-white line block">Your Mind's Opportunities</span>
+                        <span className="mb-4 mt-9 text-2xl tracking-tight leading-30 transition delay-150 duration-300 ease-in-out text-gray-900 md:text-5xl lg:text-8xl dark:text-white line block">Your Mind&apos;s Opportunities</span>
                     </h1>
                 </div>
             </section >
@@ -128,8 +128,8 @@ export default async function About() {
                     <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Meet the Team</h2>
                     <div className="grid md:grid-cols-3 gap-10 items-center justify-center">
                         {teamMemberss.map((team) => (
-                            <div className="keen-slider__slide  max-w-80 pt-4">
-                                <StaffMember key={team.name} title={team.title} name={team.name} image={team.image} />
+                            <div className="keen-slider__slide  max-w-80 pt-4" key={team.id}>
+                                <StaffMember title={team.title} name={team.name} image={team.image} />
                             </div>
                         ))}
 
