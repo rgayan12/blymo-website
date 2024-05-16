@@ -10,7 +10,7 @@ export default function LetsTalk({ title, description }: LetsTalkProps) {
     return (
         <section className=" bg-gray-100 px-6 py-10 sm:py-32 lg:px-1">
             <div className="py-5 lg:py-1 mx-auto max-w-screen-xl">
-                <h2 className="mb-8 lg:mb-8 md:text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">{title}</h2>
+                <h2 className="mb-8 lg:mb-8 text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">{title}</h2>
             </div>
             <div className="py-5 lg:py-1 mx-auto max-w-screen-xl">
 

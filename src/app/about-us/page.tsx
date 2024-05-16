@@ -33,9 +33,9 @@ export default async function About() {
 
             <section className="bg-white dark:bg-gray-900">
                 <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-                    <div className="flex flex-row justify-center">
-                        <div className="basis-1/4"> <h2 className="mb-8 lg:mb-8 md:text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">Our Vision</h2></div>
-                        <div className="basis-3/4 lg:ml-9">
+                    <div className="grid md:grid-cols-2 flex-row justify-center">
+                        <div className="col-span-1"> <h2 className="mb-8 lg:mb-8 md:text-5xl text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">Our Vision</h2></div>
+                        <div className="col-span-2 lg:ml-9">
                             <p className="mb-8 text-lg font-normal text-gray-800 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">Man kind has one ability that separates it from all other species: our ability to create. Our vision is to be a guiding post for those who seek to create and leave the world a better place than they found it.</p>
                         </div>
                     </div>
@@ -59,15 +59,15 @@ export default async function About() {
                         <div className="basis-2/4"> <p className="mb-8 text-lg font-normal text-gray-600 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">To help 300 founders and entrepreneurs bring their ideas to life by 2027</p>
                         </div>
                         <div className="basis-1/4 lg:ml-9">
-                            <h2 className="mb-8 lg:mb-8 md:text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">Mission</h2></div>
+                            <h2 className="mb-8 lg:mb-8 text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">Mission</h2></div>
                     </div>
                 </div>
             </section>
 
             <section className="bg-white dark:bg-gray-900">
                 <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-                    <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Our Values</h2>
-                    <div className="grid md:grid-cols-4 gap-10 items-center justify-center">
+                    <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl text-4xl dark:text-white">Our Values</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-10 items-center justify-center">
 
                         <div className="h-[206px] text-center" style={{
                             background: '#FBFBFB 0% 0% no-repeat padding-box',
@@ -141,7 +141,7 @@ export default async function About() {
                 <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
                     <div className="grid grid-flow-row-dense grid-cols-1 justify-center">
                         <div className="col-span-2">
-                            <h2 className="mb-8 lg:mb-8 md:text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">A Process For Success</h2>
+                            <h2 className="mb-8 lg:mb-8 text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">A Process For Success</h2>
                         </div>
                         <div className="col-span-2">
                             <OurProcessAccordion />
@@ -153,8 +153,7 @@ export default async function About() {
 
             <Testimonial />
 
-            <LetsTalk title="Get to know us" description="Don't Just Take Our Word for It. 
-Discover why our community trusts us to bring their visions to life." />
+            <LetsTalk title="Get to know us" description="Discover how we can help bring your project to life. Our team of dedicated professionals is ready to collaborate with you." />
 
         </div>
     )

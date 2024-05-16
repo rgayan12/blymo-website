@@ -116,8 +116,9 @@ export default function Home() {
           <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Our Process</h2>
           <p className="lg:mb-12 text-lg font-normal text-gray-500 lg:text-xl sm:px-1 dark:text-gray-400">Our Process: Embracing a Strict, Agile Way of Working.</p>
 
-          <div className="grid grid-cols-3">
-            <div className="item">
+          <div className="grid md:grid-cols-3">
+
+            <div className="item mt-10 lg:mt-0">
               <div className="flex items-center justify-center w-16 h-16 bg-teal-400 rounded-full">
                 <p className="text-white">01</p>
               </div>
@@ -128,7 +129,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="item">
+            <div className="item mt-10 lg:mt-0">
               <div className="flex items-center justify-center w-16 h-16 bg-teal-400 rounded-full">
                 <p className="text-white">02</p>
               </div>
@@ -139,7 +140,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="item">
+            <div className="item mt-10 lg:mt-0">
               <div className="flex items-center justify-center w-16 h-16 bg-teal-400 rounded-full">
                 <p className="text-white">03</p>
               </div>
@@ -150,8 +151,29 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 lg:mt-5">
-            <div className="item mt-[60px]">
+
+          <div className="grid md:grid-cols-3 lg:mt-5">
+            <div className="item  mt-10 lg:mt-10">
+              <div className="flex items-center justify-center w-16 h-16 bg-teal-400 rounded-full">
+                <p className="text-white">04</p>
+              </div>
+              <div className="text-gray-400 mt-3 w-[300px]">
+                <h3>Test</h3>
+                <div></div>
+                <p className="mt-1">At this stage, we tirelessly test the product, hunting down those pesky bugs.</p>
+              </div>
+            </div>
+            <div className="item mt-10 lg:mt-10">
+              <div className="flex items-center justify-center w-16 h-16 bg-teal-400 rounded-full">
+                <p className="text-white">05</p>
+              </div>
+              <div className="text-gray-400 mt-3 w-[300px]">
+                <h3>Deploy</h3>
+                <div></div>
+                <p className="mt-1">After thorough testing, we deploy the product into the live environment.</p>
+              </div>
+            </div>
+            <div className="item   mt-10 lg:mt-10]">
               <div className="flex items-center justify-center w-16 h-16 bg-teal-400 rounded-full">
                 <p className="text-white">06</p>
               </div>
@@ -162,27 +184,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="item lg:mt-[60px]">
-              <div className="flex items-center justify-center w-16 h-16 bg-teal-400 rounded-full">
-                <p className="text-white">05</p>
-              </div>
-              <div className="text-gray-400 mt-3 w-[300px]">
-                <h3>Deploy</h3>
-                <div></div>
-                <p className="mt-1">After thorough testing, we deploy the product into the live environment.</p>
-              </div>
-            </div>
 
-            <div className="item lg:mt-[60px]">
-              <div className="flex items-center justify-center w-16 h-16 bg-teal-400 rounded-full">
-                <p className="text-white">04</p>
-              </div>
-              <div className="text-gray-400 mt-3 w-[300px]">
-                <h3>Test</h3>
-                <div></div>
-                <p className="mt-1">At this stage, we tirelessly test the product, hunting down those pesky bugs.</p>
-              </div>
-            </div>
+
+
           </div>
 
         </div>
@@ -194,7 +198,7 @@ export default function Home() {
         <div class="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
 
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-4">
 
             <div>
               <h2 class="mb-8 lg:mb-8 text-3xl font-extrabold tracking-tight leading-tight text-gray-900 dark:text-white md:text-4xl">You’ll be in good company</h2>
