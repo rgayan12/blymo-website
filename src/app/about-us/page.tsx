@@ -9,6 +9,8 @@ import "@animxyz/core";
 import { XyzTransition } from "@animxyz/react";
 import Header from "../partials/header";
 import { test } from "./data/services";
+import Testimonial from "../partials/testimonial";
+import LetsTalk from "../partials/lets-talk";
 
 export default async function About() {
     return (
@@ -21,7 +23,219 @@ export default async function About() {
                     </h1>
                 </div>
             </section >
-        </div >
 
+
+            <section className="bg-white dark:bg-gray-900">
+                <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+                    <div className="flex flex-row justify-center">
+                        <div className="basis-1/4"> <h2 className="mb-8 lg:mb-8 md:text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">Our Vision</h2></div>
+                        <div className="basis-3/4 lg:ml-9">
+                            <p className="mb-8 text-lg font-normal text-gray-800 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">Man kind has one ability that separates it from all other species: our ability to create. Our vision is to be a guiding post for those who seek to create and leave the world a better place than they found it.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section background-color="white" className="bg-white dark:bg-gray-900">
+                <div className="relative border border-gray-80 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 h-[380px] p-4" style={{ backgroundImage: `url(/our-vision.jpeg)`, backgroundSize: 'cover', backgroundRepeat: "no-repeat", backgroundPosition: 'center' }}>
+                    <div className="absolute inset-0 bg-gray-800 opacity-10"></div>
+                    <div className="relative">
+                        <div>
+                            <p className="font-normal text-white dark:text-gray-400 align-text-bottom"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="bg-white dark:bg-gray-900">
+                <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+                    <div className="flex flex-row justify-center">
+                        <div className="basis-2/4"> <p className="mb-8 text-lg font-normal text-gray-600 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">To help 300 founders and entrepreneurs bring their ideas to life by 2027</p>
+                        </div>
+                        <div className="basis-1/4 lg:ml-9">
+                            <h2 className="mb-8 lg:mb-8 md:text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">Mission</h2></div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="bg-white dark:bg-gray-900">
+                <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+                    <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Our Values</h2>
+                    <div className="grid md:grid-cols-4 gap-10 items-center justify-center">
+
+                        <div className="h-[206px] text-center" style={{
+                            background: '#FBFBFB 0% 0% no-repeat padding-box',
+                            boxShadow: '0px 3px 6px #00000029',
+                            borderRadius: '30px',
+                            opacity: 1
+                        }}>
+                            <div className="flex justify-center pt-5">
+                                <Image src="/intergrity.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
+                            </div>
+                            <p className="text-lg font-normal text-teal-500 lg:text-2xl sm:px-16 xl:px-1 pt-7 dark:text-gray-400">Integrity</p>
+
+
+                        </div>
+                        <div className="h-[206px] text-center " style={{
+                            background: '#FBFBFB 0% 0% no-repeat padding-box',
+                            boxShadow: '0px 3px 6px #00000029',
+                            borderRadius: '30px',
+                            opacity: 1
+                        }}>
+                            <div className="flex justify-center pt-5">
+                                <Image src="/inclusivity.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
+                            </div>
+                            <p className="text-lg font-normal text-teal-500 lg:text-2xl sm:px-16 xl:px-1  pt-7 dark:text-gray-400">Inclusivity / Diversity</p>
+
+                        </div>
+                        <div className="h-[206px] text-center" style={{
+                            background: '#FBFBFB 0% 0% no-repeat padding-box',
+                            boxShadow: '0px 3px 6px #00000029',
+                            borderRadius: '30px',
+                            opacity: 1
+                        }}>
+                            <div className="flex justify-center pt-5">
+                                <Image src="/resourcefulness.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
+                            </div>
+                            <p className="text-lg font-normal text-teal-500 lg:text-2xl sm:px-16 xl:px-1  pt-7 dark:text-gray-400">Resourcefulness</p>
+
+                        </div>
+                        <div className="h-[206px] text-center" style={{
+                            background: '#FBFBFB 0% 0% no-repeat padding-box',
+                            boxShadow: '0px 3px 6px #00000029',
+                            borderRadius: '30px',
+                            opacity: 1
+                        }}>
+                            <div className="flex justify-center pt-5">
+                                <Image src="/transparency.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
+                            </div>
+                            <p className="text-lg font-normal pt-7 text-teal-500 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">Transparency</p>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section className="bg-white dark:bg-gray-900">
+                <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+                    <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Meet the Team</h2>
+
+
+                    <div className="grid md:grid-cols-3 gap-10 items-center justify-center">
+
+                        <div className="h-[306px]">
+                            <div className="rounded-md" style={{
+                                background: '#FBFBFB 0% 0% no-repeat padding-box',
+                                boxShadow: '0px 3px 6px #00000029',
+                                minHeight: '206px',
+                                opacity: 1
+                            }}>
+                                <Image src="/man.png" width={265} height={100} alt="our values - integrity" className="text-center" />
+                            </div>
+                            <div className="pt-5">
+                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">Founder</p>
+                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Bastiyan Rodrigo</p>
+                            </div>
+                        </div>
+
+                        <div className="h-[306px]">
+                            <div className="rounded-md text-center" style={{
+                                background: '#FBFBFB 0% 0% no-repeat padding-box',
+                                boxShadow: '0px 3px 6px #00000029',
+                                minHeight: '206px',
+                                opacity: 1
+                            }}>
+                                <Image src="/intergrity.svg" width={185} height={100} alt="our values - integrity" className="text-center" />
+                            </div>
+                            <div className="pt-5">
+                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">Commerical Director</p>
+                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Bastiyan Rodrigo</p>
+                            </div>
+                        </div>
+
+
+                        <div className="h-[306px]">
+                            <div className="rounded-md" style={{
+                                background: '#FBFBFB 0% 0% no-repeat padding-box',
+                                boxShadow: '0px 3px 6px #00000029',
+                                minHeight: '206px',
+                                opacity: 1
+                            }}>
+                                <Image src="/intergrity.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
+                            </div>
+                            <div className="pt-5">
+                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">Product Researcher</p>
+                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Malki Rodrigo</p>
+                            </div>
+                        </div>
+
+                        <div className="h-[306px]">
+                            <div className="rounded-md" style={{
+                                background: '#FBFBFB 0% 0% no-repeat padding-box',
+                                boxShadow: '0px 3px 6px #00000029',
+                                minHeight: '206px',
+                                opacity: 1
+                            }}>
+                                <Image src="/intergrity.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
+                            </div>
+                            <div className="pt-5">
+                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">Software Engineer</p>
+                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Hasitha Yapa</p>
+                            </div>
+                        </div>
+
+
+                        <div className="h-[306px]">
+                            <div className="rounded-md" style={{
+                                background: '#FBFBFB 0% 0% no-repeat padding-box',
+                                boxShadow: '0px 3px 6px #00000029',
+                                minHeight: '206px',
+                                opacity: 1
+                            }}>
+                                <Image src="/intergrity.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
+                            </div>
+                            <div className="pt-5">
+                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">Software Engineer</p>
+                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Ashen Karunarathna</p>
+                            </div>
+                        </div>
+
+                        <div className="h-[306px]">
+                            <div className="rounded-md" style={{
+                                background: '#FBFBFB 0% 0% no-repeat padding-box',
+                                boxShadow: '0px 3px 6px #00000029',
+                                minHeight: '206px',
+                                opacity: 1
+                            }}>
+                                <Image src="/intergrity.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
+                            </div>
+                            <div className="pt-5">
+                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">UX Engineer</p>
+                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Imanthi Jayakodi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className="bg-gray-100 dark:bg-gray-900">
+                <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
+                    <div className="grid grid-flow-row-dense grid-cols-4 justify-center">
+                        <div className="col-span-2">
+                            <h2 className="mb-8 lg:mb-8 md:text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">A Process For Success</h2>
+                        </div>
+                        <div className="col-span-2">
+                            <p className="mb-8 text-lg font-normal text-gray-500 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <Testimonial />
+
+            <LetsTalk />
+
+        </div>
     )
 }
