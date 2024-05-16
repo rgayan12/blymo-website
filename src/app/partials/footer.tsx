@@ -8,8 +8,8 @@ export default function Footer() {
 
                     <div className="grid grid-cols-1 gap-8 sm:gap-2 sm:grid-cols-4">
                         <div>
-                            <h2 className="mb-6 text-xl font-semibold text-white dark:text-white">Tel: +44 073 77 134  816</h2>
-                            <h2 className="mb-6 text-xl font-semibold text-white dark:text-white">Email: info@blymo.co.uk</h2>
+                            <h2 className="mb-6 text-1xl font-semibold text-white dark:text-white">Tel: +44 073 77 134  816</h2>
+                            <h2 className="mb-6 text-1xl font-semibold text-white dark:text-white">Email: info@blymo.co.uk</h2>
                         </div>
                         <div>
 
@@ -21,7 +21,7 @@ export default function Footer() {
                                     <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Facebook</a>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">LinkedIn</a>
                                 </li>
                             </ul>
                         </div>

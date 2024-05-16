@@ -1,38 +1,38 @@
-export const team = [
+export const teamMembers = [
     {
         id: 1,
         name: 'Bastiyan Rodrigo',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/product-design.svg'
+        title: 'Founder',
+        image: '/staff-man.png'
     },
     {
         id: 2,
         name: 'Lucie-Laure Mukendi',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/phone-mockup.png'
+        title: 'Commercial Director',
+        image: '/staff-lady.png'
     },
     {
         id: 3,
         name: 'Malki Rodrigo',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/phone-mockup.png'
+        title: 'Product Researcher',
+        image: '/staff-lady.png'
     },
     {
         id: 3,
         name: 'Hasitha Yapa',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/phone-mockup.png'
+        title: 'Frontend Engineer',
+        image: '/staff-man.png'
     },
     {
         id: 3,
         name: 'Ashen Karunarathne',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/phone-mockup.png'
+        title: 'Fullstack Engineer',
+        image: '/staff-man.png'
     },
     {
         id: 3,
         name: 'Imanthi Jayakodi',
-        description: 'Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.',
-        image: '/phone-mockup.png'
+        title: 'UX Engineer',
+        image: '/staff-lady.png'
     }
 ]

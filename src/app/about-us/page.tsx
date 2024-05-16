@@ -11,8 +11,14 @@ import Header from "../partials/header";
 import { test } from "./data/services";
 import Testimonial from "../partials/testimonial";
 import LetsTalk from "../partials/lets-talk";
+import { teamMembers } from "../data/team-members";
+import StaffMember from "../partials/staffMember";
+import OurProcessAccordion from "../partials/our-process";
 
 export default async function About() {
+
+    const teamMemberss = teamMembers;
+
     return (
         <div>
             {/* Hero Area */}
@@ -120,113 +126,26 @@ export default async function About() {
             <section className="bg-white dark:bg-gray-900">
                 <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
                     <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">Meet the Team</h2>
-
-
                     <div className="grid md:grid-cols-3 gap-10 items-center justify-center">
+                        {teamMemberss.map((team) => (
+                            <div className="keen-slider__slide  max-w-80 pt-4">
+                                <StaffMember key={team.name} title={team.title} name={team.name} image={team.image} />
+                            </div>
+                        ))}
 
-                        <div className="h-[306px]">
-                            <div className="rounded-md" style={{
-                                background: '#FBFBFB 0% 0% no-repeat padding-box',
-                                boxShadow: '0px 3px 6px #00000029',
-                                minHeight: '206px',
-                                opacity: 1
-                            }}>
-                                <Image src="/man.png" width={265} height={100} alt="our values - integrity" className="text-center" />
-                            </div>
-                            <div className="pt-5">
-                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">Founder</p>
-                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Bastiyan Rodrigo</p>
-                            </div>
-                        </div>
-
-                        <div className="h-[306px]">
-                            <div className="rounded-md text-center" style={{
-                                background: '#FBFBFB 0% 0% no-repeat padding-box',
-                                boxShadow: '0px 3px 6px #00000029',
-                                minHeight: '206px',
-                                opacity: 1
-                            }}>
-                                <Image src="/intergrity.svg" width={185} height={100} alt="our values - integrity" className="text-center" />
-                            </div>
-                            <div className="pt-5">
-                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">Commerical Director</p>
-                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Bastiyan Rodrigo</p>
-                            </div>
-                        </div>
-
-
-                        <div className="h-[306px]">
-                            <div className="rounded-md" style={{
-                                background: '#FBFBFB 0% 0% no-repeat padding-box',
-                                boxShadow: '0px 3px 6px #00000029',
-                                minHeight: '206px',
-                                opacity: 1
-                            }}>
-                                <Image src="/intergrity.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
-                            </div>
-                            <div className="pt-5">
-                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">Product Researcher</p>
-                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Malki Rodrigo</p>
-                            </div>
-                        </div>
-
-                        <div className="h-[306px]">
-                            <div className="rounded-md" style={{
-                                background: '#FBFBFB 0% 0% no-repeat padding-box',
-                                boxShadow: '0px 3px 6px #00000029',
-                                minHeight: '206px',
-                                opacity: 1
-                            }}>
-                                <Image src="/intergrity.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
-                            </div>
-                            <div className="pt-5">
-                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">Software Engineer</p>
-                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Hasitha Yapa</p>
-                            </div>
-                        </div>
-
-
-                        <div className="h-[306px]">
-                            <div className="rounded-md" style={{
-                                background: '#FBFBFB 0% 0% no-repeat padding-box',
-                                boxShadow: '0px 3px 6px #00000029',
-                                minHeight: '206px',
-                                opacity: 1
-                            }}>
-                                <Image src="/intergrity.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
-                            </div>
-                            <div className="pt-5">
-                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">Software Engineer</p>
-                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Ashen Karunarathna</p>
-                            </div>
-                        </div>
-
-                        <div className="h-[306px]">
-                            <div className="rounded-md" style={{
-                                background: '#FBFBFB 0% 0% no-repeat padding-box',
-                                boxShadow: '0px 3px 6px #00000029',
-                                minHeight: '206px',
-                                opacity: 1
-                            }}>
-                                <Image src="/intergrity.svg" width={65} height={100} alt="our values - integrity" className="text-center" />
-                            </div>
-                            <div className="pt-5">
-                                <p className="text-lg font-bold text-gray-500 uppercase lg:text-1.5xl sm:px-16 xl:px-1 lg:pt-5 dark:text-gray-400">UX Engineer</p>
-                                <p className="text-lg font-normal text-gray-500 uppercase lg:text-1xl sm:px-16 xl:px-1 lg:pt-1 dark:text-gray-400">Imanthi Jayakodi</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
 
             <section className="bg-gray-100 dark:bg-gray-900">
                 <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-                    <div className="grid grid-flow-row-dense grid-cols-4 justify-center">
+                    <div className="grid grid-flow-row-dense grid-cols-1 justify-center">
                         <div className="col-span-2">
                             <h2 className="mb-8 lg:mb-8 md:text-5xl font-bold tracking-tight leading-tight text-gray-900 dark:text-white">A Process For Success</h2>
                         </div>
                         <div className="col-span-2">
-                            <p className="mb-8 text-lg font-normal text-gray-500 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                            <OurProcessAccordion />
+                            
                         </div>
                     </div>
                 </div>
@@ -234,7 +153,8 @@ export default async function About() {
 
             <Testimonial />
 
-            <LetsTalk />
+            <LetsTalk title="Get to know us" description="Don't Just Take Our Word for It. 
+Discover why our community trusts us to bring their visions to life." />
 
         </div>
     )

@@ -65,8 +65,8 @@ export default function Home() {
       <section className="bg-white dark:bg-gray-900">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
 
-          <div className="hidden lg:mt-0 lg:col-span-6 lg:flex">
-            <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png" alt="mockup" />
+          <div className="lg:mt-0 lg:col-span-6 lg:flex shadow-md">
+            <Image src="/homepage-feature-image.svg" width={1900} height={1800} alt="hero image" />
           </div>
 
           <div className="ml-8 lg:col-span-5">
@@ -98,7 +98,6 @@ export default function Home() {
                 <div className="keen-slider__slide  max-w-80">
                   <HomePageServiceCard key={service.name} title={service.name} description={service.description} image={service.image} />
                 </div>
-
               ))}
 
             </div>
@@ -193,7 +192,7 @@ export default function Home() {
 
             <div>
               <h2 class="mb-8 lg:mb-8 text-3xl font-extrabold tracking-tight leading-tight text-gray-900 dark:text-white md:text-4xl">You’ll be in good company</h2>
-              <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-1 dark:text-gray-400">Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value.</p>
+              <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-1 dark:text-gray-400">Our community trusts us to bring their visions to life.</p>
             </div>
 
             <div class=" text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
