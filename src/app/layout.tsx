@@ -4,6 +4,8 @@ import "./globals.css";
 import Footer from "./partials/footer";
 import NavLinks from "./nav-links";
 import Script from "next/script";
+import { Analytics } from '@vercel/analytics/react';
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,6 +27,7 @@ export default function RootLayout({
       <body className={inter.className}>
           <NavLinks />
           {children}
+          <Analytics />
           <Footer />
         </body>
     </html>
