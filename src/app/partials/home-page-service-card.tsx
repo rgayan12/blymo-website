@@ -15,7 +15,7 @@ export default function HomePageServiceCard({ title, description, image, textCol
             <div className="relative">
                 <div className="py-5">
                     <a href="#">
-                        <h5 className={`mb-2 text-xl font-semibold tracking-tight ${textColour} uppercase`}>{title}</h5>
+                        <h5 className={`mb-2 text-xl font-semibold tracking-tight ${textColour}`}>{title}</h5>
 
                     </a>
                 </div>

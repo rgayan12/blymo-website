@@ -9,14 +9,14 @@ export const test = [
     {
         id: 2,
         name: 'Proof of Concepts / MVP',
-        description: 'Test the Waters with Speed and Precision',
+        description: 'Test the Waters with Speed and Precision.',
         image: '/mvp.jpeg',
         textColour: 'text-gray-800 dark:text-white'
     },
     {
         id: 3,
         name: 'Production Applications',
-        description: 'Build Applications that scale with your business',
+        description: 'Build Applications that scale with your business.',
         image: '/production-apps.png',
         textColour: 'text-gray-800 dark:text-white'
     },

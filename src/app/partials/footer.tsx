@@ -40,11 +40,11 @@ export default function Footer() {
                         <a href="https://blymo.co.uk/" className="flex items-center">
                             <Image
                                 src="/blymo-logo-invert.png"
-                                width={100}
-                                height={500}
+                                width={50}
+                                height={400}
                                 alt="Logo"
                             />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white">BLYMO</span>
+                            <span className="self-center text-2xl font-semibold whitespace-nowrap ml-2 text-white dark:text-white">BLYMO</span>
                         </a>
                     </div>
                 </div>
