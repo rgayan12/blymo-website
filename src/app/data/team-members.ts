@@ -4,7 +4,10 @@ export const teamMembers = [
         name: 'Bastiyan Rodrigo',
         title: 'Founder',
         image: '/members/bastiyan.jpg',
-        description: ``
+        description: `Born and raised in Sri Lanka, Bastiyan’s journey in the tech industry spans over 12 years. From a young age, he has been fascinated with computers and technology, often spending countless hours exploring and learning about the digital world. This early passion set the foundation for his future career.
+        He completed his schooling at St Joseph’s College, Colombo, before migrating to the UK in 2011 to pursue higher education. Throughout his career in the UK, Bastiyan has gained extensive experience across various industries, witnessing firsthand how technological innovation drives progress.
+        Bastiyan has contributed to a range of organizations, from SaaS startups to world-renowned academic institutes. His passion for technology and innovation led to the creation of BLYMO, a venture inspired by his vision of supporting organizations and individuals with aspirations for the future.
+        An avid learner, Bastiyan dedicates significant time to mastering new technologies, applying his insights to enhance client solutions continuously. Outside of his professional life, he enjoys spending time with his family and engaging in DIY projects.`
     },
     {
         id: 2,

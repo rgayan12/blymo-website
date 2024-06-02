@@ -22,7 +22,7 @@ body {
 
 /* styles/globals.css or a specific CSS module */
 .custom-modal-overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency here */
+  background-color: rgba(0, 0, 0, 0.5) !important; /* Adjust the transparency here */
 }
 
 

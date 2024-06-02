@@ -1,60 +1,60 @@
 "use client";
 import { useState } from "react";
 import { Modal } from "flowbite-react";
-import { teamMembers } from "../data/team-members";
-import { useEffect } from 'react';
+import { services } from "../data/services";
+import { useEffect } from "react";
 
-export default function TeamPopUp(props : any) {
+export default function ServicePopUp(props: any) {
   const {
     props: { 
       changeModelStatus,
       isModalOpen = false,
       selectedUserId = null
-    },
+    }
   } = props;
-  const teamMembersData = teamMembers;
+  const companySevices = services;
 
-  const [userImage, setUserImage] = useState('/staff-man.png');
+  const [modalImage, setModalImage] = useState("/staff-man.png");
   const [description, setDescription] = useState(null);
-  const [name, setName] = useState(null);
   const [title, setTitle] = useState(null);
+  const [long_description, setLongDescription] = useState('');
 
   useEffect(() => {
-    teamMembersData.map((member: any) => {
+    companySevices.map((member: any) => {
       if (member.id === selectedUserId) {
-        setUserImage(member.image);
-        setName(member.name);
-        setTitle(member.title);
-        setDescription(member.description)
+        setModalImage(member.image);
+        setTitle(member.name);
+        setDescription(member.description);
+        setLongDescription(member.long_description);
       }
     });
   });
-  
+
   return (
     <>
       <Modal
         show={isModalOpen}
         onClose={() => changeModelStatus(false)}
         className="custom-modal-overlay"
-        style={{ minWidth: "70vw", paddingTop: "2rem" }}
+        style={{ minWidth: "90vw" }}
       >
-        <div className="w-full">
+        <div>
           <div className="grid grid-cols-12">
-            <div className="col-span-6">
+            <div className="col-span-3">
               <div className="modal w-full">
                 <img
                   className="object-cover h-full w-full rounded-l-lg"
-                  src={userImage}
+                  src={modalImage}
                   alt="profile image"
                 />
               </div>
             </div>
-            <div className="modal col-span-6">
+            <div className="modal col-span-9">
               <div className="flex items-center">
-                <div className="ml-2 p-5 w-full">
-                  <div className="text-lg font-medium text-gray-900 flex items-center justify-between">
+                <div className="ml-2 p-5">
+                  <div className="text-lg font-medium text-gray-900 flex items-start justify-between">
                     <div className="text-3xl font-medium text-gray-900">
-                      {name}
+                      {title}
                     </div>
                     <div>
                       <svg
@@ -74,9 +74,9 @@ export default function TeamPopUp(props : any) {
                   </div>
 
                   <div className="text-lg font-medium text-gray-500 mt-2">
-                    {title}
+                    {description}
                   </div>
-                  <p className="mt-4 text-sm text-gray-500">{description}</p>
+                  <p className="mt-4 text-sm text-gray-500" dangerouslySetInnerHTML={{ __html: long_description }}></p>
                 </div>
               </div>
             </div>
@@ -84,7 +84,7 @@ export default function TeamPopUp(props : any) {
         </div>
         <style jsx>{`
           .modal {
-            height: 80vh;
+            height: 90vh;
             overflow: auto;
           }
         `}</style>
