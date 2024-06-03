@@ -19,7 +19,7 @@ export default async function ContactUs() {
                 <div className="py-5 lg:py-1 mx-auto max-w-screen-xl">
 
                     <p className="text-xl font-light leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-                        If you&apos;ve got a question for us, want to discuss business opportunities, or discover how BLYMO can assist you&apos; don&apos;t hesitate to get in touch.
+                        If you&apos;ve got a question for us, want to discuss business opportunities, or discover how BLYMO can assist you don&apos;t hesitate to get in touch.
                     </p>
 
                     <h2 className="my-10 lg:mb-8 md:text-3xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white">Not a fan of emails? Schedule a meeting with us instead.
