@@ -20,19 +20,32 @@ export default function HomePageServiceCard({ title, description, image, customS
       >
         <div className="absolute inset-0 bg-gray-800 opacity-0"></div>
         <div className="relative">
-          <div className="py-5">
+          <div>
             <a href="#">
-              <h5 className={`mb-2 text-2xl tracking-tight font-poppins ${customStyle}`}>
+              <h5 className={`mb-1 text-2xl tracking-tight ${customStyle}`}>
                 {title}
               </h5>
             </a>
           </div>
 
           <div>
-            <p className={`font-normal font-poppins-light ${customStyle} align-text-bottom`}>
+            <p className={`font-normal ${customStyle} align-text-bottom`}>
               {description}
             </p>
           </div>
+        </div>
+        <div className="absolute bottom-4 right-4 cursor-pointer">
+          <Image
+            src="/logo/eye.svg"
+            width={30}
+            height={30}
+            alt="hero image"
+            style={{
+              backgroundColor: "#dee0e3",
+              padding: "6px",
+              borderRadius: "50%",
+            }}
+          />
         </div>
       </div>
     );

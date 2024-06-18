@@ -37,12 +37,12 @@ export default function CarouselComponent({ selectMember }: any) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="flex items-center justify-center mt-10">
+      <div className="flex items-center justify-center mt-10 gap-2">
         <div className="relative cursor-pointer">
-          <CarouselPrevious />
+          <CarouselPrevious className="bg-gray-300 hover:bg-slate-400" />
         </div>
         <div className="relative cursor-pointer">
-          <CarouselNext />
+          <CarouselNext className="bg-gray-300 hover:bg-slate-400" />
         </div>
       </div>
     </Carousel>
