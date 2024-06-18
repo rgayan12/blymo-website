@@ -24,9 +24,9 @@ export default function CarouselComponent({ selectMember }: any) {
         {companyServices.map((service, index) => (
           <CarouselItem
             key={index}
-            className="sm:basis-1/2 md:basis-1/3 lg:basis-1/4 cursor-pointer"
+            className="sm:basis-1/2 md:basis-1/3 lg:basis-1/3 cursor-pointer"
           >
-            <div className="p-1" onClick={() => selectMember(service.id)}>
+            <div className="p-1" onClick={() => selectMember(service.id)}  style={{ height: "740px" }}>
               <HomePageServiceCard
                 title={service.name}
                 description={service.description}

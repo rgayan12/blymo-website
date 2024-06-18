@@ -16,6 +16,7 @@ export default function HomePageServiceCard({ title, description, image, customS
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
+          height: "740px"
         }}
       >
         <div className="absolute inset-0 bg-gray-800 opacity-0"></div>
