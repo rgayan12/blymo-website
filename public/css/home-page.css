@@ -1,0 +1,69 @@
+/* Styles for the home page */
+/* ======================== */
+/* Base styles (Large screens) */
+.head-title {
+    text-shadow: 0px 3px 6px #00000029;
+    font-size: 70px;
+    font-family: "Poppins";
+    letter-spacing: 2.8px;
+  }
+  
+  .head-button {
+    border-radius: 50px;
+    background-color: #31AFA9;
+    color: white;
+    padding: 14px 27px;
+    border: none;
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: normal;
+    letter-spacing: 0px;
+  }
+  
+  /* Medium screens (tablets) */
+  @media (max-width: 1024px) {
+    .head-title {
+      font-size: 50px;
+      letter-spacing: 2px;
+    }
+  
+    .head-button {
+      padding: 12px 24px;
+      font-size: 24px;
+    }
+  }
+  
+  /* Small screens (landscape phones) */
+  @media (max-width: 768px) {
+    .head-title {
+      font-size: 40px;
+      letter-spacing: 1.6px;
+    }
+  
+    .head-button {
+      padding: 10px 20px;
+      font-size: 20px;
+    }
+  }
+  
+  /* Extra small screens (portrait phones) */
+  @media (max-width: 480px) {
+    .head-title {
+      font-size: 30px;
+      letter-spacing: 1.2px;
+    }
+  
+    .head-button {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  }
+
+  .font-poppins-light{
+    font-family: "poppins-light" !important;
+  }
+
+  .font-poppins{
+    font-family: "poppins" !important;
+  }
+  

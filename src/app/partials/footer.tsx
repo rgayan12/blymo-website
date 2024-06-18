@@ -2,19 +2,20 @@ import Image from 'next/image'
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 dark:bg-gray-900">
+        <footer style={{ backgroundColor:"#343434" }}>
             <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-14">
                 <div className="md:flex md:justify-between">
 
                     <div className="grid grid-cols-1 gap-8 sm:gap-2 sm:grid-cols-4">
                         <div>
-                            <h2 className="mb-6 text-1xl font-semibold text-white dark:text-white">Tel: +44 073 77 134  816</h2>
-                            <h2 className="mb-6 text-1xl font-semibold text-white dark:text-white">Email: info@blymo.co.uk</h2>
+                            <h2 className="text-1xl font-poppins-light text-white dark:text-white">Tel: +44 (0)12 1234 1234</h2>
+                            <h2 className="mb-10 text-1xl font-poppins-light text-white dark:text-white">Email: info@blymo.co.uk</h2>
+                            <h2 className="text-1xl font-poppins-light text-white dark:text-white"><a href="#" className="hover:underline">Privacy Policy</a></h2>
                         </div>
                         <div>
 
                         </div>
-                        <div>
+                        {/* <div>
                             <h2 className="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Follow us</h2>
                             <ul className="text-gray-100 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
@@ -24,8 +25,8 @@ export default function Footer() {
                                     <a href="https://www.linkedin.com/company/blymo/" className="hover:underline">LinkedIn</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div>
+                        </div> */}
+                        {/* <div>
                             <ul className="text-gray-100 dark:text-gray-400 font-medium">
                                 <li className="mb-4">
                                     <a href="#" className="hover:underline">Privacy Policy</a>
@@ -34,24 +35,25 @@ export default function Footer() {
                                     <a href="#" className="hover:underline">Terms &amp; Conditions</a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                     </div>
-                    <div className="mb-6 md:mb-0">
-                        <a href="https://blymo.co.uk/" className="flex items-center">
+                    <div className="">
+                        <a href="https://blymo.co.uk/" className="flex items-center mt-5">
                             <Image
                                 src="/blymo-logo-invert.png"
-                                width={50}
-                                height={400}
+                                width={60}
+                                height={500}
                                 alt="Logo"
                             />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap ml-2 text-white dark:text-white">BLYMO</span>
+                            <span className="self-center text-3xl font-semibold whitespace-nowrap ml-2 text-white dark:text-white">BLYMO</span>
                         </a>
                     </div>
+                    <div></div>
                 </div>
-
+{/* 
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <div className="sm:flex sm:items-center sm:justify-between">
-                    <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://blymo.co.uk/" className="hover:underline">BLYMO™</a>. All Rights Reserved.
+                <div className="sm:flex sm:items-center sm:justify-between" style={{ backgroundColor:"#E5E5E5" }}>
+                    <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://blymo.co.uk/" className="hover:underline">BLYMO</a>. All Rights Reserved.
                     </span>
                     <div className="flex mt-4 sm:justify-center sm:mt-0">
                         <a href="https://www.facebook.com/profile.php?id=61558966886637" target='_blank' className="text-gray-100 hover:text-gray-900 dark:hover:text-white">
@@ -69,7 +71,10 @@ export default function Footer() {
                             <span className="sr-only">LinkedIn account</span>
                         </a>
                     </div>
-                </div>
+                </div> */}
+            </div>
+            <div style={{ backgroundColor:"#E5E5E5", width:"100%", height:"50px" }}>
+                <div className="ms-10 pt-4 text-sm text-gray-500 text-center lg:text-left dark:text-gray-400">© 2023 <a href="https://blymo.co.uk/" className="hover:underline">BLYMO</a>. All Rights Reserved.</div>
             </div>
         </footer>
 
