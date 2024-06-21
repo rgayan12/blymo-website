@@ -4,6 +4,7 @@ import Image from "next/image";
 import ServicePopUp from "./partials/servicePopUp";
 import CarouselComponent from "@/components/CarouselComponent";
 import "/public/css/home-page.css";
+import Link from "next/link";
 
 export default function Home() {
   const [isModalOpen, changeModelStatus] = useState(false);
@@ -55,9 +56,11 @@ export default function Home() {
               Brilliantly <span style={{ color: "#31AFA9" }}>lighting</span>
               <div>your mind&apos;s opportunities</div>
             </h1>
-            <button className="mt-9 head-button" type="button">
-              Get in touch
-            </button>
+            <Link href="contact-us">
+              <button className="mt-9 head-button" type="button">
+                Get in touch
+              </button>
+            </Link>
           </div>
         </section>
 
@@ -81,17 +84,23 @@ export default function Home() {
 
             <div className="md:ml-8">
               <h1
-                className="max-w-2xl mb-4 mt-8 lg:mt-2 text-4xl md:text-5xl xl:text-4xl tracking-tight dark:text-white"
+                className="max-w-2xl mt-8 lg:mt-2 text-4xl md:text-5xl xl:text-4xl tracking-tight dark:text-white"
                 style={{ lineHeight: "50px" }}
               >
-                Product Development For Startups & Forward Thinking Companies
+                Product Development for Startups & Forward Thinking Companies
               </h1>
-              <p className="max-w-2xl mb-6 lg:mb-0 lg:pt-5 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
-                Our team embodies our vision, comprising passionate designers,
-                ingenious developers, and imaginative thinkers. Each member
-                brings their unique talents and perspectives, united by a common
-                goal-to craft a brighter future.Through our collective efforts,
-                we transform our vision into reality.
+              <p className="max-w-2xl mb-6 lg:mb-0 lg:pt-2 text-gray-500 md:text-lg lg:text-lg dark:text-gray-400">
+                At BLYMO, we believe that the power of creation is what truly
+                sets humanity apart. Inspired by the diverse landscapes, vibrant
+                communities, and boundless potential around us, we harness this
+                unique creativity to forge meaningful and lasting impacts. Our
+                vision is to serve those who strive to innovate and make the
+                world a better place than they found it. Specialising in product
+                development for startups and forward-thinking companies, We
+                collaborate with visionaries across various fields, innovative
+                placemakers, and emerging brands, leveraging strategic
+                creativity to captivate audiences and craft compelling visual
+                identities.
               </p>
             </div>
           </div>
