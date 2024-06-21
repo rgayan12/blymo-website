@@ -1,153 +1,134 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import HomePageServiceCard from "./partials/home-page-service-card";
-import { services } from "./data/services";
 import ServicePopUp from "./partials/servicePopUp";
-import Link from "next/link";
-import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
-import "@animxyz/core";
+import CarouselComponent from "@/components/CarouselComponent";
+import "/public/css/home-page.css";
 
 export default function Home() {
-  const companyServices = services;
   const [isModalOpen, changeModelStatus] = useState(false);
   const [selectedUserId, setUserId] = useState(null);
 
+  const sectionsRef = useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    const fadeInOnScroll = () => {
+      sectionsRef.current.forEach((section) => {
+        if (!section) return;
+
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (sectionTop <= windowHeight - section.offsetHeight / 4) {
+          section.classList.add("opacity-100");
+          section.classList.remove("opacity-0");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll();
+
+    return () => {
+      window.removeEventListener("scroll", fadeInOnScroll);
+    };
+  }, []);
+
   const selectMember = (id: any) => {
-      setUserId(id);
-      changeModelStatus(true);
+    setUserId(id);
+    changeModelStatus(true);
   };
 
-   const props = {
-     changeModelStatus,
-     isModalOpen,
-     selectedUserId,
-   };
-
-  const [sliderRef, instanceRef] = useKeenSlider(
-    {
-      slideChanged() {
-        console.log("slide changed");
-      },
-      breakpoints: {
-        "(min-width: 800px)": {
-          loop: false,
-          slides: {
-            perView: 3.3,
-            spacing: 15,
-          },
-        },
-      },
-      loop: true,
-      slides: {
-        perView: 1.3,
-        spacing: 15,
-      },
-    },
-
-    [
-      // add plugins here
-    ]
-  );
+  const props = {
+    changeModelStatus,
+    isModalOpen,
+    selectedUserId,
+  };
 
   return (
     <>
       <div>
-        {/* Hero Area */}
-        <section className="bg-gradient-to-r from-gray-50 to-gray-100 dark:bg-gray-900 mt-0">
-          <div className="py-10 px-4 mx-auto max-w-screen-xl py-[160px] lg:px-12">
-            <h1 className="mb-4 text-6xl tracking-tight shadow-blue-150 leading-30 text-gray-900 md:text-5xl lg:text-5xl dark:text-white line">
-              Brilliantly Lighting
-              <span className="mb-4 mt-9 text-2xl tracking-tight leading-30 transition delay-150 duration-300 ease-in-out text-gray-900 md:text-5xl lg:text-8xl dark:text-white line block">
-                Your Mind&apos;s Opportunities
-              </span>
+        {/* Hero Section */}
+        <section className="bg-white dark:bg-gray-900 flex items-center h-[calc(100vh-5rem)]">
+          <div className="text-center lg:text-left mx-auto p-6">
+            <h1 className="mb-4 head-title">
+              Brilliantly <span style={{ color: "#31AFA9" }}>lighting</span>
+              <div>your mind&apos;s opportunities</div>
             </h1>
+            <button className="mt-9 head-button" type="button">
+              Get in touch
+            </button>
           </div>
         </section>
 
-        {/* end of hero area */}
-        <section className="bg-white dark:bg-gray-900">
-          <div className="py-5 px-2 mx-auto text-center max-w-screen-xl lg:py-16 lg:px-8">
-            <p className="mb-8 text-lg font-light text-gray-600 lg:text-3xl sm:px-16 xl:px-15 dark:text-gray-400">
-              Man kind has one ability that separates it from all other species:
-              our ability to create. Our vision is to be a guiding post for
-              those who seek to create and leave the world a better place than
-              they found it.
-            </p>
-          </div>
-        </section>
-
-        <section className="bg-white dark:bg-gray-900">
-          <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-            <div className="lg:mt-0 lg:col-span-6 lg:flex shadow-md">
+        {/* Vision Section */}
+        <section
+          ref={(el) => {
+            sectionsRef.current[0] = el;
+          }}
+          className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
+        >
+          <div className="grid max-w-screen-xl px-4 py-8 lg:py-16 mx-auto grid-cols-1 lg:grid-cols-2">
+            <div>
               <Image
-                src="/homepage-feature-image.svg"
+                src="/home-screen/product-development.png"
                 width={1900}
                 height={1800}
                 alt="hero image"
+                className="shadow-md rounded-lg"
               />
             </div>
 
-            <div className="md:ml-8 lg:col-span-5">
-              <h1 className="max-w-2xl mb-4 mt-10 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl dark:text-white">
-                Product Development for Startups & Forward Thinking Companies
+            <div className="md:ml-8">
+              <h1
+                className="max-w-2xl mb-4 mt-8 lg:mt-2 text-4xl md:text-5xl xl:text-4xl tracking-tight dark:text-white"
+                style={{ lineHeight: "50px" }}
+              >
+                Product Development For Startups & Forward Thinking Companies
               </h1>
-              <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-0 md:text-lg lg:text-xl lg:pt-8 dark:text-gray-400">
+              <p className="max-w-2xl mb-6 lg:mb-0 lg:pt-5 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
                 Our team embodies our vision, comprising passionate designers,
                 ingenious developers, and imaginative thinkers. Each member
                 brings their unique talents and perspectives, united by a common
                 goal-to craft a brighter future.Through our collective efforts,
                 we transform our vision into reality.
               </p>
-
-              <Link
-                href="/about-us"
-                className="inline-flex px-5 mt-8 py-2 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-              >
-                Read More
-              </Link>
             </div>
           </div>
         </section>
 
-        <section className="bg-white dark:bg-gray-900">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
+        {/* Services Section */}
+        <section
+          ref={(el) => {
+            sectionsRef.current[1] = el;
+          }}
+          className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
+        >
+          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div className="mx-auto max-w-screen-xl text-left mb-8 lg:mb-16">
               <h2 className="max-w-2xl mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
-                Our Services
+                Services
               </h2>
-              <p className="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
+              <p className="text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
                 Discover what best suits your needs.
               </p>
             </div>
 
-            {/* Start of Card 1  */}
-
-            <div className="cursor-pointer">
-              <div ref={sliderRef} className="keen-slider">
-                {companyServices.map((service) => (
-                  <div
-                    className="keen-slider__slide  max-w-80"
-                    key={service.id}
-                    onClick={() => selectMember(service.id)}
-                  >
-                    <HomePageServiceCard
-                      title={service.name}
-                      description={service.description}
-                      image={service.image}
-                      textColour={service.textColour}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* Carousel  */}
+            <CarouselComponent selectMember={selectMember} />
           </div>
         </section>
-        <section className="bg-gray-100 dark:bg-gray-900">
+
+        {/* Strategic Consulting Section */}
+        <section
+          ref={(el) => {
+            sectionsRef.current[2] = el;
+          }}
+          className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
+        >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
-              Our Process
+              Strategic Consulting
             </h2>
             <p className="lg:mb-12 text-lg font-normal text-gray-500 lg:text-xl sm:px-1 dark:text-gray-400">
               Our Process: Embracing a Strict, Agile Way of Working.
@@ -159,7 +140,7 @@ export default function Home() {
                   <p className="text-white">01</p>
                 </div>
                 <div className="text-gray-400 mt-3 w-[300px]">
-                  <h3>Research</h3>
+                  <h3>Plan</h3>
                   <div></div>
                   <p className="mt-1">
                     In this stage, we dive deep into thorough research, engage
@@ -243,48 +224,94 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gray-200 dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <h2 className="mb-8 lg:mb-8 text-3xl font-extrabold tracking-tight leading-tight text-gray-900 dark:text-white md:text-4xl">
-                  You&apos;ll be in good company
-                </h2>
-                <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-1 dark:text-gray-400">
-                  Our community trusts us to bring their visions to life.
-                </p>
-              </div>
-
-              <div className=" text-gray-500 sm:gap-12 md:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
-                <div className="grid grid-cols-3 gap-8">
-                  <a href="#">
-                    <Image
-                      src="/logo4.svg"
-                      width={500}
-                      height={1800}
-                      alt="hero image"
-                      style={{}}
-                    />
-                  </a>
-                  <a href="#">
-                    <Image
-                      src="/logo2.png"
-                      width={500}
-                      height={1800}
-                      alt="hero image"
-                      style={{}}
-                    />
-                  </a>
-                  <a href="#">
-                    <Image
-                      src="/logo3.png"
-                      width={100}
-                      height={1800}
-                      alt="hero image"
-                      style={{}}
-                    />
-                  </a>
+        {/* Clients Section */}
+        <section
+          ref={(el) => {
+            sectionsRef.current[3] = el;
+          }}
+          className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
+        >
+          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div>
+              <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+                Our Amazing Clients
+              </h2>
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div>
+                  <p className="text-gray-500 md:text-lg dark:text-gray-400">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </p>
                 </div>
+                <div>
+                  <div className="grid grid-cols-2 gap-8 md:grid-cols-3 px-4 lg:px-8">
+                    <div className="grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
+                      <Image
+                        src="/logo/google.svg"
+                        width={100}
+                        height={1800}
+                        alt="hero image"
+                        style={{}}
+                      />
+                    </div>
+                    <div className="flex grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
+                      <Image
+                        src="/logo/netflix.svg"
+                        width={100}
+                        height={1800}
+                        alt="hero image"
+                        style={{}}
+                      />
+                    </div>
+                    <div className="grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
+                      <Image
+                        src="/logo/google.svg"
+                        width={100}
+                        height={1800}
+                        alt="hero image"
+                        style={{}}
+                      />
+                    </div>
+                    <div className="grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
+                      <Image
+                        src="/logo/google.svg"
+                        width={100}
+                        height={1800}
+                        alt="hero image"
+                        style={{}}
+                      />
+                    </div>
+                    <div className="flex grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
+                      <Image
+                        src="/logo/netflix.svg"
+                        width={100}
+                        height={1800}
+                        alt="hero image"
+                        style={{}}
+                      />
+                    </div>
+                    <div className="grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
+                      <Image
+                        src="/logo/google.svg"
+                        width={100}
+                        height={1800}
+                        alt="hero image"
+                        style={{}}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="text-center md:text-start">
+                <button
+                  className="mt-9 rounded-full bg-[#31AFA9] text-white py-1.5 px-6 border-0 text-xl tracking-normal"
+                  type="button"
+                >
+                  Read More
+                </button>
               </div>
             </div>
           </div>

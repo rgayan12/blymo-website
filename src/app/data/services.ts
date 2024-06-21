@@ -3,8 +3,8 @@ export const services = [
     id: 1,
     name: "Product Design",
     description: "Converting Brilliant Ideas to Screens.",
-    image: "/product-design.svg",
-    textColour: "text-gray-800 dark:text-white",
+    image: "/home-screen/product-design.png",
+    customStyle: "text-gray-800 dark:text-white",
     long_description: `
     <p>
       Have you ever envisioned a groundbreaking startup concept but struggled to translate it into a tangible product?
@@ -58,8 +58,8 @@ export const services = [
     id: 2,
     name: "Proof of Concepts / MVP",
     description: "Test the Waters with Speed and Precision.",
-    image: "/mvp.jpeg",
-    textColour: "text-gray-800 dark:text-white",
+    image: "/home-screen/proof-of-concept.jpg",
+    customStyle: "text-white dark:text-white",
     long_description: `
     <p>
       Are you eager to test your groundbreaking idea in the market but daunted by the prospect of assembling a full development team?
@@ -107,10 +107,10 @@ export const services = [
   },
   {
     id: 3,
-    name: "Production Applications",
-    description: "Build Applications that scale with your business.",
-    image: "/production-apps.png",
-    textColour: "text-gray-800 dark:text-white",
+    name: "Production - Ready Application",
+    description: "Build applications that scale with your business.",
+    image: "/home-screen/production-ready-application.png",
+    customStyle: "text-gray-800 dark:text-white",
     long_description: `
     <p>
       Are you ready to take your idea to the next level? Whether you've tested the waters with an MVP or you're prepared to dive headfirst into a new venture, Blymo is here to help you build production-ready applications that can scale with your business.
@@ -153,42 +153,10 @@ export const services = [
   },
   {
     id: 4,
-    name: "Data Visualisation",
-    description: "Gain insights from your data.",
-    image: "/data-visualisation.png",
-    textColour: "text-white dark:text-white",
-    long_description: `
-    <p>At Blymo, we're in the business of transforming data into captivating tales of insight and opportunity.</p>
-    <p>Picture this: a world where complex data relationships unfold like stories, where every chart and graph is a portal to understanding, and where even the most intricate datasets are decoded with ease.</p>
-
-    <blockquote class="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
-      <p class="text-base italic font-small text-gray-500 dark:text-white">Our visualizations aren't just tools—they're gateways to a realm of clarity and possibility.</p>
-    </blockquote>
-
-    <p>Whether you're a seasoned executive or a curious newcomer, our dashboards beckon with their vibrant visuals and interactive charm, inviting you to embark on a journey of discovery. With every click, you delve deeper into the fabric of your data, uncovering hidden gems of wisdom and igniting sparks of innovation. At Blymo, we're not just illuminating data points; we're painting a canvas of insight</p>
-    
-    <ul class="list-disc ml-6">
-      <li class="mt-3"><b>Unveiling Customer Insights:</b> Dive into the minds of your customers and uncover the hidden gems that shape their behavior. Discover why they love that new feature, or what's driving them away from a particular product.</li>
-      <li class="mt-3"><b>Illuminating Improvement Opportunities:</b> Shine a light on areas of your products or services that are ripe for enhancement. Whether it’s refining a clunky user experience or infusing innovation, our visualizations pinpoint where your efforts will yield the greatest returns. Discover the precise elements that need attention and transform potential into performance.</li>
-      <li class="mt-3"><b>Crafting Memorable Data Narratives:</b> Transform bland numbers into captivating stories that linger in the minds of stakeholders. Paint a vivid picture of your company's journey, from humble beginnings to soaring success, through compelling data narratives.</li>
-      <li class="mt-3"><b>Guiding Product Placement Precision:</b> Effortlessly navigate market dynamics by mastering the crucial interplay of time and space. Our visualizations help you identify the optimal moments and locations to showcase your offerings. Whether it's vibrant city streets or cozy boutiques, understanding spatial data ensures maximum exposure and impact, reaching your target audience at the perfect time.</li>
-      <li class="mt-3"><b>Predicting Profit Potentials:</b> Gain foresight into sales and revenue trends with our advanced visualisations. Predict market shifts and customer behaviors, guiding your business toward sustained prosperity and success.</li>
-    </ul>
-
-    <h5 class="mt-6 text-xl font-bold dark:text-white">Why Choose BLYMO?</h5>
-    <ul class="list-disc ml-6">
-      <li class="mt-3"><b>Creative Thinkers with Spatial Expertise:</b> We excel not just in data analysis and creating visually appealing charts, but also in thinking creatively. Our team possesses the spatial knowledge to understand your unique requirements and tailor our visualizations to uncover hidden stories within your data.</li>
-      <li class="mt-3"><b>Customized Solutions for Maximum Impact:</b> We offer bespoke solutions that cater specifically to your business needs. By combining innovative visualization techniques with deep market insights, we ensure that our analyses are not only accurate but also actionable, driving tangible results for your business.</li>
-      <li class="mt-3"><b>Global Team of Experts:</b> Our international team of experts brings extensive experience across various industries. This global perspective allows us to anticipate market trends and customer behaviours effectively, providing strategic guidance to help you stay ahead of the competition and achieve long-term success.</li>
-    </ul>
-    `,
-  },
-  {
-    id: 5,
     name: "AI Integration",
     description: "Elevating Customer Experiences with Cutting-Edge Technology.",
-    image: "/ai-integration.jpeg",
-    textColour: "text-white dark:text-white",
+    image: "/home-screen/ai-integration.jpg",
+    customStyle: "text-white dark:text-white",
     long_description: `
     <p>Do you possess a wealth of data waiting to be unlocked for your customers or employees? At Blymo, we specialize in harnessing the power of advanced AI integrations to extract actionable insights and revolutionize user interactions.</p>
     <p>Picture this: a world where complex data relationships unfold like stories, where every chart and graph is a portal to understanding, and where even the most intricate datasets are decoded with ease.</p>
@@ -217,11 +185,43 @@ export const services = [
     `,
   },
   {
+    id: 5,
+    name: "Data Visualisation",
+    description: "Gain insights from your data.",
+    image: "/home-screen/data-visualisation.jpg",
+    customStyle: "text-white dark:text-white",
+    long_description: `
+    <p>At Blymo, we're in the business of transforming data into captivating tales of insight and opportunity.</p>
+    <p>Picture this: a world where complex data relationships unfold like stories, where every chart and graph is a portal to understanding, and where even the most intricate datasets are decoded with ease.</p>
+
+    <blockquote class="p-4 my-4 border-s-4 border-gray-300 bg-gray-50 dark:border-gray-500 dark:bg-gray-800">
+      <p class="text-base italic font-small text-gray-500 dark:text-white">Our visualizations aren't just tools—they're gateways to a realm of clarity and possibility.</p>
+    </blockquote>
+
+    <p>Whether you're a seasoned executive or a curious newcomer, our dashboards beckon with their vibrant visuals and interactive charm, inviting you to embark on a journey of discovery. With every click, you delve deeper into the fabric of your data, uncovering hidden gems of wisdom and igniting sparks of innovation. At Blymo, we're not just illuminating data points; we're painting a canvas of insight</p>
+    
+    <ul class="list-disc ml-6">
+      <li class="mt-3"><b>Unveiling Customer Insights:</b> Dive into the minds of your customers and uncover the hidden gems that shape their behavior. Discover why they love that new feature, or what's driving them away from a particular product.</li>
+      <li class="mt-3"><b>Illuminating Improvement Opportunities:</b> Shine a light on areas of your products or services that are ripe for enhancement. Whether it’s refining a clunky user experience or infusing innovation, our visualizations pinpoint where your efforts will yield the greatest returns. Discover the precise elements that need attention and transform potential into performance.</li>
+      <li class="mt-3"><b>Crafting Memorable Data Narratives:</b> Transform bland numbers into captivating stories that linger in the minds of stakeholders. Paint a vivid picture of your company's journey, from humble beginnings to soaring success, through compelling data narratives.</li>
+      <li class="mt-3"><b>Guiding Product Placement Precision:</b> Effortlessly navigate market dynamics by mastering the crucial interplay of time and space. Our visualizations help you identify the optimal moments and locations to showcase your offerings. Whether it's vibrant city streets or cozy boutiques, understanding spatial data ensures maximum exposure and impact, reaching your target audience at the perfect time.</li>
+      <li class="mt-3"><b>Predicting Profit Potentials:</b> Gain foresight into sales and revenue trends with our advanced visualisations. Predict market shifts and customer behaviors, guiding your business toward sustained prosperity and success.</li>
+    </ul>
+
+    <h5 class="mt-6 text-xl font-bold dark:text-white">Why Choose BLYMO?</h5>
+    <ul class="list-disc ml-6">
+      <li class="mt-3"><b>Creative Thinkers with Spatial Expertise:</b> We excel not just in data analysis and creating visually appealing charts, but also in thinking creatively. Our team possesses the spatial knowledge to understand your unique requirements and tailor our visualizations to uncover hidden stories within your data.</li>
+      <li class="mt-3"><b>Customized Solutions for Maximum Impact:</b> We offer bespoke solutions that cater specifically to your business needs. By combining innovative visualization techniques with deep market insights, we ensure that our analyses are not only accurate but also actionable, driving tangible results for your business.</li>
+      <li class="mt-3"><b>Global Team of Experts:</b> Our international team of experts brings extensive experience across various industries. This global perspective allows us to anticipate market trends and customer behaviours effectively, providing strategic guidance to help you stay ahead of the competition and achieve long-term success.</li>
+    </ul>
+    `,
+  },
+  {
     id: 6,
     name: "Web Sites",
     description: "Websites that are fast, secure and easy to manage.",
-    image: "/website.png",
-    textColour: "text-gray-800 dark:text-white",
+    image: "/home-screen/website.jpg",
+    customStyle: "text-gray-800 dark:text-white",
     long_description: `
     <p>In need of a website to showcase your product or service? Look no further. At Blymo, we specialize in crafting compelling websites that not only promote your offerings but also engage your audience effectively. With our content-first approach and attention to detail, we bring your vision to life, helping you reach wider audiences and make a lasting impression.</p>
     
