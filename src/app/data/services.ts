@@ -107,10 +107,10 @@ export const services = [
   },
   {
     id: 3,
-    name: "Roduction - Ready Application",
+    name: "Production - Ready Application",
     description: "Build applications that scale with your business.",
-    image: "/home-screen/roduction-ready-application.png",
-    customStyle: "text-gray-800 dark:text-white text-xl",
+    image: "/home-screen/production-ready-application.png",
+    customStyle: "text-gray-800 dark:text-white",
     long_description: `
     <p>
       Are you ready to take your idea to the next level? Whether you've tested the waters with an MVP or you're prepared to dive headfirst into a new venture, Blymo is here to help you build production-ready applications that can scale with your business.

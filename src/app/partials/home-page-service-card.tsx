@@ -23,14 +23,16 @@ export default function HomePageServiceCard({ title, description, image, customS
         <div className="relative">
           <div>
             <a href="#">
-              <h5 className={`mb-1 text-2xl tracking-tight ${customStyle}`}>
+              <h5
+                className={`mt-4 ml-4 mb-2 text-2xl tracking-tight ${customStyle}`}
+              >
                 {title}
               </h5>
             </a>
           </div>
 
           <div>
-            <p className={`font-normal ${customStyle} align-text-bottom`}>
+            <p className={`ml-4 align-text-bottom font-normal ${customStyle}`}>
               {description}
             </p>
           </div>

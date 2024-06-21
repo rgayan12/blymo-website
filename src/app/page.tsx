@@ -86,10 +86,7 @@ export default function Home() {
               >
                 Product Development For Startups & Forward Thinking Companies
               </h1>
-              <p
-                className="max-w-2xl mb-6 lg:mb-0 lg:pt-5 font-light text-gray-500 md:text-lg lg:text-xl dark:text-gray-400"
-                style={{ color: "#3a3a3a", fontWeight: "lighter" }}
-              >
+              <p className="max-w-2xl mb-6 lg:mb-0 lg:pt-5 text-gray-500 md:text-lg lg:text-xl dark:text-gray-400">
                 Our team embodies our vision, comprising passionate designers,
                 ingenious developers, and imaginative thinkers. Each member
                 brings their unique talents and perspectives, united by a common
@@ -112,7 +109,7 @@ export default function Home() {
               <h2 className="max-w-2xl mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
                 Services
               </h2>
-              <p className="font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
+              <p className="text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
                 Discover what best suits your needs.
               </p>
             </div>
@@ -241,7 +238,7 @@ export default function Home() {
               </h2>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 <div>
-                  <p className="font-light text-gray-500 md:text-lg dark:text-gray-400">
+                  <p className="text-gray-500 md:text-lg dark:text-gray-400">
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the 1500s, when an unknown
