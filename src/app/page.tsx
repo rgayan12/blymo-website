@@ -128,7 +128,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Strategic Consulting Section */}
+        {/* Our Process Section */}
         <section
           ref={(el) => {
             sectionsRef.current[2] = el;
@@ -137,10 +137,10 @@ export default function Home() {
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
-              Strategic Consulting
+              Our Process
             </h2>
             <p className="lg:mb-12 text-lg font-normal text-gray-500 lg:text-xl sm:px-1 dark:text-gray-400">
-              Our Process: Embracing a Strict, Agile Way of Working.
+              Embracing a Strict, Agile Way of Working.
             </p>
 
             <div className="grid md:grid-cols-3">
