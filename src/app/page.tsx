@@ -72,29 +72,31 @@ export default function Home() {
           className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="grid max-w-screen-xl px-4 py-8 lg:py-16 mx-auto grid-cols-1 lg:grid-cols-2">
-            <div>
+            <div className="flex flex-col">
               <Image
                 src="/home-screen/product-development.png"
                 width={1900}
                 height={1800}
                 alt="hero image"
-                className="shadow-md rounded-lg"
+                className="shadow-md rounded-lg mt-3 object-cover h-full"
               />
             </div>
 
-            <div className="md:ml-8">
+            <div className="md:ml-8 flex flex-col justify-center">
               <h1
-                className="max-w-2xl mt-8 lg:mt-2 text-4xl md:text-5xl xl:text-4xl tracking-tight dark:text-white"
+                className="max-w-2xl text-2xl md:text-3xl tracking-tight dark:text-white"
                 style={{ lineHeight: "50px" }}
               >
                 Product Development for Startups & Forward Thinking Companies
               </h1>
-              <p className="max-w-2xl mb-6 lg:mb-0 lg:pt-2 text-gray-500 md:text-lg lg:text-lg dark:text-gray-400">
+              <p className="max-w-2xl text-left mb-6 lg:mb-0 lg:pt-2 text-gray-500 md:text-lg lg:text-lg dark:text-gray-400">
                 At BLYMO, we believe that the power of creation is what truly
                 sets humanity apart. Inspired by the diverse landscapes, vibrant
                 communities, and boundless potential around us, we harness this
-                unique creativity to forge meaningful and lasting impacts. Our
-                vision is to serve those who strive to innovate and make the
+                unique creativity to forge meaningful and lasting impacts.
+              </p>
+              <p className="max-w-2xl text-left mb-6 mt-4 lg:mb-0 lg:pt-2 text-gray-500 md:text-lg lg:text-lg dark:text-gray-400">
+                Our vision is to serve those who strive to innovate and make the
                 world a better place than they found it. Specialising in product
                 development for startups and forward-thinking companies, We
                 collaborate with visionaries across various fields, innovative
@@ -115,8 +117,8 @@ export default function Home() {
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div className="mx-auto max-w-screen-xl text-left mb-8 lg:mb-16">
-              <h2 className="max-w-2xl mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
-                Services
+              <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
+                Our Services
               </h2>
               <p className="text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
                 Discover what best suits your needs.
@@ -139,8 +141,8 @@ export default function Home() {
             <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
               Our Process
             </h2>
-            <p className="lg:mb-12 text-lg font-normal text-gray-500 lg:text-xl sm:px-1 dark:text-gray-400">
-              Embracing a Strict, Agile Way of Working.
+            <p className="text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
+              Embracing a strict, agile way of working.
             </p>
 
             <div className="grid md:grid-cols-3">
@@ -242,86 +244,75 @@ export default function Home() {
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div>
-              <h2 className="mb-8 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+              <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
                 Our Amazing Clients
               </h2>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                <div>
+                <div className=" bg-white shadow-md opacity-100 p-6 rounded-lg">
                   <p className="text-gray-500 md:text-lg dark:text-gray-400">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
+                    "We needed a simple website for our maintenance company, and
+                    I couldn’t be more excited about the result. The website’s
+                    clean, simple, and easy-to-use design perfectly fits our
+                    needs. BLYMO’s customer support is top-notch; they instantly
+                    act on my update requests and make changes swiftly, thanks
+                    to our long-term partnership."
                   </p>
-                </div>
-                <div>
-                  <div className="grid grid-cols-2 gap-8 md:grid-cols-3 px-4 lg:px-8">
-                    <div className="grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
-                      <Image
-                        src="/logo/google.svg"
-                        width={100}
-                        height={1800}
-                        alt="hero image"
-                        style={{}}
-                      />
-                    </div>
-                    <div className="flex grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
-                      <Image
-                        src="/logo/netflix.svg"
-                        width={100}
-                        height={1800}
-                        alt="hero image"
-                        style={{}}
-                      />
-                    </div>
-                    <div className="grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
-                      <Image
-                        src="/logo/google.svg"
-                        width={100}
-                        height={1800}
-                        alt="hero image"
-                        style={{}}
-                      />
-                    </div>
-                    <div className="grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
-                      <Image
-                        src="/logo/google.svg"
-                        width={100}
-                        height={1800}
-                        alt="hero image"
-                        style={{}}
-                      />
-                    </div>
-                    <div className="flex grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
-                      <Image
-                        src="/logo/netflix.svg"
-                        width={100}
-                        height={1800}
-                        alt="hero image"
-                        style={{}}
-                      />
-                    </div>
-                    <div className="grayscale transition duration-200 hover:grayscale-0 cursor-pointer mx-auto">
-                      <Image
-                        src="/logo/google.svg"
-                        width={100}
-                        height={1800}
-                        alt="hero image"
-                        style={{}}
-                      />
+                  <div className="flex items-center gap-5 mt-5">
+                    <Image
+                      src="/logo/s5-logo-new.png"
+                      width={100}
+                      height={1800}
+                      alt="s5-logo"
+                      style={{}}
+                    />
+                    <div className="flex flex-col">
+                      <p className="text-gray-500 md:text-lg dark:text-gray-400">
+                        Anton Shaw
+                      </p>
+                      <p className="text-gray-500 md:text-lg dark:text-gray-400">
+                        (CEO) - S5 Maintenance
+                      </p>
                     </div>
                   </div>
                 </div>
+                <div className="flex gap-8 px-4 lg:px-8 items-center justify-between">
+                  <div className="transition duration-200 cursor-pointer">
+                    <Image
+                      src="/logo/lawnops-logo.webp"
+                      width={100}
+                      height={100}
+                      alt="lawnops-logo"
+                      style={{}}
+                    />
+                  </div>
+                  <div className="transition duration-200 cursor-pointer">
+                    <Image
+                      src="/logo/idcc-logo.png"
+                      width={100}
+                      height={100}
+                      alt="idcc-logo"
+                      style={{}}
+                    />
+                  </div>
+                  <div className="transition duration-200 cursor-pointer">
+                    <Image
+                      src="/logo/heyoo-logo.svg"
+                      width={100}
+                      height={100}
+                      alt="heyoo-logo"
+                      style={{}}
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="text-center md:text-start">
+              {/* <div className="text-center md:text-start">
                 <button
                   className="mt-9 rounded-full bg-[#31AFA9] text-white py-1.5 px-6 border-0 text-xl tracking-normal"
                   type="button"
                 >
                   Read More
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

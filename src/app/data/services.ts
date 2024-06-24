@@ -107,8 +107,8 @@ export const services = [
   },
   {
     id: 3,
-    name: "Production - Ready Application",
-    description: "Build applications that scale with your business.",
+    name: "Production Ready Applications",
+    description: "Build Applications that Scale with Your Business.",
     image: "/home-screen/production-ready-application.png",
     customStyle: "text-gray-800 dark:text-white",
     long_description: `
@@ -186,8 +186,8 @@ export const services = [
   },
   {
     id: 5,
-    name: "Data Visualisation",
-    description: "Gain insights from your data.",
+    name: "Data Visualisations",
+    description: "Gain Insights from Your Data.",
     image: "/home-screen/data-visualisation.jpg",
     customStyle: "text-white dark:text-white",
     long_description: `
@@ -218,8 +218,8 @@ export const services = [
   },
   {
     id: 6,
-    name: "Web Sites",
-    description: "Websites that are fast, secure and easy to manage.",
+    name: "Websites",
+    description: "Fast, Secure, and Easy-to-Manage Websites.",
     image: "/home-screen/website.jpg",
     customStyle: "text-gray-800 dark:text-white",
     long_description: `
