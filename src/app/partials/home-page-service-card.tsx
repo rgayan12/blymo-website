@@ -24,7 +24,7 @@ export default function HomePageServiceCard({ title, description, image, customS
           <div>
             <a href="#">
               <h5
-                className={`mt-4 ml-4 mb-2 text-2xl tracking-tight ${customStyle}`}
+                className={`mt-4 ml-4 mb-2 text-left text-2xl tracking-tight ${customStyle}`}
               >
                 {title}
               </h5>
@@ -32,7 +32,7 @@ export default function HomePageServiceCard({ title, description, image, customS
           </div>
 
           <div>
-            <p className={`ml-4 align-text-bottom font-normal ${customStyle}`}>
+            <p className={`ml-4 text-center font-normal ${customStyle}`}>
               {description}
             </p>
           </div>
