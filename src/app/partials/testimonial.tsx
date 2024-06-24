@@ -19,11 +19,12 @@ export default function Testimonial() {
         <figure className="mt-10">
           <blockquote className="text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
             <p>
-              “Working with BLYMO; was an absolute pleasure. Their team&apos;s
-              expertise and attention to detail transformed our vision into a
-              stunning reality. From concept to launch, they guided us every
-              step of the way, ensuring that our website not only met but
-              exceeded our expectations.”
+              “We needed a simple website for our maintenance company, and I
+              couldn’t be more excited about the result. The website’s clean,
+              simple, and easy-to-use design perfectly fits our needs. BLYMO’s
+              customer support is top-notch; they instantly act on my update
+              requests and make changes swiftly, thanks to our long-term
+              partnership.”
             </p>
           </blockquote>
           <figcaption className="mt-5">
