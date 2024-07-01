@@ -2,6 +2,7 @@ export const services = [
   {
     id: 1,
     name: "Product Design",
+    route: "product-design",
     description: "Converting Brilliant Ideas to Screens.",
     image: "/home-screen/product-design.png",
     customStyle: "text-gray-800 dark:text-white",
@@ -57,6 +58,7 @@ export const services = [
   {
     id: 2,
     name: "Proof of Concepts / MVP",
+    route: "proof-of-concepts",
     description: "Test the Waters with Speed and Precision.",
     image: "/home-screen/proof-of-concept.jpg",
     customStyle: "text-white dark:text-white",

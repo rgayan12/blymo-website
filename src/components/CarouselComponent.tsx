@@ -26,13 +26,14 @@ export default function CarouselComponent({ selectMember }: any) {
             key={index}
             className="sm:basis-1/2 md:basis-1/3 lg:basis-1/3 cursor-pointer"
           >
-            <div className="p-1" onClick={() => selectMember(service.id)}  style={{ height: "740px" }}>
-              <HomePageServiceCard
-                title={service.name}
-                description={service.description}
-                image={service.image}
-                customStyle={service.customStyle}
-              />
+            <div className="p-1" style={{ height: "740px" }}>
+                <HomePageServiceCard
+                  title={service.name}
+                  description={service.description}
+                  image={service.image}
+                  customStyle={service.customStyle}
+                  route={service?.route || "product-design"}
+                />
             </div>
           </CarouselItem>
         ))}
