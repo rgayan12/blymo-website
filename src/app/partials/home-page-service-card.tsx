@@ -34,7 +34,7 @@ export default function HomePageServiceCard({ title, description, image, customS
               </div>
 
               <div>
-                <p className={`ml-4 text-center font-normal ${customStyle}`}>
+                <p className={`ml-4 text-left font-normal ${customStyle}`}>
                   {description}
                 </p>
               </div>
