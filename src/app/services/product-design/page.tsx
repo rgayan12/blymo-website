@@ -72,7 +72,7 @@ export default function ProductDesign() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 pb-6">
               <div className="flex flex-col relative overflow-hidden mx-auto">
                 <Image
-                  src="/card/design-card-1.png"
+                  src="/services_cards/product_design/design-card-1.png"
                   alt="computer"
                   width={500}
                   height={500}
@@ -111,7 +111,7 @@ export default function ProductDesign() {
               </div>
               <div className="flex flex-col relative overflow-hidden mx-auto my-auto order-1 md:order-2">
                 <Image
-                  src="/card/design-card-2.png"
+                  src="/services_cards/product_design/design-card-2.png"
                   alt="computer"
                   width={500}
                   height={500}
@@ -122,7 +122,7 @@ export default function ProductDesign() {
             <div className="grid grid-cols-1 lg:grid-cols-2 mt-8 md:mt-16 gap-8 md:gap-16">
               <div className="flex flex-col relative overflow-hidden mx-auto">
                 <Image
-                  src="/card/design-card-3.jpeg"
+                  src="/services_cards/product_design/design-card-3.jpeg"
                   alt="computer"
                   width={500}
                   height={500}
