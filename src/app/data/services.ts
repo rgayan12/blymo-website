@@ -110,6 +110,7 @@ export const services = [
   {
     id: 3,
     name: "Production Ready Applications",
+    route: "production-ready-applications",
     description: "Build Applications that Scale with Your Business.",
     image: "/home-screen/production-ready-application.png",
     customStyle: "text-gray-800 dark:text-white",
@@ -159,6 +160,7 @@ export const services = [
     description: "Elevating Customer Experiences with Cutting-Edge Technology.",
     image: "/home-screen/ai-integration.jpg",
     customStyle: "text-white dark:text-white",
+    route: "ai-integration",
     long_description: `
     <p>Do you possess a wealth of data waiting to be unlocked for your customers or employees? At Blymo, we specialize in harnessing the power of advanced AI integrations to extract actionable insights and revolutionize user interactions.</p>
     <p>Picture this: a world where complex data relationships unfold like stories, where every chart and graph is a portal to understanding, and where even the most intricate datasets are decoded with ease.</p>
@@ -192,6 +194,7 @@ export const services = [
     description: "Gain Insights from Your Data.",
     image: "/home-screen/data-visualisation.jpg",
     customStyle: "text-white dark:text-white",
+    route: "data-visualization",
     long_description: `
     <p>At Blymo, we're in the business of transforming data into captivating tales of insight and opportunity.</p>
     <p>Picture this: a world where complex data relationships unfold like stories, where every chart and graph is a portal to understanding, and where even the most intricate datasets are decoded with ease.</p>
@@ -224,6 +227,7 @@ export const services = [
     description: "Fast, Secure, and Easy-to-Manage Websites.",
     image: "/home-screen/website.jpg",
     customStyle: "text-gray-800 dark:text-white",
+    route: "websites",
     long_description: `
     <p>In need of a website to showcase your product or service? Look no further. At Blymo, we specialize in crafting compelling websites that not only promote your offerings but also engage your audience effectively. With our content-first approach and attention to detail, we bring your vision to life, helping you reach wider audiences and make a lasting impression.</p>
     

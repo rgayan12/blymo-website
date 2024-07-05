@@ -20,13 +20,12 @@ export default function ProductDesign() {
                 Converting brilliant ideas to screens
               </p>
 
-              <div className="relative cursor-pointer w-full max-w-screen-sm md:max-w-screen-xl h-[40vh] md:h-[50vh] rounded-2xl overflow-hidden">
+              <div className="relative cursor-pointer w-full max-w-screen-sm md:max-w-screen-xl h-full max-h-[50vh] rounded-2xl overflow-hidden">
                 <Image
-                  src="/card/product-design.png"
-                  alt="hero image"
-                  fill={true}
-                  objectFit="fill"
-                  objectPosition="center"
+                  src="/services_cards/product_design/product-design.png"
+                  alt="websites hero image"
+                  height={1000}
+                  width={1000}
                   className="rounded-2xl"
                 />
               </div>
@@ -50,7 +49,10 @@ export default function ProductDesign() {
                   At BLYMO, we specialize in turning your brilliant ideas into
                   reality through innovative product design solutions.
                 </p>
-                <div className="text-center md:text-right text-xl md:text-3xl text-[#31AFA9]" style={{ marginTop: "5rem"  }}>
+                <div
+                  className="text-center md:text-right text-xl md:text-3xl text-[#31AFA9]"
+                  style={{ marginTop: "5rem" }}
+                >
                   Our Approach
                 </div>
                 <Separator className="my-8" />

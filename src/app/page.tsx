@@ -10,6 +10,8 @@ export default function Home() {
   const [isModalOpen, changeModelStatus] = useState(false);
   const [selectedUserId, setUserId] = useState(null);
 
+  const isBrowser = () => typeof window !== "undefined";
+
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
@@ -34,6 +36,11 @@ export default function Home() {
       window.removeEventListener("scroll", fadeInOnScroll);
     };
   }, []);
+
+  const scrollToTop = () => {
+    if (!isBrowser()) return;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const selectMember = (id: any) => {
     setUserId(id);
@@ -69,6 +76,7 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[0] = el;
           }}
+          data-index={0}
           className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="grid max-w-screen-xl px-4 py-8 lg:py-16 mx-auto grid-cols-1 lg:grid-cols-2">
@@ -113,6 +121,7 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[1] = el;
           }}
+          data-index={1}
           className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -135,6 +144,7 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[2] = el;
           }}
+          data-index={2}
           className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -240,6 +250,7 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[3] = el;
           }}
+          data-index={3}
           className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -316,6 +327,24 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <button
+          type="button"
+          onClick={scrollToTop}
+          className="fixed bottom-0 right-0 px-7 py-4 mr-8 mb-[71px] z-50 hidden md:block text-white bg-[#31afa9] border-none hover:bg-opacity-90 focus:outline-none focus:ring-[#31afa9] rounded-3xl text-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="size-6"
+          >
+            <path
+              fillRule="evenodd"
+              d="M11.47 2.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06l-6.22-6.22V21a.75.75 0 0 1-1.5 0V4.81l-6.22 6.22a.75.75 0 1 1-1.06-1.06l7.5-7.5Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
       <ServicePopUp props={props} />
     </>

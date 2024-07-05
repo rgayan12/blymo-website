@@ -3,7 +3,7 @@ import BreadcrumbComponent from "@/components/BreadcrumbComponent";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
-export default function ProductDesign() {
+export default function ProofOfConcepts() {
   return (
     <>
       <div>
@@ -20,13 +20,12 @@ export default function ProductDesign() {
                 Test the Waters with Speed and Precision.
               </p>
 
-              <div className="relative cursor-pointer w-full max-w-screen-sm md:max-w-screen-xl h-[40vh] md:h-[30vh] rounded-2xl overflow-hidden">
+              <div className="relative cursor-pointer w-full max-w-screen-sm md:max-w-screen-xl h-full max-h-[50vh] rounded-2xl overflow-hidden">
                 <Image
-                  src="/card/proof-of-concepts.jpg"
-                  alt="proof-of-concepts"
-                  fill={true}
-                  objectFit="fill"
-                  objectPosition="center"
+                  src="/services_cards/proof_of_concept/proof-of-concepts.jpg"
+                  alt="websites hero image"
+                  height={1000}
+                  width={1000}
                   className="rounded-2xl"
                 />
               </div>
@@ -114,7 +113,7 @@ export default function ProductDesign() {
                   </div>
                   <div className="my-4 px-4 block md:hidden">
                     <Image
-                      src="/card/tech-stack.jpg"
+                      src="/services_cards/proof_of_concept/tech-stack.jpg"
                       alt="tech-stack"
                       height={400}
                       width={400}
@@ -125,7 +124,7 @@ export default function ProductDesign() {
 
                 <div className="absolute hidden md:block md:pl-[calc(55%-0.5rem)] md:pt-[5vh]">
                   <Image
-                    src="/card/tech-stack.jpg"
+                    src="/services_cards/proof_of_concept/tech-stack.jpg"
                     alt="tech-stack"
                     height={400}
                     width={400}
@@ -157,7 +156,7 @@ export default function ProductDesign() {
                   </div>
                   <div className="my-4 px-4 block md:hidden">
                     <Image
-                      src="/card/agile.png"
+                      src="/services_cards/proof_of_concept/agile.png"
                       alt="agile"
                       height={400}
                       width={400}
@@ -167,7 +166,7 @@ export default function ProductDesign() {
                 </div>
                 <div className="absolute hidden md:block md:pr-[calc(60%-0.5rem)] md:pt-[3vh]">
                   <Image
-                    src="/card/agile.png"
+                    src="/services_cards/proof_of_concept/agile.png"
                     alt="agile"
                     height={400}
                     width={400}

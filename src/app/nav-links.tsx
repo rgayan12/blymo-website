@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function NavLinks() {
   const pathname = usePathname();
   return (
-    <nav className="bg-white dark:bg-gray-900">
+    <nav className="bg-white dark:bg-gray-900 sticky top-0 z-40">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <Image
