@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import ServicePopUp from "./partials/servicePopUp";
+import ScrollToTopButton from "./partials/moveToTopBtn";
 import CarouselComponent from "@/components/CarouselComponent";
 import "/public/css/home-page.css";
 import Link from "next/link";
@@ -9,8 +10,6 @@ import Link from "next/link";
 export default function Home() {
   const [isModalOpen, changeModelStatus] = useState(false);
   const [selectedUserId, setUserId] = useState(null);
-
-  const isBrowser = () => typeof window !== "undefined";
 
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
 
@@ -36,11 +35,6 @@ export default function Home() {
       window.removeEventListener("scroll", fadeInOnScroll);
     };
   }, []);
-
-  const scrollToTop = () => {
-    if (!isBrowser()) return;
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   const selectMember = (id: any) => {
     setUserId(id);
@@ -316,35 +310,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              {/* <div className="text-center md:text-start">
-                <button
-                  className="mt-9 rounded-full bg-[#31AFA9] text-white py-1.5 px-6 border-0 text-xl tracking-normal"
-                  type="button"
-                >
-                  Read More
-                </button>
-              </div> */}
             </div>
           </div>
         </section>
-        <button
-          type="button"
-          onClick={scrollToTop}
-          className="fixed bottom-0 right-0 px-7 py-4 mr-8 mb-[71px] z-50 hidden md:block text-white bg-[#31afa9] border-none hover:bg-opacity-90 focus:outline-none focus:ring-[#31afa9] rounded-3xl text-center"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="size-6"
-          >
-            <path
-              fillRule="evenodd"
-              d="M11.47 2.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06l-6.22-6.22V21a.75.75 0 0 1-1.5 0V4.81l-6.22 6.22a.75.75 0 1 1-1.06-1.06l7.5-7.5Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
+        <ScrollToTopButton />
       </div>
       <ServicePopUp props={props} />
     </>

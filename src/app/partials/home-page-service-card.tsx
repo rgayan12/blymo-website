@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function HomePageServiceCard({ title, description, image, customStyle, route = "product-design" }: HomePageServiceCardProps) {
     return (
       <>
-        <Link href={route}>
+        <Link href={'/services/' + route}>
           <div
             className="relative border border-gray-80 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 h-[580px] p-4"
             style={{
