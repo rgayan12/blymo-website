@@ -126,7 +126,7 @@ export default function Home() {
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div className="mx-auto max-w-screen-xl text-left mb-8 lg:mb-16">
-              <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
+              <h2 className="max-w-2xl lg:mb-5 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
                 Our Services
               </h2>
               <p className="text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
@@ -148,7 +148,7 @@ export default function Home() {
           className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
+            <h2 className="max-w-2xl lg:mb-5 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
               Our Process
             </h2>
             <p className="text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
