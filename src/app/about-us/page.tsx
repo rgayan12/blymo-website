@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import Testimonial from "../partials/testimonial";
-import LetsTalk from "../partials/lets-talk";
-import StaffMember from "../partials/staffMember";
-import TeamPopUp from "../partials/teamPopUp";
-import OurProcessAccordion from "../partials/our-process";
-import { teamMembers } from "../data/team-members";
+import Testimonial from "@/app/partials/testimonial";
+import LetsTalk from "@/app/partials/lets-talk";
+import StaffMember from "@/app/partials/staffMember";
+import TeamPopUp from "@/app/partials/teamPopUp";
+import OurProcessAccordion from "@/app/partials/our-process";
+import { teamMembers } from "@/app/data/team-members";
+import ScrollToTopButton from "@/app/partials/moveToTopBtn";
 
 export default function About() {
   const teamMembersData = teamMembers;
@@ -241,8 +242,9 @@ export default function About() {
           title="Get to know us"
           description="Discover how we can help bring your project to life. Our team of dedicated professionals is ready to collaborate with you."
         />
+        <ScrollToTopButton />
       </div>
-      <TeamPopUp props={props}/>
+      <TeamPopUp props={props} />
       {/* <TeamPopUp changeModelStatus={changeModelStatus} isModalOpen={isModalOpen} selectedUserId={selectedUserId} teamMembersData={teamMembersData}/> */}
     </>
   );

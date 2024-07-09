@@ -1,19 +1,32 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import ServicePopUp from "./partials/servicePopUp";
-import ScrollToTopButton from "./partials/moveToTopBtn";
+import Link from "next/link";
+import ServicePopUp from "@/app/partials/servicePopUp";
+import ScrollToTopButton from "@/app/partials/moveToTopBtn";
 import CarouselComponent from "@/components/CarouselComponent";
 import "/public/css/home-page.css";
-import Link from "next/link";
 
 export default function Home() {
   const [isModalOpen, changeModelStatus] = useState(false);
   const [selectedUserId, setUserId] = useState(null);
-
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
 
+  const searchParams = useSearchParams();
+  const search = searchParams.get("page");
+
   useEffect(() => {
+    // Scroll to section on page load
+    if (search === "services" && sectionsRef.current[1]) {
+      const element = sectionsRef.current[1];
+      const offsetTop =
+        element.getBoundingClientRect().top + window.scrollY - 20;
+
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+
+    // Fade in on scroll
     const fadeInOnScroll = () => {
       sectionsRef.current.forEach((section) => {
         if (!section) return;
@@ -268,7 +281,6 @@ export default function Home() {
                       width={100}
                       height={1800}
                       alt="s5-logo"
-                      style={{}}
                     />
                     <div className="flex flex-col">
                       <p className="text-gray-500 md:text-lg dark:text-gray-400">
@@ -287,7 +299,6 @@ export default function Home() {
                       width={100}
                       height={100}
                       alt="lawnops-logo"
-                      style={{}}
                     />
                   </div>
                   <div className="transition duration-200 cursor-pointer">
@@ -296,7 +307,6 @@ export default function Home() {
                       width={100}
                       height={100}
                       alt="idcc-logo"
-                      style={{}}
                     />
                   </div>
                   <div className="transition duration-200 cursor-pointer">
@@ -305,7 +315,6 @@ export default function Home() {
                       width={100}
                       height={100}
                       alt="heyoo-logo"
-                      style={{}}
                     />
                   </div>
                 </div>

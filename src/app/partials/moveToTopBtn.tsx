@@ -29,19 +29,19 @@ const ScrollToTopButton = () => {
     <button
       type="button"
       onClick={scrollToTop}
-      className={`fixed bottom-0 right-0 px-7 py-4 mr-8 mb-[71px] z-50 ${
-        isVisible ? 'block' : 'hidden'
-      } text-white bg-[#31afa9] border-none hover:bg-opacity-90 focus:outline-none focus:ring-[#31afa9] rounded-3xl text-center`}
+      className={`fixed bottom-0 right-0 px-6 py-4 mr-4 mb-[60px] z-50 cursor-pointer ${
+        isVisible ? "block" : "hidden"
+      }`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        fill="currentColor"
-        className="size-6"
+        fill="#979797"
+        className="size-16 cursor-pointer"
       >
         <path
           fillRule="evenodd"
-          d="M11.47 2.47a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06l-6.22-6.22V21a.75.75 0 0 1-1.5 0V4.81l-6.22 6.22a.75.75 0 1 1-1.06-1.06l7.5-7.5Z"
+          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm.53 5.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l1.72-1.72v5.69a.75.75 0 0 0 1.5 0v-5.69l1.72 1.72a.75.75 0 1 0 1.06-1.06l-3-3Z"
           clipRule="evenodd"
         />
       </svg>

@@ -13,10 +13,10 @@ export default function ProductDesign() {
           </div>
           <div className="px-4 mx-auto max-w-screen-lg py-8 md:py-16">
             <div>
-              <h1 className="mb-4 text-2xl md:text-5xl text-center">
+              <h1 className="mb-4 text-3xl md:text-5xl text-center font-poppins font-semibold">
                 Data Visualization
               </h1>
-              <p className="mb-8 text-2xl md:text-4xl text-center text-gray-500 dark:text-gray-400">
+              <p className="mb-8 text-2xl md:text-4xl text-center text-gray-500 dark:text-gray-400 font-poppins font-medium">
                 Gain insights from your data.
               </p>
 
@@ -37,7 +37,7 @@ export default function ProductDesign() {
           <div className="px-4 mx-auto max-w-screen-lg py-2 lg:py-4 text-center">
             <Card className="max-w-screen-sm md:max-w-screen-lg h-fit p-10">
               <CardContent>
-                <p className="text-left text-xl md:text-3xl mr-8 md:mr-24">
+                <p className="text-left text-xl font-light font-poppins md:text-3xl mr-8 md:mr-24">
                   At Blymo, we're in the business of{" "}
                   <span className="text-[#31AFA9]">transforming data</span> into
                   captivating tales of{" "}
@@ -45,7 +45,7 @@ export default function ProductDesign() {
                   <span className="text-[#31AFA9]">opportunity.</span>
                 </p>
                 <Separator className="my-8" />
-                <p className="text-left mt-4 lg:mt-8 text-xl md:text-3xl">
+                <p className="text-left font-normal font-poppins mt-4 lg:mt-8 text-xl md:text-3xl">
                   Imagine a world where complex data tells a story, where every
                   chart and graph opens doors to understanding, and
                   sophisticated datasets are easily illustrated
@@ -58,7 +58,7 @@ export default function ProductDesign() {
         <section className="bg-[#F7FFFF] dark:bg-gray-900 flex items-center py-8 md:py-16">
           <div className="py-2 px-4 mx-auto max-w-screen-lg lg:py-4 w-full">
             <div>
-              <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
+              <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-medium font-poppins md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
                 How it Works?
               </h2>
               <div className="relative cursor-pointer w-full max-w-screen-sm md:max-w-screen-lg h-full overflow-hidden">
@@ -70,7 +70,7 @@ export default function ProductDesign() {
                   className="rounded-2xl py-8 my-8"
                 />
               </div>
-              <div className="text-left mt-4 lg:mt-8 text-xl md:text-3xl">
+              <div className="text-left font-normal font-poppins mt-4 lg:mt-8 text-xl md:text-3xl">
                 We start engagements by identifying critical questions and
                 decisions that data should support across our business areas,
                 including tech, sales, supply chains, procurement, and research
@@ -78,7 +78,7 @@ export default function ProductDesign() {
                 identifying the additional data needed to inform the who, what,
                 when, where, and how of the decision-making process.
               </div>
-              <div className="text-left mt-4 lg:mt-8 text-xl md:text-3xl">
+              <div className="text-left font-normal font-poppins mt-4 lg:mt-8 text-xl md:text-3xl">
                 The output turns raw data into useful information by creating
                 automated reports, interactive dashboards, and predictive tools.
                 These are built into the workflow to help make better decisions
@@ -101,10 +101,10 @@ export default function ProductDesign() {
                 />
               </div>
               <div className="flex flex-col mx-auto px-4 md:px-0">
-                <p className="text-2xl md:text-4xl text-left mb-4 md:mb-8">
+                <p className="text-2xl font-medium font-poppins md:text-4xl text-left mb-4 md:mb-8">
                   Interactive Dashboards
                 </p>
-                <p className="text-xl md:text-2xl text-left text-wrap mb-4 md:mb-8">
+                <p className="text-xl font-normal font-poppins md:text-2xl text-left text-wrap mb-4 md:mb-8">
                   We design and develop interactive dashboards that enable users
                   to filter data, drill down into details, and explore
                   information in real-time.
@@ -113,10 +113,10 @@ export default function ProductDesign() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 mt-8 md:mt-16 gap-8 md:gap-16">
               <div className="flex flex-col mx-auto px-4 md:px-0 order-2 md:order-1">
-                <p className="text-2xl md:text-4xl text-left mb-4 md:mb-8">
+                <p className="text-2xl font-medium font-poppins md:text-4xl text-left mb-4 md:mb-8">
                   Custom Reporting
                 </p>
-                <p className="text-xl md:text-2xl text-left text-wrap mb-4 md:mb-8">
+                <p className="text-xl font-normal font-poppins md:text-2xl text-left text-wrap mb-4 md:mb-8">
                   We develop customized reports to fit your business needs,
                   including various metrics and key performance indicators
                   (KPIs).
@@ -124,7 +124,7 @@ export default function ProductDesign() {
               </div>
               <div className="flex flex-col relative overflow-hidden mx-auto my-auto order-1 md:order-2">
                 <Image
-                  src="/services_cards/data-visualization/tools.png"
+                  src="/services_cards/data-visualization/reporting.png"
                   alt="computer"
                   width={500}
                   height={500}
@@ -135,7 +135,7 @@ export default function ProductDesign() {
             <div className="grid grid-cols-1 lg:grid-cols-2 mt-8 md:mt-16 gap-8 md:gap-16">
               <div className="flex flex-col relative overflow-hidden mx-auto">
                 <Image
-                  src="/services_cards/data-visualization/reporting.png"
+                  src="/services_cards/data-visualization/tools.png"
                   alt="computer"
                   width={500}
                   height={500}
@@ -143,10 +143,10 @@ export default function ProductDesign() {
                 />
               </div>
               <div className="flex flex-col mx-auto px-4 md:px-0">
-                <p className="text-2xl md:text-4xl text-left mb-4 md:mb-8">
+                <p className="text-2xl font-medium font-poppins md:text-4xl text-left mb-4 md:mb-8">
                   Utilizing Industry-Standard Tools and Technologies
                 </p>
-                <p className="text-xl md:text-2xl text-left text-wrap mb-4 md:mb-8">
+                <p className="text-xl font-normal font-poppins md:text-2xl text-left text-wrap mb-4 md:mb-8">
                   We utilize industry-standard tools and technologies for data
                   analysis and reporting, from generalized and widely used tools
                   like R and Python for data analysis to business-specific tools
@@ -163,11 +163,11 @@ export default function ProductDesign() {
           <div className="py-2 px-4 mx-auto max-w-screen-lg lg:py-4 text-center">
             <Card className="max-w-screen-sm md:max-w-screen-lg h-fit p-10">
               <CardContent>
-                <p className="text-left font-bold mt-4 lg:mt-8 text-2xl md:text-3xl">
+                <p className="text-left font-medium font-poppins mt-4 lg:mt-8 text-2xl md:text-3xl">
                   Why choose BLYMO?
                 </p>
-                <p className="text-left mt-4 lg:mt-8 text-xl md:text-2xl">
-                  <span className="font-bold">
+                <p className="text-left font-light font-poppins mt-4 lg:mt-8 text-xl md:text-2xl">
+                  <span className="font-normal font-poppins">
                     {" "}
                     Creative Thinkers with Spatial Expertise:{" "}
                   </span>
@@ -177,8 +177,8 @@ export default function ProductDesign() {
                   requirements and tailor our visualizations to uncover hidden
                   stories within your data.
                 </p>
-                <p className="text-left mt-4 lg:mt-8 text-xl md:text-2xl">
-                  <span className="font-bold">
+                <p className="text-left font-light font-poppins mt-4 lg:mt-8 text-xl md:text-2xl">
+                  <span className="font-normal font-poppins">
                     {" "}
                     Customized Solutions for Maximum Impact:{" "}
                   </span>
@@ -188,9 +188,11 @@ export default function ProductDesign() {
                   analyses are not only accurate but also actionable, driving
                   tangible results for your business.
                 </p>
-                <p className="text-left mt-4 lg:mt-8 text-xl md:text-2xl">
-                  <span className="font-bold">Global Team of Experts:</span> Our
-                  international team of experts brings extensive experience
+                <p className="text-left font-light font-poppins mt-4 lg:mt-8 text-xl md:text-2xl">
+                  <span className="font-normal font-poppins">
+                    Global Team of Experts:
+                  </span>{" "}
+                  Our international team of experts brings extensive experience
                   across various industries. This global perspective allows us
                   to anticipate market trends and customer behaviors
                   effectively, providing strategic guidance to help you stay

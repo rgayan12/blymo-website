@@ -13,11 +13,11 @@ export default function ProofOfConcepts() {
           </div>
           <div className="px-4 mx-auto max-w-screen-lg py-8 md:py-16">
             <div>
-              <h1 className="mb-4 text-2xl md:text-5xl text-center">
+              <h1 className="mb-4 text-3xl md:text-5xl text-center font-poppins font-semibold">
                 Proof of Concepts / MVP
               </h1>
-              <p className="mb-8 text-2xl md:text-4xl text-center text-gray-500 dark:text-gray-400">
-                Test the Waters with Speed and Precision.
+              <p className="mb-8 text-2xl md:text-4xl text-center text-gray-500 dark:text-gray-400 font-poppins font-medium">
+                Test the waters with speed and precision.
               </p>
 
               <div className="relative cursor-pointer w-full max-w-screen-sm md:max-w-screen-xl h-full max-h-[50vh] rounded-2xl overflow-hidden">
@@ -37,7 +37,7 @@ export default function ProofOfConcepts() {
           <div className="px-4 mx-auto max-w-screen-lg py-2 lg:py-4 text-center">
             <Card className="max-w-screen-sm md:max-w-screen-lg h-fit p-10">
               <CardContent>
-                <p className="text-left text-xl md:text-3xl mr-8 md:mr-24">
+                <p className="text-left text-xl font-light font-poppins md:text-3xl mr-8 md:mr-24">
                   Are you eager to <span className="text-[#31AFA9]">test</span>{" "}
                   your{" "}
                   <span className="text-[#31AFA9]">groundbreaking idea</span> in
@@ -50,7 +50,7 @@ export default function ProofOfConcepts() {
                   expectations?
                 </p>
                 <Separator className="my-8" />
-                <p className="text-left mt-4 lg:mt-8 text-xl md:text-3xl">
+                <p className="text-left mt-4 lg:mt-8 text-xl font-normal font-poppins md:text-3xl">
                   Enter BLYMO, your partner in swiftly bringing your Minimum
                   Viable Product (MVP) to life. With our streamlined approach
                   and expertise, we empower startups to validate their concepts
@@ -76,10 +76,10 @@ export default function ProofOfConcepts() {
                   ></div>
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
-                  <h1 className="text-xl md:text-2xl text-left mb-4 ml-4">
+                  <h1 className="text-xl font-medium font-poppins md:text-2xl text-left mb-4 ml-4">
                     Boil it Down
                   </h1>
-                  <div className="text-lg md:text-xl text-left text-[#252525] font-normal p-8 bg-[#E4F5F4] rounded-[30px]">
+                  <div className="text-lg font-normal font-poppins md:text-xl text-left text-[#252525] p-8 bg-[#E4F5F4] rounded-[30px]">
                     We start by listening intently to your vision and
                     objectives, distilling them into the most essential
                     components. Our goal is to create a lean, focused MVP that
@@ -99,10 +99,10 @@ export default function ProofOfConcepts() {
                   ></div>
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
-                  <h1 className="text-xl md:text-2xl text-left mb-4 ml-4">
+                  <h1 className="text-xl font-medium font-poppins md:text-2xl text-left mb-4 ml-4">
                     Tech Stack
                   </h1>
-                  <div className="text-lg md:text-xl text-left text-[#252525] font-normal p-8 bg-[#E4F5F4] rounded-[30px]">
+                  <div className="text-lg font-normal font-poppins md:text-xl text-left text-[#252525] p-8 bg-[#E4F5F4] rounded-[30px]">
                     Choosing the right tech stack is crucial for the success of
                     your project. We eschew one-size-fits-all solutions like
                     WordPress in favors of tailor-made tech stacks that align
@@ -144,10 +144,10 @@ export default function ProofOfConcepts() {
                   ></div>
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
-                  <h1 className="text-xl md:text-2xl text-left mb-4 ml-4">
+                  <h1 className="text-xl font-medium font-poppins md:text-2xl text-left mb-4 ml-4">
                     Agile Development
                   </h1>
-                  <div className="text-lg md:text-xl text-left text-[#252525] font-normal p-8 bg-[#E4F5F4] rounded-[30px]">
+                  <div className="text-lg font-normal font-poppins md:text-xl text-left text-[#252525] p-8 bg-[#E4F5F4] rounded-[30px]">
                     We embrace the Agile methodology, breaking down development
                     into iterative cycles that prioritize collaboration,
                     adaptability, and rapid delivery. This approach allows us to
@@ -186,10 +186,10 @@ export default function ProofOfConcepts() {
                   ></div>
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)]">
-                  <h1 className="text-xl md:text-2xl text-left mb-4 ml-4">
+                  <h1 className="text-xl font-medium font-poppins md:text-2xl text-left mb-4 ml-4">
                     Integration with External Services
                   </h1>
-                  <div className="text-lg md:text-xl text-left text-[#252525] font-normal p-8 bg-[#E4F5F4] rounded-[30px]">
+                  <div className="text-lg font-normal font-poppins md:text-xl text-left text-[#252525] p-8 bg-[#E4F5F4] rounded-[30px]">
                     Time is of the essence when building an MVP. Rather than
                     reinventing the wheel, we leverage existing APIs and
                     external services to accelerate development and enhance
@@ -207,17 +207,23 @@ export default function ProofOfConcepts() {
           <div className="py-2 px-4 mx-auto max-w-screen-lg lg:py-4 text-center">
             <Card className="max-w-screen-sm md:max-w-screen-lg h-fit p-10">
               <CardContent>
-                <p className="text-left font-bold mt-4 lg:mt-8 text-2xl md:text-3xl">
+                <p className="text-left font-medium font-poppins mt-4 lg:mt-8 text-2xl md:text-3xl">
                   Why choose BLYMO?
                 </p>
-                <p className="text-left mt-4 lg:mt-8 text-xl md:text-2xl">
-                  <span className="font-bold"> Speed to Market: </span>
+                <p className="text-left font-light font-poppins mt-4 lg:mt-8 text-xl md:text-2xl">
+                  <span className="font-normal font-poppins">
+                    {" "}
+                    Speed to Market:{" "}
+                  </span>
                   Our streamlined development process enables us to deliver your
                   MVP in record time, giving you a head start in testing the
                   market and gaining valuable insights.
                 </p>
-                <p className="text-left mt-4 lg:mt-8 text-xl md:text-2xl">
-                  <span className="font-bold"> Cost-Effective Solutions </span>
+                <p className="text-left font-light font-poppins mt-4 lg:mt-8 text-xl md:text-2xl">
+                  <span className="font-normal font-poppins">
+                    {" "}
+                    Cost-Effective Solutions{" "}
+                  </span>
                   We understand the budget constraints faced by startups. Our
                   flexible pricing models and efficient use of resources ensure
                   you get the most bang for your buck without sacrificing
@@ -226,8 +232,10 @@ export default function ProofOfConcepts() {
                   providing ongoing support and scaling solutions to meet your
                   evolving needs.
                 </p>
-                <p className="text-left mt-4 lg:mt-8 text-xl md:text-2xl">
-                  <span className="font-bold">Tailored Tech Solutions:</span>
+                <p className="text-left font-light font-poppins mt-4 lg:mt-8 text-xl md:text-2xl">
+                  <span className="font-normal font-poppins">
+                    Tailored Tech Solutions:
+                  </span>
                   No two startups are alike, and neither are their tech needs.
                   We take a customized approach to tech stack selection,
                   ensuring your MVP is built on a foundation that supports your

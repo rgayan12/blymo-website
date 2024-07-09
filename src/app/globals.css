@@ -35,10 +35,18 @@
       --radius: 0.5rem;
 
       /* overwrite the service card css */
-      .custom-modal-overlay{
-        background: #000000b5 !important
+        .custom-modal-overlay {
+          background: #000000b5 !important
         }
-    }
+      
+        .font-poppins {
+          font-family: "poppins" !important;
+        }
+
+        .font-poppins-light{
+          font-family: "poppins-light" !important;
+        }
+      }
 
     .dark {
       --background: 222.2 84% 4.9%;

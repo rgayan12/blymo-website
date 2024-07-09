@@ -22,7 +22,7 @@ const BreadcrumbComponent = ({ pageName }: any) => {
             <Slash />
           </BreadcrumbSeparator>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/">Services</BreadcrumbLink>
+            <BreadcrumbLink href="/?page=services">Services</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator>
             <Slash />
