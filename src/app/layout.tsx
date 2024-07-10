@@ -6,6 +6,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { cn } from "@/lib/utils";
 import "./globals.css";
+import { Suspense } from "react";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -41,10 +42,12 @@ export default function RootLayout({
         ></link>
       </head>
       <body className={cn("font-sans antialiased", fontSans.variable)}>
-        <NavLinks />
-        {children}
-        <Analytics />
-        <Footer />
+        <Suspense>
+          <NavLinks />
+          {children}
+          <Analytics />
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

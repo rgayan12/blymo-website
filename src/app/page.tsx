@@ -13,18 +13,18 @@ export default function Home() {
   const [selectedUserId, setUserId] = useState(null);
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
 
-  // const searchParams = useSearchParams();
-  // const search = searchParams.get("page");
+  const searchParams = useSearchParams();
+  const search = searchParams.get("page");
 
   useEffect(() => {
     // Scroll to section on page load
-    // if (search === "services" && sectionsRef.current[1]) {
-    //   const element = sectionsRef.current[1];
-    //   const offsetTop =
-    //     element.getBoundingClientRect().top + window.scrollY - 20;
+    if (search === "services" && sectionsRef.current[1]) {
+      const element = sectionsRef.current[1];
+      const offsetTop =
+        element.getBoundingClientRect().top + window.scrollY - 20;
 
-    //   window.scrollTo({ top: offsetTop, behavior: "smooth" });
-    // }
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
 
     // Fade in on scroll
     const fadeInOnScroll = () => {
