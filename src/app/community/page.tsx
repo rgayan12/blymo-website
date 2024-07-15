@@ -7,7 +7,7 @@ export default function Community() {
   return (
     <>
       <div>
-        <section className=" bg-gray-100 px-6 py-10 sm:py-64 lg:px-0 bg-[url('/community/community.jpeg')] bg-cover min-h-[80vh]">
+        <section className="bg-gray-100 px-6 py-10 sm:py-64 lg:px-0 bg-[url('/community/community.jpeg')] bg-center bg-cover min-h-[100vh]">
           <div className="py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
             <h2 className="mb-8 lg:mb-8 md:text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
               Explore Our Community
