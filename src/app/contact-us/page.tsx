@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
-import "@animxyz/core";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import {
   Card,
   CardContent,
@@ -15,8 +15,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
 import ScrollToTopButton from "@/app/partials/moveToTopBtn";
 
 export default function ContactUs() {
@@ -42,10 +41,10 @@ export default function ContactUs() {
 
         <section className="bg-white dark:bg-gray-900">
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <Card className="w-full min-w-screen-lg rounded-3xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 p-5">
-                <div>
-                  <Card className="w-full min-h-[60vh] bg-[#31AFA9] rounded-3xl p-6">
+            <Card className="w-full bg-[#FBFBFB] min-w-screen-lg rounded-3xl mx-auto border-0 shadow-md">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 p-5">
+                <div className="col-span-5">
+                  <Card className="w-full min-h-full bg-[#31AFA9] rounded-3xl p-6">
                     <CardHeader>
                       <CardTitle className="text-2xl md:text-4xl font-medium font-poppins text-white">
                         Get in touch
@@ -58,13 +57,13 @@ export default function ContactUs() {
                     </CardHeader>
                     <CardContent>
                       <form>
-                        <div className="grid w-full items-center gap-4">
+                        <div className="grid w-full items-center gap-8">
                           <div className="flex items-center gap-8">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
                               fill="white"
-                              className="size-6"
+                              className="size-6 w-[10%]"
                             >
                               <path
                                 fillRule="evenodd"
@@ -73,7 +72,7 @@ export default function ContactUs() {
                               />
                             </svg>
 
-                            <p className="font-normal font-poppins text-lg text-white">
+                            <p className="w-[90%] font-normal font-poppins text-lg text-white">
                               +44 749 332 5738
                             </p>
                           </div>
@@ -82,13 +81,13 @@ export default function ContactUs() {
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
                               fill="white"
-                              className="size-6"
+                              className="size-6 w-[10%]"
                             >
                               <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
                               <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
                             </svg>
 
-                            <p className="font-normal font-poppins text-lg text-white">
+                            <p className="w-[90%] font-normal font-poppins text-lg text-white">
                               info@blymo.co.uk
                             </p>
                           </div>
@@ -97,7 +96,7 @@ export default function ContactUs() {
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 24 24"
                               fill="white"
-                              className="size-6"
+                              className="size-6 w-[10%]"
                             >
                               <path
                                 fillRule="evenodd"
@@ -106,7 +105,7 @@ export default function ContactUs() {
                               />
                             </svg>
 
-                            <p className="font-normal font-poppins text-lg text-white">
+                            <p className="w-[90%] font-normal font-poppins text-lg text-white">
                               BLYMO Ltd, International House, 142 Cromwell Road,
                               London, SW7 4EF
                             </p>
@@ -116,27 +115,43 @@ export default function ContactUs() {
                     </CardContent>
                   </Card>
                 </div>
-                <div>
+                <div className="col-span-7">
                   <form>
                     <div className="grid w-full items-center gap-1 md:p-8">
-                      <h2 className="my-6 lg:mb-8 text-xl md:text-3xl font-normal text-gray-900 dark:text-white">
+                      <h2 className="my-6 lg:mb-8 text-lg md:text-xl font-normal font-poppins text-black dark:text-white">
                         Fill in your details and we'll be in touch
                       </h2>
                       <div className="flex flex-col mb-3">
-                        <Input id="name" name="name" placeholder="Name" />
+                        <Input
+                          id="name"
+                          name="name"
+                          placeholder="Name"
+                          className="text-xl text-[#98999A]"
+                        />
                       </div>
                       <div className="flex flex-col mb-3">
-                        <Input id="email" name="email" placeholder="Email" />
+                        <Input
+                          id="email"
+                          name="email"
+                          placeholder="Email"
+                          className="text-xl text-[#98999A]"
+                        />
                       </div>
                       <div className="flex flex-col mb-3">
-                        <Input id="phone" name="phone" placeholder="Phone" />
+                        <Input
+                          id="phone"
+                          name="phone"
+                          placeholder="Phone"
+                          className="text-xl text-[#98999A]"
+                        />
                       </div>
                       <div className="flex flex-col mb-3">
                         <Textarea
                           id="description"
                           name="description"
                           placeholder="Tell us more about your project"
-                          rows={15}
+                          className="text-xl text-[#98999A]"
+                          rows={6}
                         />
                       </div>
                       <div className="flex items-center justify-end">
@@ -167,22 +182,22 @@ export default function ContactUs() {
                   className="mt-3 object-cover h-full"
                 />
                 <div className="absolute w-[60%] bottom-24 right-0 bg-[#494D4A] bg-opacity-70 text-white p-4 rounded-md">
-                  <div className="text-lg font-semibold">
-                    Lucie-Laure Mukendi
+                  <div className="text-2xl font-bold">Lucie-Laure Mukendi</div>
+                  <div className="text-xl font-semibold">
+                    COMMERCIAL DIRECTOR
                   </div>
-                  <div className="text-sm">COMMERCIAL DIRECTOR</div>
                 </div>
               </div>
               <div>
                 <div className="grid w-full gap-4 px-8 md:px-16 mt-10">
-                  <h2 className="my-7 lg:mb-8 text-xl md:text-2xl font-semibold font-poppins text-gray-900 dark:text-white">
+                  <h2 className="my-7 lg:mb-8 text-xl md:text-2xl font-semibold font-poppins text-black dark:text-white">
                     Not a fan of emails?
                   </h2>
-                  <p className="font-normal font-poppins text-xl text-gray-900 dark:text-white">
+                  <p className="font-normal font-poppins text-xl text-black dark:text-white">
                     Would you rather have a call to explain your needs than
                     email us?
                   </p>
-                  <p className="font-normal font-poppins text-xl text-gray-900 dark:text-white">
+                  <p className="font-normal font-poppins text-xl text-black dark:text-white">
                     Schedule a one-on-one call with Lucie to discuss your needs
                     in detail.
                   </p>
@@ -202,7 +217,7 @@ export default function ContactUs() {
 
         <section className="bg-white dark:bg-gray-900">
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <h2 className="max-w-2xl lg:mb-8 mb-4 text-xl font-medium font-poppins md:text-2xl xl:text-2xl text-gray-900 dark:text-white">
+            <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-gray-900 dark:text-white">
               Frequently Asked Questions
             </h2>
             <div>
@@ -229,24 +244,43 @@ export default function ContactUs() {
                       >
                         01
                       </span>
-                      <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white">
+                      <p className="font-poppins font-normal text-lg text-black dark:text-white">
                         What types of services does your company offer to
                         support software development and project management?
                       </p>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="font-poppins font-normal px-16">
-                    <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white mb-4">
+                    <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white mb-4">
                       We provide services in three ways:
                     </p>
-                    <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white  mb-4 ps-4">
-                      1. Set-up Product Teams: We assemble dedicated product teams customized to your project requirements. Our experts collaborate seamlessly with your in-house team to ensure the successful development and deployment of your software solutions.
+                    <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white  mb-4 ps-4">
+                      1.{" "}
+                      <span className="font-medium">Set-up Product Teams:</span>{" "}
+                      We assemble dedicated product teams customized to your
+                      project requirements. Our experts collaborate seamlessly
+                      with your in-house team to ensure the successful
+                      development and deployment of your software solutions.
                     </p>
-                    <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white  mb-4 ps-4">
-                      2. Staff Augmentation: Need an extra hand? Our staff augmentation services provide you with experienced professionals to supplement your existing team. Whether it’s for a short-term project or long-term engagement, our talent pool is ready to assist you in achieving your goals.
+                    <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white  mb-4 ps-4">
+                      2.{" "}
+                      <span className="font-medium">Staff Augmentation:</span>{" "}
+                      Need an extra hand? Our staff augmentation services
+                      provide you with experienced professionals to supplement
+                      your existing team. Whether it's for a short-term project
+                      or long-term engagement, our talent pool is ready to
+                      assist you in achieving your goals.
                     </p>
-                    <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white  mb-4 ps-4">
-                      3. Project-by-Project Basis: For businesses looking for project-specific expertise, we offer comprehensive project management services. From initial planning to final delivery, we handle every aspect of your project to ensure it’s completed on time and within budget.
+                    <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white  mb-4 ps-4">
+                      3.{" "}
+                      <span className="font-medium">
+                        Project-by-Project Basis:
+                      </span>{" "}
+                      For businesses looking for project-specific expertise, we
+                      offer comprehensive project management services. From
+                      initial planning to final delivery, we handle every aspect
+                      of your project to ensure it's completed on time and
+                      within budget.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -267,14 +301,17 @@ export default function ContactUs() {
                       >
                         02
                       </span>
-                      <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white">
+                      <p className="font-poppins font-normal text-lg text-black dark:text-white">
                         How much do your services cost?
                       </p>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="font-poppins font-normal px-16">
-                    <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white">
-                      Our pricing varies based on the scope and complexity of the project. Please contact our commercial director for a detailed quote. Lucie lucielaure.mukendi@blymo.co.uk Bastiyan bastiyan@blymo.co.uk
+                    <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white">
+                      Our pricing varies based on the scope and complexity of
+                      the project. Please contact our commercial director for a
+                      detailed quote. Lucie lucielaure.mukendi@blymo.co.uk
+                      Bastiyan bastiyan@blymo.co.uk
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -295,14 +332,15 @@ export default function ContactUs() {
                       >
                         03
                       </span>
-                      <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white">
+                      <p className="font-poppins font-normal text-lg text-black dark:text-white">
                         Who should I contact for partnership opportunities?
                       </p>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="font-poppins font-normal px-16">
-                    <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white">
-                      For partnership inquiries, please contact our commercial director Lucie at lucielaure.mukendi@ blymo.co.uk
+                    <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white">
+                      For partnership inquiries, please contact our commercial
+                      director Lucie at lucielaure.mukendi@ blymo.co.uk
                     </p>
                   </AccordionContent>
                 </AccordionItem>
@@ -323,14 +361,19 @@ export default function ContactUs() {
                       >
                         04
                       </span>
-                      <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white">
+                      <p className="font-poppins font-normal text-lg text-black dark:text-white">
                         How can I get support?
                       </p>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="font-poppins font-normal px-16">
-                    <p className="font-poppins font-normal text-lg text-gray-900 dark:text-white">
-                      The easiest way to get support is to send us an email at info@blymo.co.uk or bastiyan@blymo.c o.uk. Alternatively, you can give us a call at +44 7493 325738 if you prefer speaking directly with us. You can also schedule a call with Lucie using our Contact Us page, where you will have the option to choose a date and time in her calendar.
+                    <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white">
+                      The easiest way to get support is to send us an email at
+                      info@blymo.co.uk or bastiyan@blymo.c o.uk. Alternatively,
+                      you can give us a call at +44 7493 325738 if you prefer
+                      speaking directly with us. You can also schedule a call
+                      with Lucie using our Contact Us page, where you will have
+                      the option to choose a date and time in her calendar.
                     </p>
                   </AccordionContent>
                 </AccordionItem>

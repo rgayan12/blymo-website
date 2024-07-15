@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Poppins as FontSans } from "next/font/google";
 import Footer from "@/app/partials/footer";
 import NavLinks from "./nav-links";
@@ -6,7 +7,6 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { cn } from "@/lib/utils";
 import "./globals.css";
-import { Suspense } from "react";
 
 const fontSans = FontSans({
   subsets: ["latin"],

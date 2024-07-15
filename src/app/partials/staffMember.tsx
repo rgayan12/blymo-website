@@ -4,12 +4,40 @@ interface StaffMember {
   image: string;
 }
 import Image from "next/image";
+import { Card } from "@/components/ui/card";
 
 export default function StaffMember({ title, name, image }: StaffMember) {
-    
   return (
     <>
-      <div className="h-[326px]">
+      <Card className="w-full flex flex-col items-center justify-center gap-4 rounded-3xl shadow-md my-8 p-8">
+        <div>
+          <Image
+            src={image}
+            width={200}
+            height={200}
+            alt="our values - integrity"
+            className="text-center rounded-full shadow-xl"
+          />
+        </div>
+        <div className="pt-1">
+          <p className="text-lg text-center md:text-xl font-semibold font-poppins text-gray-900 uppercase pt-5">
+            {title}
+          </p>
+          <p className="text-lg text-center md:text-xl font-medium font-poppins text-gray-700 uppercase pt-1">
+            {name}
+          </p>
+          <div className="pt-4">
+            <Image
+              src="/about-us/linkedin.svg"
+              width={20}
+              height={20}
+              alt="our values - integrity"
+              className="text-center mx-auto"
+            />
+          </div>
+        </div>
+      </Card>
+      {/* <div className="h-[326px]">
         <div
           className="rounded-md flex items-center justify-center"
           style={{
@@ -35,7 +63,7 @@ export default function StaffMember({ title, name, image }: StaffMember) {
             {name}
           </p>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
