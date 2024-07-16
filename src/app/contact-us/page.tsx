@@ -28,13 +28,11 @@ export default function ContactUs() {
   return (
     <>
       <div>
-        <section className="bg-gray-100 px-6 py-10 sm:py-32 lg:px-0 bg-[url('/contact-us/header-image.jpeg')] bg-cover bg-center min-h-[100vh]">
-          <div className="py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
+        <section className="relative bg-gray-100 px-6 py-10 sm:py-52 lg:px-0 bg-[url('/contact-us/header-image.jpeg')] bg-cover bg-center min-h-[100vh]">
+          <div className="absolute inset-0 bg-[#1D1D1D] opacity-35"></div>
+          <div className="relative py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
             <h2 className="mb-8 lg:mb-8 md:text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
-              Contact Our Friendly
-            </h2>
-            <h2 className="mb-8 lg:mb-8 md:text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
-              Team
+              Connect with Us
             </h2>
           </div>
         </section>

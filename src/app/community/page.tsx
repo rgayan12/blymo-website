@@ -7,8 +7,9 @@ export default function Community() {
   return (
     <>
       <div>
-        <section className="bg-gray-100 px-6 py-10 sm:py-64 lg:px-0 bg-[url('/community/community.jpeg')] bg-center bg-cover min-h-[100vh]">
-          <div className="py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
+        <section className="relative bg-gray-100 px-6 py-10 sm:py-64 lg:px-0 bg-[url('/community/community.jpeg')] bg-cover bg-center min-h-[100vh]">
+          <div className="absolute inset-0 bg-[#1D1D1D] opacity-35"></div>
+          <div className="relative py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
             <h2 className="mb-8 lg:mb-8 md:text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
               Explore Our Community
             </h2>
@@ -173,16 +174,15 @@ export default function Community() {
           <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 py-4 md:py-8">
               <div>
-                <h2 className="max-w-2xl mt-4 mb-2 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
+                <h2 className="max-w-2xl mt-4 mb-2 font-medium font-poppins text-2xl md:text-5xl text-[#252525] dark:text-white">
                   From Our
                 </h2>
-                <h2 className="max-w-2xl font-semibold font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
+                <h2 className="max-w-2xl font-semibold font-poppins text-2xl md:text-5xl text-[#252525] dark:text-white">
                   Community
                 </h2>
-                <p className="mt-16 text-lg md:text-xl font-normal font-poppins text-[#252525]">
-                  Here's what other subscribers had to say about production
-                  online
-                </p>
+                <h2 className="max-w-2xl mt-4 mb-2 font-medium font-poppins text-2xl md:text-5xl text-[#252525] dark:text-white">
+                  to Yours
+                </h2>
               </div>
               <div className="w-full">
                 <div className="px-4 md:px-7">
@@ -192,10 +192,10 @@ export default function Community() {
                     height={100}
                     alt="our values - integrity"
                     className="text-center"
-                    style={{ 
+                    style={{
                       position: "relative",
-                      left: "-7px"
-                     }}
+                      left: "-7px",
+                    }}
                   />
                 </div>
                 <p className="px-4 md:px-8 text-lg md:text-xl font-normal font-poppins text-[#252525">
@@ -216,7 +216,7 @@ export default function Community() {
                     <p className="text-[#252525] font-normal font-poppins md:text-lg dark:text-gray-400">
                       Leo Arachchi
                     </p>
-                    <p className="text-[#252525] font-light font-poppins md:text-md dark:text-gray-400">
+                    <p className="text-[#252525] font-normal font-poppins md:text-md dark:text-gray-400">
                       The founder of Arachchi Foundation
                     </p>
                   </div>
