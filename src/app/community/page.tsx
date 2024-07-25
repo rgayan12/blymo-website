@@ -1,193 +1,271 @@
 "use client";
+import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import "keen-slider/keen-slider.min.css";
-import "@animxyz/core";
-import LetsTalk from "@/app/partials/lets-talk";
 import ScrollToTopButton from "@/app/partials/moveToTopBtn";
 
 export default function Community() {
   return (
-    <div>
-      {/* Hero Area */}
-
-      <section background-color="white" className="bg-white dark:bg-gray-900">
-        <div
-          className="relative border border-gray-80 shadow dark:bg-gray-800 dark:border-gray-700 h-[680px] p-4"
-          style={{
-            backgroundImage: `url(/community.jpeg)`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "top",
-          }}
-        >
-          <div className="absolute inset-0 bg-gray-800 opacity-10"></div>
-          <div className="relative">
-            <div>
-              <p className="font-normal text-white dark:text-gray-400 align-text-bottom"></p>
-            </div>
+    <>
+      <div>
+        <section className="relative bg-gray-100 px-6 py-10 sm:py-64 lg:px-0 bg-[url('/community/community.jpeg')] bg-cover bg-center min-h-[100vh]">
+          <div className="absolute inset-0 bg-[#1D1D1D] opacity-35"></div>
+          <div className="relative py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
+            <h2 className="mb-8 lg:mb-8 md:text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
+              Explore Our Community
+            </h2>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="bg-white dark:bg-gray-900">
-        <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-          <div className="justify-center grid grid-cols-1">
-            <div>
-              {" "}
-              <h2 className="mb-8 lg:mb-8 md:text-5xl font-semibold tracking-tight leading-tight text-gray-900 dark:text-white">
-                Tech Solutions for Good Causes
-              </h2>
-            </div>
-            <div>
-              <p className="mb-8 text-lg font-light text-gray-600 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">
-                It is at the heart of what we do. We help solo philanthropists
-                and community projects with limited budgets to spread their
-                value.
-              </p>
-              <p className="mb-8 text-lg  font-light text-gray-600 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">
-                At BLYMO, we believe in the power of change-makers - individuals
-                and organisations dedicated to making a positive impact in our
-                world. We are here to support outstanding nonprofit
-                organisations, and philanthropists, with pro-bono technological
-                solutions provided by our exceptional teams.{" "}
-              </p>
-
-              <p className="mb-8 text-lg  font-light text-gray-600 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">
-                Take a look at how we supported the Arachchi Foundation The
-                Arachchi Foundation, a bold initiative inspired by the vision of
-                philanthropist and real estate investor Leo Arachchi, operates
-                as a non-governmental organization committed to addressing
-                inequality and conflict. With strong connections to Sri Lanka,
-                the UK, and Dubai, the Foundation is dedicated to creating
-                positive change in these regions.
-              </p>
-
+        <section className="bg-white dark:bg-gray-900">
+          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+            <Card className="w-full rounded-xl my-8 shadow-md">
               <div>
-                {" "}
-                <h2 className="mb-8 lg:mb-8 lg:pt-10  md:text-4xl font-light tracking-tight leading-tight text-gray-900 dark:text-white">
-                  Our Services
-                </h2>
-              </div>
-              <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400 mb-8 py-2">
-                <li className="flex items-center text-lg font-light text-gray-600 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">
-                  <Image
-                    src="/check.svg"
-                    width={40}
-                    height={80}
-                    alt="our values - integrity"
-                    className="mr-4"
-                  />
-                  <span>Social media branding</span>
-                </li>
-                <li className="flex items-center text-lg font-light text-gray-600 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">
-                  <Image
-                    src="/check.svg"
-                    width={40}
-                    height={80}
-                    alt="our values - integrity"
-                    className="mr-4"
-                  />
-                  <span>Content writing</span>
-                </li>
-                <li className="flex items-center mb-8 text-lg font-light text-gray-600 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">
-                  <Image
-                    src="/check.svg"
-                    width={40}
-                    height={80}
-                    alt="our values - integrity"
-                    className="mr-4"
-                  />
-                  <span>Website Design and development</span>
-                </li>
-                <li className="flex items-center mb-8 text-lg font-light text-gray-600 lg:text-2xl sm:px-16 xl:px-1 dark:text-gray-400">
-                  <Image
-                    src="/check.svg"
-                    width={40}
-                    height={80}
-                    alt="our values - integrity"
-                    className="mr-4"
-                  />
-                  <span>Data visualisation</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <Image
-            src="/community-page2.png"
-            width={1000}
-            height={500}
-            alt="our values - integrity"
-            className="text-center"
-          />
-        </div>
-      </section>
-
-      <section className="bg-white dark:bg-gray-900">
-        <div className="py-8 lg:py-16 mx-auto max-w-screen-xl px-4">
-          <div className="justify-center grid grid-cols-1">
-            <div>
-              <h2 className="lg:pt-10  md:text-4xl font-light tracking-tight leading-tight text-gray-900 dark:text-white">
-                Result
-              </h2>
-            </div>
-
-            <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-8 lg:px-6">
-              <figure className="max-w-screen-md mx-auto">
-                <svg
-                  className="h-12 mx-auto mb-3 text-gray-400 dark:text-gray-600"
-                  viewBox="0 0 24 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <blockquote>
-                  <p className="text-2xl font-medium text-gray-900 dark:text-white">
-                    We are profoundly appreciative of the transformative work
-                    you've done on our brand. The new branding has not only
-                    exceeded our expectations but has also propelled our
-                    foundation into a fresh, modern direction that aligns
-                    perfectly with our vision. The attention to detail and
-                    creativity invested in this project are evident, and we are
-                    truly delighted with the results. Thank you for your
-                    exceptional efforts and dedication.
-                  </p>
-                </blockquote>
-                <figcaption className="flex items-center justify-center mt-6 space-x-3">
-                  <Image
-                    className="w-20 h-20 rounded-full"
-                    width={500}
-                    height={400}
-                    src="/leo-arachchi.jpg"
-                    alt="leo arachchi picture"
-                  />
-                  <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                    <div className="pr-3 font-medium text-gray-900 dark:text-white">
-                      The founder of Arachchi Foundation,
+                <div>
+                  <h2 className="px-4 py-4 md:px-8 mt-8 text-xl md:text-3xl font-semibold font-poppins tracking-tight leading-tight text-[#252525] dark:text-white">
+                    Tech Solutions for Good Causes
+                  </h2>
+                  <div className="p-8">
+                    <div className="flex items-center p-8">
+                      <div>
+                        <Image
+                          src="/community/bulb.svg"
+                          width={250}
+                          height={250}
+                          alt="bulb-image"
+                          className="text-center"
+                          style={{
+                            transform: "rotate(-30deg)",
+                          }}
+                        />
+                      </div>
+                      <p className="px-4 md:px-8 text-lg md:text-xl font-normal font-poppins text-[#252525]">
+                        Tech Solutions for Good Causes It is at the heart of
+                        what we do. We help solo philanthropists and community
+                        projects with limited budgets to spread their value.
+                      </p>
                     </div>
-                    <div className="pl-3 text-sm font-light text-gray-500 dark:text-gray-400">
-                      Leo Arachchi
+                    <div className="relative flex items-center p-8 mb-8 md:mb-16">
+                      <p className="px-4 md:px-8 text-lg md:text-xl font-normal font-poppins text-[#252525]">
+                        At BLYMO, we believe in the power of change-makers -
+                        individuals and organizations dedicated to making a
+                        positive impact in our world. We are here to support
+                        outstanding nonprofit organizations, and
+                        philanthropists, with pro-bono technological solutions
+                        provided by our exceptional teams.
+                      </p>
+                      <div className="absolute -right-4 -bottom-16">
+                        <Image
+                          src="/community/spinner.svg"
+                          width={200}
+                          height={200}
+                          alt="our values - integrity"
+                          className="text-center"
+                          style={{
+                            transform: "rotate(180deg)",
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
-                </figcaption>
-              </figure>
-            </div>
-            <p className="text-2xl font-medium text-gray-900 dark:text-white">
-              All you have to do is submit a project, and we will connect you
-              with the expertise and resources you need to amplify your impact.
-            </p>
+                </div>
+              </div>
+            </Card>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <LetsTalk
-        title="Reach out"
-        description="Talk to us about your community project, whether existing or new, and we'll connect you with our experts to amplify its impact."
-      />
-      <ScrollToTopButton />
-    </div>
+        <section className="bg-[#F7FFFF] dark:bg-gray-900">
+          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+            <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
+              A Case Study
+            </h2>
+            <p className="w-full mb-8 font-normal font-poppins text-[#252525] text-lg md:text-xl dark:text-gray-400">
+              The Arachchi Foundation, a bold initiative inspired by the vision
+              of philanthropist and real estate investor Leo Arachchi, operates
+              as a non-governmental organization committed to addressing
+              inequality and conflict. With strong connections to Sri Lanka, the
+              UK, and Dubai, the Foundation is dedicated to creating positive
+              change in these regions. Our services to the Arachchi foundation
+              were,
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 my-8 md:my-16">
+              <div>
+                <div className="flex flex-col items-center gap-6">
+                  <div className="rounded-full bg-[#31AFA9] flex items-center justify-center w-10 h-10">
+                    <Image
+                      src="/community/hastag.svg"
+                      width={20}
+                      height={20}
+                      alt="our values - integrity"
+                      className="text-center"
+                    />
+                  </div>
+                  <p className="font-normal font-poppins text-center text-[#252525] text-lg md:text-xl">
+                    Social media branding
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-col items-center gap-6">
+                  <div className="rounded-full bg-[#31AFA9] flex items-center justify-center w-10 h-10">
+                    <Image
+                      src="/community/journal-alt.svg"
+                      width={20}
+                      height={20}
+                      alt="our values - integrity"
+                      className="text-center"
+                    />
+                  </div>
+                  <p className="font-normal font-poppins text-center text-[#252525] text-lg md:text-xl">
+                    Content writing
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-col items-center gap-6">
+                  <div className="rounded-full bg-[#31AFA9] flex items-center justify-center w-10 h-10">
+                    <Image
+                      src="/about-us/display-code.svg"
+                      width={20}
+                      height={20}
+                      alt="our values - integrity"
+                      className="text-center"
+                    />
+                  </div>
+                  <p className="font-normal font-poppins text-center text-[#252525] text-lg md:text-xl">
+                    Website Design and development
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div className="flex flex-col items-center gap-6">
+                  <div className="rounded-full bg-[#31AFA9] flex items-center justify-center w-10 h-10">
+                    <Image
+                      src="/community/chart-histogram.svg"
+                      width={20}
+                      height={20}
+                      alt="our values - integrity"
+                      className="text-center"
+                    />
+                  </div>
+                  <p className="font-normal font-poppins text-center text-[#252525] text-lg md:text-xl">
+                    Data visualisation
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white dark:bg-gray-900">
+          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+            <div>
+              <video
+                src="/community/community_video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+              ></video>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white dark:bg-gray-900">
+          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 py-4 md:py-8">
+              <div>
+                <h2 className="max-w-2xl mt-4 mb-2 font-medium font-poppins text-2xl md:text-5xl text-[#252525] dark:text-white">
+                  From Our
+                </h2>
+                <h2 className="max-w-2xl font-semibold font-poppins text-2xl md:text-5xl text-[#252525] dark:text-white">
+                  Community
+                </h2>
+                <h2 className="max-w-2xl mt-4 mb-2 font-medium font-poppins text-2xl md:text-5xl text-[#252525] dark:text-white">
+                  to Yours
+                </h2>
+              </div>
+              <div className="w-full">
+                <div className="px-4 md:px-7">
+                  <Image
+                    src="/community/quotes.svg"
+                    width={100}
+                    height={100}
+                    alt="our values - integrity"
+                    className="text-center"
+                    style={{
+                      position: "relative",
+                      left: "-7px",
+                    }}
+                  />
+                </div>
+                <p className="px-4 md:px-8 text-lg md:text-xl font-normal font-poppins text-[#252525">
+                  We are very grateful for the incredible work you've done on
+                  our brand. The new branding has surpassed our expectations and
+                  has taken our foundation in a modern direction that fits our
+                  vision perfectly. Thank you for your exceptional efforts and
+                  dedication."
+                </p>
+                <div className="flex items-center gap-5 px-4 md:px-8 pt-8">
+                  <Image
+                    src="/logo/leo-logo.png"
+                    width={80}
+                    height={80}
+                    alt="s5-logo"
+                  />
+                  <div className="flex flex-col">
+                    <p className="text-[#252525] font-normal font-poppins md:text-lg dark:text-gray-400">
+                      Leo Arachchi
+                    </p>
+                    <p className="text-[#252525] font-normal font-poppins md:text-md dark:text-gray-400">
+                      The founder of Arachchi Foundation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#F7FFFF] dark:bg-gray-900 relative">
+          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+            <h2 className="lg:mb-8 mb-4 text-start text-2xl font-medium font-poppins md:text-4xl text-[#252525] dark:text-white">
+              Reach Out
+            </h2>
+            <p className="lg:mb-8 mb-4 text-start text-lg font-normal font-poppins md:text-xl text-[#252525] dark:text-white max-w-xl">
+              Talk to us about your community project, whether existing or new,
+              and we'll connect you with our experts to amplify its impact.
+            </p>
+            <div className="flex items-start">
+              <button
+                className="mt-4 mb-8 w-[150px] bg-[#31afa9] hover:bg-[#31afa9]/90 text-white font-semibold py-2 px-4 border rounded-full"
+                type="button"
+              >
+                Let's Talk
+              </button>
+            </div>
+          </div>
+          <div className="absolute hidden md:block bottom-0 right-0">
+            <Image
+              src="/community/girl.svg"
+              width={550}
+              height={500}
+              alt="our values - integrity"
+              className="text-center bg-[#F7FFFF]"
+            />
+          </div>
+          <div className="absolute md:hidden bottom-0 right-0">
+            <Image
+              src="/community/girl.svg"
+              width={200}
+              height={200}
+              alt="our values - integrity"
+              className="text-center bg-[#F7FFFF]"
+            />
+          </div>
+        </section>
+
+        <ScrollToTopButton />
+      </div>
+    </>
   );
 }

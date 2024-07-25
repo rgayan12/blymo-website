@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Modal } from "flowbite-react";
 import { teamMembers } from "../data/team-members";
 import { useEffect } from 'react';
+import Image from "next/image";
 
 export default function TeamPopUp(props : any) {
   const {
@@ -39,44 +40,47 @@ export default function TeamPopUp(props : any) {
         style={{ minWidth: "70vw", paddingTop: "2rem" }}
       >
         <div className="w-full">
-          <div className="grid grid-cols-12">
-            <div className="col-span-6">
-              <div className="modal w-full">
-                <img
-                  className="object-cover h-full w-full rounded-l-lg"
-                  src={userImage}
-                  alt="profile image"
-                />
-              </div>
-            </div>
-            <div className="modal col-span-6">
+          <div className="w-full">
+            <div className="modal">
               <div className="flex items-center">
                 <div className="ml-2 p-5 w-full">
-                  <div className="text-lg font-medium text-gray-900 flex items-center justify-between">
-                    <div className="text-3xl font-medium text-gray-900">
-                      {name}
-                    </div>
-                    <div>
+                  <div className="relative flex justify-center items-center w-full">
+                    <Image
+                      src={userImage}
+                      width={200}
+                      height={200}
+                      alt="our values - integrity"
+                      className="text-center rounded-full shadow-xl"
+                    />
+                    <div className="absolute top-4 right-12">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
                         viewBox="0 0 24 24"
-                        fill="currentColor"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
                         className="size-7 cursor-pointer"
                         onClick={() => changeModelStatus(false)}
                       >
                         <path
-                          fill-rule="evenodd"
-                          d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
-                          clip-rule="evenodd"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                         />
                       </svg>
                     </div>
                   </div>
-
-                  <div className="text-lg font-medium text-gray-500 mt-2">
+                  <div className="text-lg font-medium text-[#252525] flex items-center justify-center mt-4">
+                    <div className="text-3xl font-medium text-[#252525]">
+                      {name}
+                    </div>
+                  </div>
+                  <div className="text-2xl text-center font-medium text-text-[#252525] mt-2">
                     {title}
                   </div>
-                  <p className="mt-4 text-sm text-gray-500">{description}</p>
+                  <p className="mt-8 px-8 md:px-16 text-sm font-normal text-[#252525]">
+                    {description}
+                  </p>
                 </div>
               </div>
             </div>
