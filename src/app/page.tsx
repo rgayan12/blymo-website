@@ -1,18 +1,32 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import ServicePopUp from "./partials/servicePopUp";
+import Link from "next/link";
+import ServicePopUp from "@/app/partials/servicePopUp";
+import ScrollToTopButton from "@/app/partials/moveToTopBtn";
 import CarouselComponent from "@/components/CarouselComponent";
 import "/public/css/home-page.css";
-import Link from "next/link";
 
 export default function Home() {
   const [isModalOpen, changeModelStatus] = useState(false);
   const [selectedUserId, setUserId] = useState(null);
-
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
 
+  const searchParams = useSearchParams();
+  const search = searchParams.get("page");
+
   useEffect(() => {
+    // Scroll to section on page load
+    if (search === "services" && sectionsRef.current[1]) {
+      const element = sectionsRef.current[1];
+      const offsetTop =
+        element.getBoundingClientRect().top + window.scrollY - 20;
+
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+
+    // Fade in on scroll
     const fadeInOnScroll = () => {
       sectionsRef.current.forEach((section) => {
         if (!section) return;
@@ -69,6 +83,7 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[0] = el;
           }}
+          data-index={0}
           className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="grid max-w-screen-xl px-4 py-8 lg:py-16 mx-auto grid-cols-1 lg:grid-cols-2">
@@ -113,11 +128,12 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[1] = el;
           }}
+          data-index={1}
           className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div className="mx-auto max-w-screen-xl text-left mb-8 lg:mb-16">
-              <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
+              <h2 className="max-w-2xl lg:mb-5 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
                 Our Services
               </h2>
               <p className="text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
@@ -135,10 +151,11 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[2] = el;
           }}
+          data-index={2}
           className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
+            <h2 className="max-w-2xl lg:mb-5 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
               Our Process
             </h2>
             <p className="text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">
@@ -240,6 +257,7 @@ export default function Home() {
           ref={(el) => {
             sectionsRef.current[3] = el;
           }}
+          data-index={3}
           className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -263,7 +281,6 @@ export default function Home() {
                       width={100}
                       height={1800}
                       alt="s5-logo"
-                      style={{}}
                     />
                     <div className="flex flex-col">
                       <p className="text-gray-500 md:text-lg dark:text-gray-400">
@@ -282,7 +299,6 @@ export default function Home() {
                       width={100}
                       height={100}
                       alt="lawnops-logo"
-                      style={{}}
                     />
                   </div>
                   <div className="transition duration-200 cursor-pointer">
@@ -291,7 +307,6 @@ export default function Home() {
                       width={100}
                       height={100}
                       alt="idcc-logo"
-                      style={{}}
                     />
                   </div>
                   <div className="transition duration-200 cursor-pointer">
@@ -300,22 +315,14 @@ export default function Home() {
                       width={100}
                       height={100}
                       alt="heyoo-logo"
-                      style={{}}
                     />
                   </div>
                 </div>
               </div>
-              {/* <div className="text-center md:text-start">
-                <button
-                  className="mt-9 rounded-full bg-[#31AFA9] text-white py-1.5 px-6 border-0 text-xl tracking-normal"
-                  type="button"
-                >
-                  Read More
-                </button>
-              </div> */}
             </div>
           </div>
         </section>
+        <ScrollToTopButton />
       </div>
       <ServicePopUp props={props} />
     </>
