@@ -99,7 +99,7 @@ export default function Footer() {
                   <Link href="/">Home</Link>
                 </div>
                 <div className="text-sm w-full text-left mt-5 gap-4 text-[#E3E3E3] dark:text-[#E3E3E3]">
-                  <Link href="/about">About Us</Link>
+                  <Link href="/about-us">About Us</Link>
                 </div>{" "}
                 <div className="text-sm w-full text-left mt-5 gap-4 text-[#E3E3E3] dark:text-[#E3E3E3]">
                   <Link href="/services">Services</Link>
@@ -108,7 +108,7 @@ export default function Footer() {
                   <Link href="/community">Community</Link>
                 </div>
                 <div className="text-sm w-full text-left mt-5 gap-4 text-[#E3E3E3] dark:text-[#E3E3E3]">
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact-us">Contact Us</Link>
                 </div>
               </div>
               <div
