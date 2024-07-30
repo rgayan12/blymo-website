@@ -46,6 +46,10 @@
         .font-poppins-light{
           font-family: "poppins-light" !important;
         }
+
+        .icon-white {
+          filter: brightness(500%);
+        }
       }
 
     .dark {

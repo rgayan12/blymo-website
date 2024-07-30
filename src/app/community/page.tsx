@@ -2,6 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import ScrollToTopButton from "@/app/partials/moveToTopBtn";
+import { Link } from "lucide-react";
 
 export default function Community() {
   return (
@@ -236,30 +237,34 @@ export default function Community() {
               and we'll connect you with our experts to amplify its impact.
             </p>
             <div className="flex items-start">
-              <button
-                className="mt-4 mb-8 w-[150px] bg-[#31afa9] hover:bg-[#31afa9]/90 text-white font-semibold py-2 px-4 border rounded-full"
-                type="button"
-              >
-                Let's Talk
-              </button>
+              <a href="/contact-us">
+                <button
+                  className="mt-4 mb-8 w-[150px] bg-[#31afa9] hover:bg-[#31afa9]/90 text-white font-semibold py-2 px-4 border rounded-full"
+                  type="button"
+                >
+                  Let's Talk
+                </button>
+              </a>
             </div>
           </div>
-          <div className="absolute hidden md:block bottom-0 right-0">
+          <div className="absolute hidden md:block bottom-0 right-0 overflow-hidden">
             <Image
               src="/community/girl.svg"
               width={550}
               height={500}
               alt="our values - integrity"
-              className="text-center bg-[#F7FFFF]"
+              className="text-center"
+              style={{ position: "relative", top: "46px" }}
             />
           </div>
-          <div className="absolute md:hidden bottom-0 right-0">
+          <div className="absolute md:hidden bottom-0 right-0 overflow-hidden">
             <Image
               src="/community/girl.svg"
               width={200}
               height={200}
               alt="our values - integrity"
-              className="text-center bg-[#F7FFFF]"
+              className="text-center"
+              style={{ position: "relative", top: "16px" }}
             />
           </div>
         </section>

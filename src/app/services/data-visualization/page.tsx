@@ -139,7 +139,7 @@ export default function ProductDesign() {
                   alt="computer"
                   width={500}
                   height={500}
-                  className="rounded-2xl object-cover h-full -mt-7 -ml-2"
+                  className="rounded-2xl object-cover mt-16 ml-2"
                 />
               </div>
               <div className="flex flex-col mx-auto px-4 md:px-0">
