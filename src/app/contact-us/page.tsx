@@ -28,7 +28,7 @@ export default function ContactUs() {
   return (
     <>
       <div>
-        <section className="relative bg-gray-100 px-6 py-10 sm:py-52 lg:px-0 bg-[url('/contact-us/header-image.jpeg')] bg-cover bg-center min-h-[100vh]">
+        <section className="relative bg-gray-100 px-6 py-10 sm:py-52 lg:px-0 bg-[url('/contact-us/header-image.jpeg')] bg-cover bg-center min-h-[60vh]">
           <div className="absolute inset-0 bg-[#1D1D1D] opacity-35"></div>
           <div className="relative py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
             <h2 className="mb-8 lg:mb-8 md:text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
@@ -38,8 +38,8 @@ export default function ContactUs() {
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-            <Card className="w-full bg-[#FBFBFB] min-w-screen-lg rounded-3xl mx-auto border-0 shadow-md">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
+            <Card className="w-full bg-[#FBFBFB] rounded-3xl mx-auto border-0 shadow-md">
               <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 p-5">
                 <div className="col-span-5">
                   <Card className="w-full min-h-full bg-[#31AFA9] rounded-3xl p-6">
@@ -154,8 +154,8 @@ export default function ContactUs() {
         </section>
 
         <section className="bg-white dark:bg-gray-900 border border-t border-b">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-10 lg:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-5">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
+            <div className="min-w-screen-xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative">
                 <Image
                   src="/members/luchie-bg-white.jpg"
@@ -199,7 +199,7 @@ export default function ContactUs() {
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-gray-900 dark:text-white">
               Frequently Asked Questions
             </h2>
@@ -374,7 +374,7 @@ export default function ContactUs() {
                   </AccordionTrigger>
                   <AccordionContent className="font-poppins font-normal px-16">
                     <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white">
-                      The easiest way to get support is to send us an email at {" "}
+                      The easiest way to get support is to send us an email at{" "}
                       <a
                         className="text-[#31AFA9] underline"
                         href="mailto:lucielaure.mukendi@blymo.co.uk"

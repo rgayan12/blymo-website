@@ -26,7 +26,7 @@ export default function About() {
   return (
     <>
       <div>
-        <section className="relative bg-gray-100 px-6 py-10 sm:py-52 lg:px-0 bg-[url('/about-us/our-vision.jpeg')] bg-cover bg-center min-h-[100vh]">
+        <section className="relative bg-gray-100 px-6 py-10 sm:py-52 lg:px-0 bg-[url('/about-us/our-vision.jpeg')] bg-cover bg-center min-h-[60vh]">
           <div className="absolute inset-0 bg-[#1D1D1D] opacity-35"></div>
           <div className="relative py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
             <h2 className="mb-8 lg:mb-8 md:text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
@@ -36,7 +36,7 @@ export default function About() {
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <Card className="w-full rounded-xl my-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                 <div>
@@ -97,7 +97,7 @@ export default function About() {
         </section>
 
         <section className="bg-[#F7FFFF] dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
               Our Values
             </h2>
@@ -115,7 +115,7 @@ export default function About() {
                 <p className="font-medium text-[#31AFA9] text-lg md:text-xl dark:text-gray-400 group-hover:opacity-10">
                   Integrity
                 </p>
-                <div className="absolute cursor-pointer font-normal px-4 top-5 right-0 text-xs text-[#252525] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute cursor-pointer font-medium px-4 top-5 right-0 text-xs text-center text-[#252525] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   Your success is our success. We are committed to delivering
                   high-quality results that exceed your expectations fostering
                   trust and transparency in all our partnerships.
@@ -134,7 +134,7 @@ export default function About() {
                 <p className="font-medium text-[#31AFA9] text-lg md:text-xl dark:text-gray-400 group-hover:opacity-10">
                   Inclusivity/Diversity
                 </p>
-                <div className="absolute cursor-pointer font-normal px-4 top-5 right-0 text-xs text-[#252525] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute cursor-pointer font-medium px-4 top-5 right-0 text-xs text-center text-[#252525] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   We embrace a culture of inclusivity and diversity, valuing the
                   unique perspectives and experiences that each team member and
                   client brings.
@@ -154,7 +154,7 @@ export default function About() {
                 <p className="font-medium text-[#31AFA9] text-lg md:text-xl dark:text-gray-400 group-hover:opacity-10">
                   Resourcefulness
                 </p>
-                <div className="absolute cursor-pointer font-normal px-4 top-5 right-0 text-xs text-[#252525] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute cursor-pointer font-medium px-4 top-5 right-0 text-xs text-center text-[#252525] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   We leverage our knowledge and skills to overcome challenges
                   and deliver exceptional outcomes.
                 </div>
@@ -172,7 +172,7 @@ export default function About() {
                 <p className="font-medium text-[#31AFA9] text-lg md:text-xl dark:text-gray-400 group-hover:opacity-10">
                   Transparency
                 </p>
-                <div className="absolute cursor-pointer font-normal px-4 top-5 right-0 text-xs text-[#252525] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute cursor-pointer font-medium px-4 top-5 right-0 text-xs text-center text-[#252525] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   We are constantly exploring new ideas and approaches to drive
                   progress and deliver future-ready solutions.
                 </div>
@@ -182,7 +182,7 @@ export default function About() {
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
               Meet Our Team
             </h2>
@@ -205,7 +205,7 @@ export default function About() {
         </section>
 
         <section className="bg-[#F7FFFF] dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
               Our Process for Success
             </h2>
@@ -358,7 +358,7 @@ export default function About() {
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
               Don't Just Take Our Word for it
             </h2>
@@ -428,7 +428,7 @@ export default function About() {
         </section>
 
         <section className="bg-[#F7FFFF] dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <h2 className="lg:mb-8 mb-4 text-center text-2xl font-medium font-poppins md:text-4xl text-[#252525] dark:text-white">
               Get to know us
             </h2>

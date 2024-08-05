@@ -62,10 +62,10 @@ export default function Home() {
     <>
       <div>
         {/* Hero Section */}
-        <section className="max-w-screen-xl mx-auto p-4 flex flex-wrap items-center justify-center h-[calc(100vh-5rem)] min-h-[calc(100vh-5rem)] font-poppins">
-          <div>
+        <section className="relative max-w-screen-xl mx-auto p-4 flex flex-wrap items-center justify-center h-[calc(100vh-5rem)] min-h-[calc(100vh-5rem)] font-poppins">
+          <div className="absolute w-full h-0 pb-[56.25%] mt-8">
             <video
-              className="absolute inset-0 object-cover w-full h-full mt-8"
+              className="absolute inset-0 w-full h-full object-cover"
               src="/home-screen/header-video.mp4"
               autoPlay
               loop
@@ -87,10 +87,10 @@ export default function Home() {
                   alt="arrow right"
                   width={10}
                   height={10}
-                  style={{ 
+                  style={{
                     position: "relative",
                     left: "-17px",
-                   }}
+                  }}
                 />
               </div>
             </Link>

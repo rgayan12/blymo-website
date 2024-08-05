@@ -11,7 +11,7 @@ export default function ProductDesign() {
           <div className="py-4 px-4 mx-auto max-w-screen-xl">
             <BreadcrumbComponent pageName="Data Visualization" />
           </div>
-          <div className="px-4 mx-auto max-w-screen-lg py-8 md:py-16">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <div>
               <h1 className="mb-4 text-3xl md:text-5xl text-center font-poppins font-semibold">
                 Data Visualization
@@ -20,22 +20,24 @@ export default function ProductDesign() {
                 Gain insights from your data.
               </p>
 
-              <div className="relative cursor-pointer w-full max-w-screen-sm md:max-w-screen-xl h-full max-h-[50vh] rounded-2xl overflow-hidden">
-                <Image
-                  src="/services_cards/data-visualization/data-visualization.jpeg"
-                  alt="data visualization hero image"
-                  height={1000}
-                  width={1000}
-                  className="rounded-2xl"
-                />
+              <div className="w-full max-w-full sm:max-w-screen-sm md:max-w-screen-xl rounded-2xl overflow-hidden">
+                <div className="relative pb-[50%]">
+                  <Image
+                    src="/services_cards/data-visualization/data-visualization.jpeg"
+                    alt="websites hero image"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-2xl px-4 md:px-0"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-white dark:bg-gray-900 flex items-center py-8 md:py-16">
-          <div className="px-4 mx-auto max-w-screen-lg py-2 lg:py-4 text-center">
-            <Card className="max-w-screen-sm md:max-w-screen-lg h-fit p-10">
+        <section className="bg-white dark:bg-gray-900">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
+            <Card className="max-w-screen-sm md:max-w-screen-xl h-fit p-10">
               <CardContent>
                 <p className="text-left text-xl font-light font-poppins md:text-3xl mr-8 md:mr-24">
                   At Blymo, we're in the business of{" "}
@@ -55,18 +57,18 @@ export default function ProductDesign() {
           </div>
         </section>
 
-        <section className="bg-[#F7FFFF] dark:bg-gray-900 flex items-center py-8 md:py-16">
-          <div className="py-2 px-4 mx-auto max-w-screen-lg lg:py-4 w-full">
+        <section className="bg-[#F7FFFF] dark:bg-gray-900">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16 px-4 md:px-0">
             <div>
               <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-medium font-poppins md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
                 How it Works?
               </h2>
-              <div className="relative cursor-pointer w-full max-w-screen-sm md:max-w-screen-lg h-full overflow-hidden">
+              <div className="relative cursor-pointer w-full max-w-screen-sm md:max-w-screen-xl h-full overflow-hidden">
                 <Image
                   src="/services_cards/data-visualization/how_it_work.png"
                   alt="hero image"
                   height={1000}
-                  width={1000}
+                  width={2000}
                   className="rounded-2xl py-8 my-8"
                 />
               </div>
@@ -88,8 +90,8 @@ export default function ProductDesign() {
           </div>
         </section>
 
-        <section className="bg-white dark:bg-gray-900 flex items-center py-8 md:py-16">
-          <div className="mx-auto max-w-screen-sm md:max-w-screen-lg">
+        <section className="bg-white dark:bg-gray-900">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 pb-6">
               <div className="flex flex-col relative overflow-hidden mx-auto">
                 <Image
@@ -159,9 +161,9 @@ export default function ProductDesign() {
           </div>
         </section>
 
-        <section className="bg-white dark:bg-gray-900 flex items-center py-8 md:py-16">
-          <div className="py-2 px-4 mx-auto max-w-screen-lg lg:py-4 text-center">
-            <Card className="max-w-screen-sm md:max-w-screen-lg h-fit p-10">
+        <section className="bg-white dark:bg-gray-900">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
+            <Card className="max-w-screen-sm md:max-w-screen-xl h-fit p-10">
               <CardContent>
                 <p className="text-left font-medium font-poppins mt-4 lg:mt-8 text-2xl md:text-3xl">
                   Why choose BLYMO?
