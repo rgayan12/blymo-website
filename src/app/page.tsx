@@ -103,7 +103,7 @@ export default function Home() {
             sectionsRef.current[0] = el;
           }}
           data-index={0}
-          className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900 p-20"
+          className="opacity-0 transition-opacity ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900 p-20"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
             <p className="mb-12 font-medium text-2xl text-[#3A3A3A] font-poppins">
@@ -130,7 +130,7 @@ export default function Home() {
             sectionsRef.current[1] = el;
           }}
           data-index={1}
-          className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
+          className="opacity-0 transition-opacity ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
             <div className="mx-auto max-w-screen-xl text-left mb-8 lg:mb-16">
@@ -153,7 +153,7 @@ export default function Home() {
             sectionsRef.current[2] = el;
           }}
           data-index={2}
-          className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900 p-16"
+          className="opacity-0 transition-opacity ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900 p-16"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
             <h2 className="max-w-2xl lg:mb-5 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
@@ -308,7 +308,7 @@ export default function Home() {
             sectionsRef.current[3] = el;
           }}
           data-index={3}
-          className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-white dark:bg-gray-900"
+          className="opacity-0 transition-opacity ease-in delay-700 bg-white dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
             <div>
@@ -379,7 +379,7 @@ export default function Home() {
             sectionsRef.current[4] = el;
           }}
           data-index={2}
-          className="opacity-0 transition-opacity duration-[4000ms] ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900 p-16 font-poppins"
+          className="opacity-0 transition-opacity ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900 p-16 font-poppins"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 text-center">
             <div className="text-4xl font-medium mb-8">Get to know us</div>
