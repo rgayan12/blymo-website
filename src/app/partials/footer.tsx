@@ -117,9 +117,9 @@ export default function Footer() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-[80%,20%] lg:gap-8 max-w-screen-sm md:max-w-screen-xl p-10 md:p-0">
-            <div className="text-center lg:text-start">
-              <h1 className="mb-4 text-3xl md:text-2xl lg:text-3xl">
+          <div className="grid grid-cols-1 lg:grid-cols-[80%,20%] lg:gap-8 max-w-screen-sm md:max-w-screen-xl p-10 md:p-0 text-[#FFF]">
+            <div className="text-center lg:text-start mt-5">
+              <h1 className="mb-4 text-2xl md:text-2xl">
                 Ready to Validate Your Idea?
               </h1>
               <p>
