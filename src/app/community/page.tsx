@@ -2,12 +2,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import ScrollToTopButton from "@/app/partials/moveToTopBtn";
+import { Link } from "lucide-react";
 
 export default function Community() {
   return (
     <>
       <div>
-        <section className="relative bg-gray-100 px-6 py-10 sm:py-64 lg:px-0 bg-[url('/community/community.jpeg')] bg-cover bg-center min-h-[100vh]">
+        <section className="relative bg-gray-100 px-6 py-10 sm:py-52 lg:px-0 bg-[url('/community/community.jpeg')] bg-cover bg-center min-h-[60vh]">
           <div className="absolute inset-0 bg-[#1D1D1D] opacity-35"></div>
           <div className="relative py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
             <h2 className="mb-8 lg:mb-8 md:text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
@@ -17,7 +18,7 @@ export default function Community() {
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <Card className="w-full rounded-xl my-8 shadow-md">
               <div>
                 <div>
@@ -74,7 +75,7 @@ export default function Community() {
         </section>
 
         <section className="bg-[#F7FFFF] dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
               A Case Study
             </h2>
@@ -157,7 +158,7 @@ export default function Community() {
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <div>
               <video
                 src="/community/community_video.mp4"
@@ -171,7 +172,7 @@ export default function Community() {
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 py-4 md:py-8">
               <div>
                 <h2 className="max-w-2xl mt-4 mb-2 font-medium font-poppins text-2xl md:text-5xl text-[#252525] dark:text-white">
@@ -227,7 +228,7 @@ export default function Community() {
         </section>
 
         <section className="bg-[#F7FFFF] dark:bg-gray-900 relative">
-          <div className="py-8 lg:py-16 mx-auto max-w-screen-lg px-4">
+          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
             <h2 className="lg:mb-8 mb-4 text-start text-2xl font-medium font-poppins md:text-4xl text-[#252525] dark:text-white">
               Reach Out
             </h2>
@@ -236,30 +237,34 @@ export default function Community() {
               and we'll connect you with our experts to amplify its impact.
             </p>
             <div className="flex items-start">
-              <button
-                className="mt-4 mb-8 w-[150px] bg-[#31afa9] hover:bg-[#31afa9]/90 text-white font-semibold py-2 px-4 border rounded-full"
-                type="button"
-              >
-                Let's Talk
-              </button>
+              <a href="/contact-us">
+                <button
+                  className="mt-4 mb-8 w-[150px] bg-[#31afa9] hover:bg-[#31afa9]/90 text-white font-semibold py-2 px-4 border rounded-full"
+                  type="button"
+                >
+                  Let's Talk
+                </button>
+              </a>
             </div>
           </div>
-          <div className="absolute hidden md:block bottom-0 right-0">
+          <div className="absolute hidden md:block bottom-0 right-0 overflow-hidden">
             <Image
               src="/community/girl.svg"
               width={550}
               height={500}
               alt="our values - integrity"
-              className="text-center bg-[#F7FFFF]"
+              className="text-center"
+              style={{ position: "relative", top: "46px" }}
             />
           </div>
-          <div className="absolute md:hidden bottom-0 right-0">
+          <div className="absolute md:hidden bottom-0 right-0 overflow-hidden">
             <Image
               src="/community/girl.svg"
               width={200}
               height={200}
               alt="our values - integrity"
-              className="text-center bg-[#F7FFFF]"
+              className="text-center"
+              style={{ position: "relative", top: "16px" }}
             />
           </div>
         </section>

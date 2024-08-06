@@ -41,7 +41,12 @@ export default function RootLayout({
           rel="stylesheet"
         ></link>
       </head>
-      <body className={cn("font-sans antialiased", fontSans.variable)}>
+      <body
+        className={cn(
+          "font-sans antialiased",
+          fontSans.variable
+        )}
+      >
         <Suspense>
           <NavLinks />
           {children}
