@@ -270,8 +270,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-normal font-poppins text-[#252525] text-md my-8">
-                    At this stage, we tirelessly test the product, hunting down
-                    those pesky bugs.
+                    Once testing is complete, we deploy the product to the live environment.
                   </p>
                 </div>
               </div>
@@ -292,9 +291,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-normal font-poppins text-[#252525] text-md my-8">
-                    Post-deployment, we conduct a comprehensive project review
-                    to gather feedback, evaluate success, and anticipate future
-                    requirements to sustain the project.
+                    We rigorously test the product to identify and fix any issues.
                   </p>
                 </div>
               </div>

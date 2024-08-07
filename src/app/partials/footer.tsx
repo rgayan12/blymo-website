@@ -1,20 +1,79 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function Footer() {
-  const router = usePathname();
-  const URLSegments = router.split("/");
+  const router = useRouter();
+  const path = usePathname();
+  const URLSegments = path.split("/");
   const [showMainFooter, setShowMainFooter] = useState(true);
+
+  const handleResetAndRedirect = () => {
+    // Reset the current URL by navigating to the current pathname
+    router.replace(window.location.pathname);
+    // Then navigate to the new page
+    router.push("/contact-us");
+  };
+
   useEffect(() => {
     if (URLSegments[1] === "services") {
       setShowMainFooter(false);
-    }else{
+    } else {
       setShowMainFooter(true);
     }
   });
+
+  let paragraphContent;
+
+  switch (URLSegments[2]) {
+    case "production-ready-applications":
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your product development needs and take the first step towards turning
+          your vision into reality.
+        </p>
+      );
+      break;
+    case "ai-integration":
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your AI Integration needs and take the first step towards turning your
+          vision into reality.
+        </p>
+      );
+      break;
+    case "data-visualization":
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your data visualization needs and take the first step towards turning
+          your vision into reality.
+        </p>
+      );
+      break;
+    case "websites":
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your website needs and take the first step towards turning your vision
+          into reality.
+        </p>
+      );
+      break;
+    default:
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your MVP development needs and take the first step towards turning
+          your vision into reality.
+        </p>
+      );
+      break;
+  }
 
   return (
     <footer className="font-poppins bg-[#343434]">
@@ -86,11 +145,11 @@ export default function Footer() {
                     src="/footer/facebook.svg"
                     alt="Facebook"
                     className="w-8 h-8"
-                    style={{ 
-                      padding:"8px",
-                      background:"#8C8C8C4D",
-                      borderRadius:"50%"
-                     }}
+                    style={{
+                      padding: "8px",
+                      background: "#8C8C8C4D",
+                      borderRadius: "50%",
+                    }}
                   />
                 </div>
                 <div className="flex items-center justify-center">
@@ -98,11 +157,11 @@ export default function Footer() {
                     src="/footer/linkedin.svg"
                     alt="LinkedIn"
                     className="w-8 h-8"
-                    style={{ 
-                      padding:"8px",
-                      background:"#8C8C8C4D",
-                      borderRadius:"50%"
-                     }}
+                    style={{
+                      padding: "8px",
+                      background: "#8C8C8C4D",
+                      borderRadius: "50%",
+                    }}
                   />
                 </div>
               </div>
@@ -122,21 +181,16 @@ export default function Footer() {
               <h1 className="mb-4 text-2xl md:text-2xl">
                 Ready to Validate Your Idea?
               </h1>
-              <p>
-                Let's embark on this journey together. Contact us today to
-                discuss your MVP development needs and take the first step
-                towards turning your vision into reality.
-              </p>
+              {paragraphContent}
             </div>
             <div className="text-center lg:text-left">
-              <Link href="contact-us">
-                <button
-                  className="mt-12 font-medium rounded-full bg-[#31afa9] py-3 px-10 text-white"
-                  type="button"
-                >
-                  GET IN TOUCH
-                </button>
-              </Link>
+              <button
+                className="mt-12 font-medium rounded-full bg-[#31afa9] py-3 px-10 text-white"
+                type="button"
+                onClick={handleResetAndRedirect}
+              >
+                GET IN TOUCH
+              </button>
             </div>
           </div>
         )}

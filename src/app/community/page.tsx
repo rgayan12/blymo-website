@@ -40,7 +40,7 @@ export default function Community() {
                         />
                       </div>
                       <p className="px-4 md:px-8 text-lg md:text-xl font-normal font-poppins text-[#252525]">
-                        Tech Solutions for Good Causes It is at the heart of
+                        It is at the heart of
                         what we do. We help solo philanthropists and community
                         projects with limited budgets to spread their value.
                       </p>
@@ -218,7 +218,7 @@ export default function Community() {
                       Leo Arachchi
                     </p>
                     <p className="text-[#252525] font-normal font-poppins md:text-md dark:text-gray-400">
-                      The founder of Arachchi Foundation
+                      The Founder of Arachchi Foundation
                     </p>
                   </div>
                 </div>
