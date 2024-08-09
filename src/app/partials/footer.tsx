@@ -8,6 +8,7 @@ export default function Footer() {
   const router = useRouter();
   const path = usePathname();
   const URLSegments = path.split("/");
+
   const [showMainFooter, setShowMainFooter] = useState(true);
 
   const handleResetAndRedirect = () => {
