@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/accordion";
 import Image from "next/image";
 import ScrollToTopButton from "@/app/partials/moveToTopBtn";
+import GoogleCalendarButton from "@/app/partials/googleCalendarButton";
 
 export default function ContactUs() {
   const [openItem, setOpenItem] = useState(null);
@@ -185,12 +186,7 @@ export default function ContactUs() {
                     in detail.
                   </p>
                   <div className="flex items-center justify-start space-y-2">
-                    <button
-                      className="mt-9 w-[200px] bg-[#31afa9] hover:bg-[#31afa9]/90 text-white font-semibold py-2 px-4 border rounded-full"
-                      type="button"
-                    >
-                      Start New Project
-                    </button>
+                    <GoogleCalendarButton />
                   </div>
                 </div>
               </div>
