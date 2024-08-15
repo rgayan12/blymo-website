@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ReCaptchaProvider } from "next-recaptcha-v3";
 import { Suspense } from "react";
 import { Poppins as FontSans } from "next/font/google";
 import Footer from "@/app/partials/footer";
@@ -45,14 +46,17 @@ export default function RootLayout({
           href="https://calendar.google.com/calendar/scheduling-button-script.css"
           rel="stylesheet"
         />
-
       </head>
       <body className={cn("font-sans antialiased", fontSans.variable)}>
         <Suspense>
-          <NavLinks />
-          {children}
-          <Analytics />
-          <Footer />
+          <ReCaptchaProvider
+            reCaptchaKey={process.env.RECAPTCHA_SITE_KEY}
+          >
+            <NavLinks />
+            {children}
+            <Analytics />
+            <Footer />
+          </ReCaptchaProvider>
         </Suspense>
       </body>
     </html>

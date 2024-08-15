@@ -76,7 +76,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="font-poppins bg-[#343434]">
+    <footer className="font-poppins bg-[#484848]">
       <div className="max-w-screen-xl mx-auto w-full py-6 lg:py-8 mb-4 md:mb-8">
         {showMainFooter ? (
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4">
@@ -195,21 +195,23 @@ export default function Footer() {
           </div>
         )}
       </div>
-      <hr className="border-[#9C9C9C] dark:border-gray-700 max-w-screen-xl mx-auto" />
-      <div className="flex flex-col lg:flex-row justify-between items-center max-w-screen-xl mx-auto py-8">
-        <div className="py-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
-          © 2023{" "}
-          <a href="https://blymo.co.uk/" className="hover:underline">
-            BLYMO
-          </a>
-          . All Rights Reserved.
-        </div>
-        <div className="flex flex-col lg:flex-row gap-4 px-4 lg:px-8 items-center justify-between">
-          <div className="pt-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
-            <Link href="/privacy-policy">Privacy Policy</Link>
+      {/* <hr className="border-[#9C9C9C] dark:border-gray-700 max-w-screen-xl mx-auto" /> */}
+      <div className="w-full bg-[#343434]">
+        <div className="flex flex-col lg:flex-row justify-between items-center max-w-screen-xl mx-auto py-8">
+          <div className="py-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
+            © 2023{" "}
+            <a href="https://blymo.co.uk/" className="hover:underline">
+              BLYMO
+            </a>
+            . All Rights Reserved.
           </div>
-          <div className="pt-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
-            <Link href="/terms-and-conditions">Terms & Conditions</Link>
+          <div className="flex flex-col lg:flex-row gap-4 px-4 lg:px-8 items-center justify-between">
+            <div className="pt-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
+              <Link href="/privacy-policy">Privacy Policy</Link>
+            </div>
+            <div className="pt-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
+              <Link href="/terms-and-conditions">Terms & Conditions</Link>
+            </div>
           </div>
         </div>
       </div>

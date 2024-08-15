@@ -235,7 +235,7 @@ export default function Home() {
                 <div className="flex items-center gap-6">
                   <div className="rounded-full bg-[#31AFA9] flex items-center justify-center w-10 h-10">
                     <Image
-                      src="/about-us/feedback-review.svg"
+                      src="/about-us/bug.svg"
                       width={20}
                       height={20}
                       alt="our values - integrity"
@@ -243,13 +243,14 @@ export default function Home() {
                     />
                   </div>
                   <p className="font-medium font-poppins text-[#252525] text-xl md:text-2xl">
-                    Review
+                    Test
                   </p>
                 </div>
                 <div>
                   <p className="font-normal font-poppins text-[#252525] text-md my-8">
-                    At this stage, we tirelessly test the product, hunting down
-                    those pesky bugs.
+                    Post-deployment, we conduct a comprehensive project review
+                    to gather feedback, evaluate success, and anticipate future
+                    requirements to sustain the project.
                   </p>
                 </div>
               </div>
@@ -279,7 +280,7 @@ export default function Home() {
                 <div className="flex items-center gap-6">
                   <div className="rounded-full bg-[#31AFA9] flex items-center justify-center w-10 h-10">
                     <Image
-                      src="/about-us/bug.svg"
+                      src="/about-us/feedback-review.svg"
                       width={20}
                       height={20}
                       alt="our values - integrity"
@@ -287,17 +288,16 @@ export default function Home() {
                     />
                   </div>
                   <p className="font-medium font-poppins text-[#252525] text-xl md:text-2xl">
-                    Test
+                    Review
                   </p>
                 </div>
                 <div>
                   <p className="font-normal font-poppins text-[#252525] text-md my-8">
-                    Post-deployment, we conduct a comprehensive project review
-                    to gather feedback, evaluate success, and anticipate future
-                    requirements to sustain the project.
+                    At this stage, we tirelessly test the product, hunting down
+                    those pesky bugs.
                   </p>
                 </div>
-              </div>
+              </div>              
             </div>
           </div>
         </section>
