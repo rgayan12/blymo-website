@@ -3,9 +3,11 @@ import { useState } from "react";
 import { teamMembers } from "@/app/data/team-members";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 import StaffMember from "@/app/partials/staffMember";
 import TeamPopUp from "@/app/partials/teamPopUp";
 import ScrollToTopButton from "@/app/partials/moveToTopBtn";
+import "/public/css/home-page.css";
 
 export default function About() {
   const teamMembersData = teamMembers;
@@ -29,14 +31,14 @@ export default function About() {
         <section className="relative bg-gray-100 px-6 py-10 sm:py-52 lg:px-0 bg-[url('/about-us/our-vision.jpeg')] bg-cover bg-center min-h-[60vh]">
           <div className="absolute inset-0 bg-[#1D1D1D] opacity-35"></div>
           <div className="relative py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
-            <h2 className="mb-8 lg:mb-8 md:text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
+            <h2 className="mb-8 text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
               Our Story
             </h2>
           </div>
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
+          <div className="px-4 mx-auto max-w-screen-xl py-8 lg:py-16">
             <Card className="w-full rounded-xl my-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
                 <div>
@@ -97,8 +99,8 @@ export default function About() {
         </section>
 
         <section className="bg-[#F7FFFF] dark:bg-gray-900">
-          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
-            <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
+          <div className="px-4 mx-auto max-w-screen-xl py-8 lg:py-16">
+            <h2 className="mb-4 lg:mb-8 font-medium font-poppins text-center md:text-left text-2xl md:text-3xl text-[#252525] dark:text-white">
               Our Values
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -182,14 +184,14 @@ export default function About() {
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
-            <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
+          <div className="px-4 mx-auto max-w-screen-xl py-8 lg:py-16">
+            <h2 className="mb-4 lg:mb-8 font-medium font-poppins text-center md:text-left text-2xl md:text-3xl text-[#252525] dark:text-white">
               Meet Our Team
             </h2>
             <div className="grid md:grid-cols-3 gap-10 items-center justify-center cursor-pointer">
               {teamMembersData.map((team) => (
                 <div
-                  className="max-w-80 h-full"
+                  className="w-full md:max-w-80 h-full"
                   key={team.id}
                   onClick={() => selectMember(team.id)}
                 >
@@ -205,8 +207,8 @@ export default function About() {
         </section>
 
         <section className="bg-[#F7FFFF] dark:bg-gray-900">
-          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
-            <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
+          <div className="px-4 mx-auto max-w-screen-xl py-8 lg:py-16">
+            <h2 className="mb-4 lg:mb-8 font-medium font-poppins text-center md:text-left text-2xl md:text-3xl text-[#252525] dark:text-white">
               Our Process for Success
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 my-8 md:my-16">
@@ -358,8 +360,8 @@ export default function About() {
         </section>
 
         <section className="bg-white dark:bg-gray-900">
-          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
-            <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-[#252525] dark:text-white">
+          <div className="px-4 mx-auto max-w-screen-xl py-8 lg:py-16">
+            <h2 className="mb-4 lg:mb-8 font-medium font-poppins text-center md:text-left text-2xl md:text-3xl text-[#252525] dark:text-white">
               Don't Just Take Our Word for it
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 py-4 md:py-8">
@@ -428,21 +430,21 @@ export default function About() {
         </section>
 
         <section className="bg-[#F7FFFF] dark:bg-gray-900">
-          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
-            <h2 className="lg:mb-8 mb-4 text-center text-2xl font-medium font-poppins md:text-4xl text-[#252525] dark:text-white">
+          <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 text-center">
+            <div className="text-4xl font-medium font-poppins mb-8">
               Get to know us
-            </h2>
-            <p className="lg:mb-8 mb-4 text-center text-lg font-medium font-poppins md:text-2xl text-[#252525] dark:text-white">
+            </div>
+            <div className="text-lg font-medium font-poppins">
               Discover how we can help bring your project to life.
-            </p>
-            <div className="flex items-center justify-center">
+            </div>
+            <Link href="contact-us">
               <button
-                className="mt-4 mb-8 w-[150px] bg-[#31afa9] hover:bg-[#31afa9]/90 text-white font-semibold py-2 px-4 border rounded-full"
+                className="mt-12 font-poppins head-button btn-small"
                 type="button"
               >
                 Let's Talk
               </button>
-            </div>
+            </Link>
           </div>
         </section>
 

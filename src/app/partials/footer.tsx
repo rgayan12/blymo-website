@@ -79,7 +79,7 @@ export default function Footer() {
     <footer className="font-poppins bg-[#484848]">
       <div className="max-w-screen-xl mx-auto w-full py-6 lg:py-8 mb-4 md:mb-8">
         {showMainFooter ? (
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4 px-2">
             <div className="flex flex-col items-center md:items-start justify-center">
               <a href="https://blymo.co.uk/" className="flex items-center mt-5">
                 <Image
@@ -196,7 +196,7 @@ export default function Footer() {
         )}
       </div>
       {/* <hr className="border-[#9C9C9C] dark:border-gray-700 max-w-screen-xl mx-auto" /> */}
-      <div className="w-full bg-[#343434]">
+      <div className="w-full bg-[#343434] px-2">
         <div className="flex flex-col lg:flex-row justify-between items-center max-w-screen-xl mx-auto py-8">
           <div className="py-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
             © 2023{" "}

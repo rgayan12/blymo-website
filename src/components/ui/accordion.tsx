@@ -35,7 +35,7 @@ const AccordionTrigger = React.forwardRef<
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="#31AFA9"
-        className="size-10 group-data-[state=closed]:hidden"
+        className="size-10 shrink-0 group-data-[state=closed]:hidden"
       >
         <path
           fillRule="evenodd"
@@ -48,7 +48,7 @@ const AccordionTrigger = React.forwardRef<
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="#D8D8D8"
-        className="size-10 group-data-[state=open]:hidden"
+        className="size-10 shrink-0 group-data-[state=open]:hidden"
       >
         <path
           fillRule="evenodd"
