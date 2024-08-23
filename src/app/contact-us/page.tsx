@@ -311,17 +311,15 @@ export default function ContactUs() {
             <div className="min-w-screen-xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative">
                 <Image
-                  src="/members/luchie-bg-white.jpg"
+                  src="/members/bastiyan-bg-white.png"
                   width={500}
                   height={500}
                   alt="luchie"
                   className="mt-3 object-cover h-full"
                 />
                 <div className="absolute w-[60%] bottom-24 right-0 bg-[#494D4A] bg-opacity-70 text-white p-4 rounded-md">
-                  <div className="text-2xl font-bold">Lucie-Laure Mukendi</div>
-                  <div className="text-md font-semibold">
-                    COMMERCIAL DIRECTOR
-                  </div>
+                  <div className="text-2xl font-bold">Bastiyan Rodrigo</div>
+                  <div className="text-md font-semibold">FOUNDER</div>
                 </div>
               </div>
               <div>
@@ -443,7 +441,7 @@ export default function ContactUs() {
                       the project. Please contact our commercial director for a
                       detailed quote.
                     </p>
-                    <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white mt-4">
+                    {/* <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white mt-4">
                       Lucie -{" "}
                       <a
                         className="text-[#31AFA9] underline"
@@ -451,7 +449,7 @@ export default function ContactUs() {
                       >
                         lucielaure.mukendi@blymo.co.uk
                       </a>
-                    </p>
+                    </p> */}
                     <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white">
                       Bastiyan -{" "}
                       <a
@@ -488,12 +486,12 @@ export default function ContactUs() {
                   <AccordionContent className="font-poppins font-normal px-16">
                     <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white">
                       For partnership inquiries, please contact our commercial
-                      director Lucie at{" "}
+                      director Bastiyan at{" "}
                       <a
                         className="text-[#31AFA9] underline"
-                        href="mailto:lucielaure.mukendi@blymo.co.uk"
+                        href="mailto:bastiyan@blymo.co.uk"
                       >
-                        lucielaure.mukendi@blymo.co.uk
+                        bastiyan@blymo.co.uk
                       </a>
                     </p>
                   </AccordionContent>

@@ -9,17 +9,17 @@ export const teamMembers = [
         Bastiyan has contributed to a range of organizations, from SaaS startups to world-renowned academic institutes. His passion for technology and innovation led to the creation of BLYMO, a venture inspired by his vision of supporting organizations and individuals with aspirations for the future.
         An avid learner, Bastiyan dedicates significant time to mastering new technologies, applying his insights to enhance client solutions continuously. Outside of his professional life, he enjoys spending time with his family and engaging in DIY projects.`
     },
+    // {
+    //     id: 2,
+    //     name: 'Lucie-Laure Mukendi',
+    //     title: 'Commercial Director',
+    //     image: '/members/luchie.jpg',
+    //     description: `Hi, I am Lucie-Laure Mukendi, the Sales Director of BLYMO. Originally from Paris, I have lived in London for the past 10 years. With 15 years of sales experience in B2B as an account manager and B2C as a letting agent in both Paris and London, I've cultivated a keen ability to listen and empathise, essential qualities for nurturing strong customer relationships.
+    //     Throughout my career, I have collaborated with diverse teams, gaining insights from various experiences. This has taught me to stay open-minded to new ideas and adapt to the ever-evolving CRM systems.
+    //     I'm known as the go-to person for seizing new opportunities, dedicating my days to helping our clients thrive and achieve their goals. And when I'm not at work, you'll likely spot me at the gym or immersing myself in theater classes, finding joy in staying active and creative outside the office`
+    // },
     {
         id: 2,
-        name: 'Lucie-Laure Mukendi',
-        title: 'Commercial Director',
-        image: '/members/luchie.jpg',
-        description: `Hi, I am Lucie-Laure Mukendi, the Sales Director of BLYMO. Originally from Paris, I have lived in London for the past 10 years. With 15 years of sales experience in B2B as an account manager and B2C as a letting agent in both Paris and London, I've cultivated a keen ability to listen and empathise, essential qualities for nurturing strong customer relationships.
-        Throughout my career, I have collaborated with diverse teams, gaining insights from various experiences. This has taught me to stay open-minded to new ideas and adapt to the ever-evolving CRM systems.
-        I'm known as the go-to person for seizing new opportunities, dedicating my days to helping our clients thrive and achieve their goals. And when I'm not at work, you'll likely spot me at the gym or immersing myself in theater classes, finding joy in staying active and creative outside the office`
-    },
-    {
-        id: 3,
         name: 'Malki Rodrigo',
         title: 'Product Researcher',
         image: '/members/malki.jpg',
@@ -32,7 +32,7 @@ export const teamMembers = [
         `
     },
     {
-        id: 4,
+        id: 3,
         name: 'Hasitha Yapa',
         title: 'Frontend Engineer',
         image: '/members/hasitha.jpg',
@@ -41,7 +41,7 @@ export const teamMembers = [
         I love bouncing ideas around, iterating, and refining until we've nailed it. Agile methodologies? Yep, I'm all over that. Outside of work, you'll find me geeking out over the latest design trends, maybe even mentoring budding designers over a cup of coffee. I'm passionate about giving back to the community and helping others grow in this ever-evolving field.`
     },
     {
-        id: 5,
+        id: 4,
         name: 'Ashen Karunarathne',
         title: 'Fullstack Engineer',
         image: '/members/ashen.jpg',
@@ -50,7 +50,7 @@ export const teamMembers = [
         As a tea lover, I enjoy the tranquility and focus that a good cup of tea provides, especially when diving into challenging projects. Whether it's crafting a dynamic web application or exploring new technologies, my goal is to continuously enhance my skills and contribute to meaningful projects that make a difference.`
     },
     {
-        id: 6,
+        id: 5,
         name: 'Imanthi Jayakodi',
         title: 'UX Engineer',
         image: '/members/imanthi.jpg',

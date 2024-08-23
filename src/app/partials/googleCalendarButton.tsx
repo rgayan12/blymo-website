@@ -31,7 +31,7 @@ const GoogleCalendarButton = () => {
           button.id = buttonId;
           target.appendChild(button);
           window.calendar.schedulingButton.load({
-            url: "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3P0OJv3HVyoqUOt4wxx7wrpNtCz-Mn8jWfvPB7WbOsnWsGMTzNDG3vkCQwxx0yLC1B9JHsihCx",
+            url: process.env.CONTACT_US_CALENDAR_URL || '',
             color: "#31afa9",
             label: "Start New Project",
             target: button,
