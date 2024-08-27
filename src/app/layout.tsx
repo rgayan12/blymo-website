@@ -47,7 +47,12 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className={cn("font-sans antialiased", fontSans.variable)}>
+      <body
+        className={cn(
+          "font-sans antialiased",
+          fontSans.variable
+        )}
+      >
         <Suspense>
           <ReCaptchaProvider
             reCaptchaKey={process.env.RECAPTCHA_SITE_KEY}
