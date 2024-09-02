@@ -37,9 +37,9 @@ export default function TeamPopUp(props : any) {
         show={isModalOpen}
         onClose={() => changeModelStatus(false)}
         className="custom-modal-overlay"
-        style={{ minWidth: "70vw", paddingTop: "2rem" }}
+        style={{ minWidth: "40vw", paddingTop: "2rem" }}
       >
-        <div className="w-full">
+        <div className="w-full mt-8">
           <div className="w-full">
             <div className="modal">
               <div className="flex items-center">
