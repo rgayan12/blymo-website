@@ -41,7 +41,7 @@ export default function About() {
           <div className="px-4 mx-auto max-w-screen-xl py-8 lg:py-16">
             <Card className="w-full rounded-xl my-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-                <div>
+                <div className="px-6 pt-0">
                   <h2 className="px-4 py-4 md:px-8 mt-8 text-3xl md:text-4xl  font-semibold font-poppins tracking-tight leading-tight text-[#252525] dark:text-white">
                     About Us
                   </h2>
@@ -188,7 +188,7 @@ export default function About() {
             <h2 className="mb-4 lg:mb-8 font-medium font-poppins text-center md:text-left text-2xl md:text-3xl text-[#252525] dark:text-white">
               Meet Our Team
             </h2>
-            <div className="grid md:grid-cols-4 gap-10 items-center justify-center cursor-pointer">
+            <div className="grid md:grid-cols-4 gap-10 items-center justify-center cursor-pointer mb-7">
               {teamMembersData.map((team) => (
                 <div
                   className="w-full md:max-w-80 h-full"
