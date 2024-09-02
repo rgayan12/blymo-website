@@ -31,15 +31,15 @@ export const teamMembers = [
         And when I’m not working you’ll find me out and about, discovering new places and tackling mountains that challenge my sedentary lifestyle. 
         `
     },
-    {
-        id: 3,
-        name: 'Hasitha Yapa',
-        title: 'Frontend Engineer',
-        image: '/members/hasitha.jpg',
-        description: `Hey there! I'm Hasitha Yapa, a seasoned UI/UX designer with a background in computer science. With over 13 years in the field, I've been blending my tech-savvy skills with a passion for creating killer user experiences.
-        After graduating with a degree in Computer Science, I dove headfirst into the world of UI/UX design and haven't looked back since. From mobile apps to web platforms, I've tackled a variety of projects, always aiming to make the user experience as smooth as butter. My computer science background gives me a solid foundation to understand the nitty-gritty technical details while crafting designs that are both practical and visually appealing. I'm all about finding that sweet spot where innovation meets usability.Over the years, I've worked alongside diverse teams, keeping the user at the heart of every decision. 
-        I love bouncing ideas around, iterating, and refining until we've nailed it. Agile methodologies? Yep, I'm all over that. Outside of work, you'll find me geeking out over the latest design trends, maybe even mentoring budding designers over a cup of coffee. I'm passionate about giving back to the community and helping others grow in this ever-evolving field.`
-    },
+    // {
+    //     id: 3,
+    //     name: 'Hasitha Yapa',
+    //     title: 'Frontend Engineer',
+    //     image: '/members/hasitha.jpg',
+    //     description: `Hey there! I'm Hasitha Yapa, a seasoned UI/UX designer with a background in computer science. With over 13 years in the field, I've been blending my tech-savvy skills with a passion for creating killer user experiences.
+    //     After graduating with a degree in Computer Science, I dove headfirst into the world of UI/UX design and haven't looked back since. From mobile apps to web platforms, I've tackled a variety of projects, always aiming to make the user experience as smooth as butter. My computer science background gives me a solid foundation to understand the nitty-gritty technical details while crafting designs that are both practical and visually appealing. I'm all about finding that sweet spot where innovation meets usability.Over the years, I've worked alongside diverse teams, keeping the user at the heart of every decision. 
+    //     I love bouncing ideas around, iterating, and refining until we've nailed it. Agile methodologies? Yep, I'm all over that. Outside of work, you'll find me geeking out over the latest design trends, maybe even mentoring budding designers over a cup of coffee. I'm passionate about giving back to the community and helping others grow in this ever-evolving field.`
+    // },
     {
         id: 4,
         name: 'Ashen Karunarathne',

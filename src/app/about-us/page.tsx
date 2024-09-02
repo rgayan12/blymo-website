@@ -188,7 +188,7 @@ export default function About() {
             <h2 className="mb-4 lg:mb-8 font-medium font-poppins text-center md:text-left text-2xl md:text-3xl text-[#252525] dark:text-white">
               Meet Our Team
             </h2>
-            <div className="grid md:grid-cols-3 gap-10 items-center justify-center cursor-pointer">
+            <div className="grid md:grid-cols-4 gap-10 items-center justify-center cursor-pointer">
               {teamMembersData.map((team) => (
                 <div
                   className="w-full md:max-w-80 h-full"
