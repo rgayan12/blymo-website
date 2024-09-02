@@ -103,7 +103,7 @@ export default function Home() {
             sectionsRef.current[0] = el;
           }}
           data-index={0}
-          className="opacity-0 transition-opacity ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900 p-20"
+          className="opacity-0 transition-opacity ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
             <p className="mb-12 font-medium text-2xl text-[#3A3A3A] font-poppins">
@@ -153,7 +153,7 @@ export default function Home() {
             sectionsRef.current[2] = el;
           }}
           data-index={2}
-          className="opacity-0 transition-opacity ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900 p-16"
+          className="opacity-0 transition-opacity ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
             <h2 className="max-w-2xl lg:mb-5 mb-4 text-4xl font-normal tracking-tight leading-none md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
@@ -235,7 +235,7 @@ export default function Home() {
                 <div className="flex items-center gap-6">
                   <div className="rounded-full bg-[#31AFA9] flex items-center justify-center w-10 h-10">
                     <Image
-                      src="/about-us/feedback-review.svg"
+                      src="/about-us/bug.svg"
                       width={20}
                       height={20}
                       alt="our values - integrity"
@@ -243,13 +243,12 @@ export default function Home() {
                     />
                   </div>
                   <p className="font-medium font-poppins text-[#252525] text-xl md:text-2xl">
-                    Review
+                    Test
                   </p>
                 </div>
                 <div>
                   <p className="font-normal font-poppins text-[#252525] text-md my-8">
-                    At this stage, we tirelessly test the product, hunting down
-                    those pesky bugs.
+                    Post-deployment, we conduct a comprehensive project review to gather feedback, evaluate success, and anticipate future requirements to sustain the project.
                   </p>
                 </div>
               </div>
@@ -270,8 +269,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="font-normal font-poppins text-[#252525] text-md my-8">
-                    At this stage, we tirelessly test the product, hunting down
-                    those pesky bugs.
+                    After thorough testing, we deploy the product into the live environment.
                   </p>
                 </div>
               </div>
@@ -279,7 +277,7 @@ export default function Home() {
                 <div className="flex items-center gap-6">
                   <div className="rounded-full bg-[#31AFA9] flex items-center justify-center w-10 h-10">
                     <Image
-                      src="/about-us/bug.svg"
+                      src="/about-us/feedback-review.svg"
                       width={20}
                       height={20}
                       alt="our values - integrity"
@@ -287,14 +285,13 @@ export default function Home() {
                     />
                   </div>
                   <p className="font-medium font-poppins text-[#252525] text-xl md:text-2xl">
-                    Test
+                    Review
                   </p>
                 </div>
                 <div>
                   <p className="font-normal font-poppins text-[#252525] text-md my-8">
-                    Post-deployment, we conduct a comprehensive project review
-                    to gather feedback, evaluate success, and anticipate future
-                    requirements to sustain the project.
+                    At this stage, we tirelessly test the product, hunting down
+                    those pesky bugs.
                   </p>
                 </div>
               </div>
@@ -379,15 +376,20 @@ export default function Home() {
             sectionsRef.current[4] = el;
           }}
           data-index={2}
-          className="opacity-0 transition-opacity ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900 p-16 font-poppins"
+          className="opacity-0 transition-opacity ease-in delay-700 bg-[#F7FFFF] dark:bg-gray-900"
         >
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 text-center">
-            <div className="text-4xl font-medium mb-8">Get to know us</div>
-            <div className="text-lg font-medium">
+            <div className="text-4xl font-medium font-poppins mb-8">
+              Get to know us
+            </div>
+            <div className="text-lg font-medium font-poppins">
               Discover how we can help bring your project to life.
             </div>
             <Link href="contact-us">
-              <button className="mt-12 head-button btn-small" type="button">
+              <button
+                className="mt-12 font-poppins head-button btn-small"
+                type="button"
+              >
                 Let's Talk
               </button>
             </Link>

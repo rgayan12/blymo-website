@@ -1,26 +1,94 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function Footer() {
-  const router = usePathname();
-  const URLSegments = router.split("/");
+  const router = useRouter();
+  const path = usePathname();
+  const URLSegments = path.split("/");
   const [showMainFooter, setShowMainFooter] = useState(true);
+
+  const handleResetAndRedirect = () => {
+    // Reset the current URL by navigating to the current pathname
+    router.replace(window.location.pathname);
+    // Then navigate to the new page
+    router.push("/contact-us");
+  };
+
   useEffect(() => {
     if (URLSegments[1] === "services") {
       setShowMainFooter(false);
-    }else{
+    } else {
       setShowMainFooter(true);
     }
   });
 
+  let paragraphContent;
+
+  switch (URLSegments[2]) {
+    case "production-ready-applications":
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your product development needs and take the first step towards turning
+          your vision into reality.
+        </p>
+      );
+      break;
+    case "ai-integration":
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your AI Integration needs and take the first step towards turning your
+          vision into reality.
+        </p>
+      );
+      break;
+    case "data-visualization":
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your data visualization needs and take the first step towards turning
+          your vision into reality.
+        </p>
+      );
+      break;
+    case "websites":
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your website needs and take the first step towards turning your vision
+          into reality.
+        </p>
+      );
+      break;
+    case "product-design":
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your product design needs and take the first step towards turning your vision
+          into reality.
+        </p>
+      );
+      break;
+    default:
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your MVP development needs and take the first step towards turning
+          your vision into reality.
+        </p>
+      );
+      break;
+  }
+
   return (
-    <footer className="font-poppins bg-[#343434]">
+    <footer className="font-poppins bg-[#484848]">
       <div className="max-w-screen-xl mx-auto w-full py-6 lg:py-8 mb-4 md:mb-8">
         {showMainFooter ? (
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4 px-2">
             <div className="flex flex-col items-center md:items-start justify-center">
               <a href="https://blymo.co.uk/" className="flex items-center mt-5">
                 <Image
@@ -86,11 +154,11 @@ export default function Footer() {
                     src="/footer/facebook.svg"
                     alt="Facebook"
                     className="w-8 h-8"
-                    style={{ 
-                      padding:"8px",
-                      background:"#8C8C8C4D",
-                      borderRadius:"50%"
-                     }}
+                    style={{
+                      padding: "8px",
+                      background: "#8C8C8C4D",
+                      borderRadius: "50%",
+                    }}
                   />
                 </div>
                 <div className="flex items-center justify-center">
@@ -98,11 +166,11 @@ export default function Footer() {
                     src="/footer/linkedin.svg"
                     alt="LinkedIn"
                     className="w-8 h-8"
-                    style={{ 
-                      padding:"8px",
-                      background:"#8C8C8C4D",
-                      borderRadius:"50%"
-                     }}
+                    style={{
+                      padding: "8px",
+                      background: "#8C8C8C4D",
+                      borderRadius: "50%",
+                    }}
                   />
                 </div>
               </div>
@@ -122,40 +190,37 @@ export default function Footer() {
               <h1 className="mb-4 text-2xl md:text-2xl">
                 Ready to Validate Your Idea?
               </h1>
-              <p>
-                Let's embark on this journey together. Contact us today to
-                discuss your MVP development needs and take the first step
-                towards turning your vision into reality.
-              </p>
+              {paragraphContent}
             </div>
             <div className="text-center lg:text-left">
-              <Link href="contact-us">
-                <button
-                  className="mt-12 font-medium rounded-full bg-[#31afa9] py-3 px-10 text-white"
-                  type="button"
-                >
-                  GET IN TOUCH
-                </button>
-              </Link>
+              <button
+                className="mt-12 font-medium rounded-full bg-[#31afa9] py-3 px-10 text-white"
+                type="button"
+                onClick={handleResetAndRedirect}
+              >
+                GET IN TOUCH
+              </button>
             </div>
           </div>
         )}
       </div>
-      <hr className="border-[#9C9C9C] dark:border-gray-700 max-w-screen-xl mx-auto" />
-      <div className="flex flex-col lg:flex-row justify-between items-center max-w-screen-xl mx-auto py-8">
-        <div className="py-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
-          © 2023{" "}
-          <a href="https://blymo.co.uk/" className="hover:underline">
-            BLYMO
-          </a>
-          . All Rights Reserved.
-        </div>
-        <div className="flex flex-col lg:flex-row gap-4 px-4 lg:px-8 items-center justify-between">
-          <div className="pt-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
-            <Link href="/privacy-policy">Privacy Policy</Link>
+      {/* <hr className="border-[#9C9C9C] dark:border-gray-700 max-w-screen-xl mx-auto" /> */}
+      <div className="w-full bg-[#343434] px-2">
+        <div className="flex flex-col lg:flex-row justify-between items-center max-w-screen-xl mx-auto py-8">
+          <div className="py-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
+            © 2023{" "}
+            <a href="https://blymo.co.uk/" className="hover:underline">
+              BLYMO
+            </a>
+            . All Rights Reserved.
           </div>
-          <div className="pt-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
-            <Link href="/terms-and-conditions">Terms & Conditions</Link>
+          <div className="flex flex-col lg:flex-row gap-4 px-4 lg:px-8 items-center justify-between">
+            <div className="pt-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
+              <Link href="/privacy-policy">Privacy Policy</Link>
+            </div>
+            <div className="pt-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
+              <Link href="/terms-and-conditions">Terms & Conditions</Link>
+            </div>
           </div>
         </div>
       </div>
