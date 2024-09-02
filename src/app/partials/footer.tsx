@@ -64,6 +64,15 @@ export default function Footer() {
         </p>
       );
       break;
+    case "product-design":
+      paragraphContent = (
+        <p>
+          Let's embark on this journey together. Contact us today to discuss
+          your product design needs and take the first step towards turning your vision
+          into reality.
+        </p>
+      );
+      break;
     default:
       paragraphContent = (
         <p>
