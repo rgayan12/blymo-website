@@ -9,6 +9,7 @@ export default function Footer() {
   const path = usePathname();
   const URLSegments = path.split("/");
   const [showMainFooter, setShowMainFooter] = useState(true);
+  const currentYear = new Date().getFullYear();
 
   const handleResetAndRedirect = () => {
     // Reset the current URL by navigating to the current pathname
@@ -23,7 +24,7 @@ export default function Footer() {
     } else {
       setShowMainFooter(true);
     }
-  });
+  }, [path]);
 
   let paragraphContent;
 
@@ -84,143 +85,192 @@ export default function Footer() {
       break;
   }
 
+  const sitemapLinks = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Services", href: "/?page=services" },
+    { label: "Community", href: "/community" },
+    { label: "Contact Us", href: "/contact-us" },
+  ];
+
+  const legalLinks = [
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms & Conditions", href: "/terms-and-conditions" },
+  ];
+
   return (
-    <footer className="font-poppins bg-[#484848]">
-      <div className="max-w-screen-xl mx-auto w-full py-6 lg:py-8 mb-4 md:mb-8">
+    <footer className="font-poppins bg-slate-950 text-slate-300">
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-teal-400/60 to-transparent" />
+      <div className="max-w-screen-xl mx-auto w-full px-6 py-14 lg:py-20">
         {showMainFooter ? (
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4 px-2">
-            <div className="flex flex-col items-center md:items-start justify-center">
-              <a href="https://blymo.co.uk/" className="flex items-center mt-5">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.25fr_0.75fr_0.9fr_0.7fr]">
+            <div className="max-w-sm">
+              <a href="https://blymo.co.uk/" className="inline-flex items-center">
                 <Image
                   src="/blymo-logo-invert.png"
                   width={60}
-                  height={500}
+                  height={60}
                   alt="Logo"
+                  className="h-12 w-auto"
                 />
-                <span className="text-3xl font-semibold whitespace-nowrap ml-2 text-[#E3E3E3]">
+                <span className="text-3xl font-semibold whitespace-nowrap ml-3 text-white">
                   BLYMO
                 </span>
               </a>
+              <p className="mt-6 text-sm leading-7 text-slate-400">
+                Research-driven software, venture incubation, and product delivery
+                for teams building technology with measurable human impact.
+              </p>
+              <div className="mt-8 flex items-center gap-3">
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-teal-300/50 hover:bg-teal-400/10"
+                >
+                  <Image
+                    src="/footer/facebook.svg"
+                    width={18}
+                    height={18}
+                    alt=""
+                    className="icon-white"
+                  />
+                </a>
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-teal-300/50 hover:bg-teal-400/10"
+                >
+                  <Image
+                    src="/footer/linkedin.svg"
+                    width={18}
+                    height={18}
+                    alt=""
+                    className="icon-white"
+                  />
+                </a>
+              </div>
             </div>
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
-              <h1 className="text-xl font-medium text-[#E3E3E3]">Contact Us</h1>
-              <div className="grid grid-cols-[auto,1fr] gap-4 items-center justify-center md:justify-start max-w-[200px] md:max-w-full mt-5 text-[#E3E3E3]">
+
+            <div>
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-white">
+                Contact
+              </h2>
+              <div className="mt-6 grid grid-cols-[auto,1fr] gap-x-4 gap-y-5 text-sm text-slate-400">
                 <Image
                   src="/footer/phone-call.svg"
-                  width={20}
-                  height={20}
+                  width={18}
+                  height={18}
                   alt="Phone"
-                  className="mx-auto md:mx-0"
+                  className="icon-white opacity-70"
                 />
-                <p className="text-sm font-normal">+44 749 332 5738</p>
+                <p>+44 749 332 5738</p>
 
                 <Image
                   src="/footer/envelope.svg"
-                  width={20}
-                  height={20}
+                  width={18}
+                  height={18}
                   alt="Email"
-                  className="mx-auto md:mx-0"
+                  className="icon-white opacity-70"
                 />
-                <p className="text-sm font-normal">info@blymo.co.uk</p>
+                <p>info@blymo.co.uk</p>
 
                 <Image
                   src="/footer/marker.svg"
-                  width={20}
-                  height={20}
+                  width={18}
+                  height={18}
                   alt="Address"
-                  className="mx-auto md:mx-0"
+                  className="icon-white opacity-70"
                 />
-                <p className="text-sm font-normal">
+                <p className="leading-6">
                   BLYMO Ltd, International House, 142 Cromwell Road, London, SW7
                   4EF
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-center md:items-start text-center md:text-left md:ml-[150px]">
-              <h1 className="text-xl font-medium text-[#E3E3E3]">Sitemap</h1>
-              <div className="flex flex-col items-center md:items-start gap-4 mt-5 text-[#E3E3E3] text-sm">
-                <Link href="/">Home</Link>
-                <Link href="/about-us">About Us</Link>
-                <Link href="/services">Services</Link>
-                <Link href="/community">Community</Link>
-                <Link href="/contact-us">Contact Us</Link>
+
+            <div>
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-white">
+                Sitemap
+              </h2>
+              <div className="mt-6 grid gap-3 text-sm">
+                {sitemapLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="transition hover:text-teal-300"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </div>
-            <div className="flex flex-col items-center md:items-start text-center md:text-left md:ml-[110px]">
-              <h1 className="text-xl font-medium text-[#E3E3E3]">Socials</h1>
-              <div className="flex justify-center md:justify-start mt-5 gap-4">
-                <div className="flex items-center justify-center">
-                  <img
-                    src="/footer/facebook.svg"
-                    alt="Facebook"
-                    className="w-8 h-8"
-                    style={{
-                      padding: "8px",
-                      background: "#8C8C8C4D",
-                      borderRadius: "50%",
-                    }}
-                  />
-                </div>
-                <div className="flex items-center justify-center">
-                  <img
-                    src="/footer/linkedin.svg"
-                    alt="LinkedIn"
-                    className="w-8 h-8"
-                    style={{
-                      padding: "8px",
-                      background: "#8C8C8C4D",
-                      borderRadius: "50%",
-                    }}
-                  />
+
+            <div className="flex flex-col gap-8">
+              <div>
+                <h2 className="text-sm font-semibold uppercase tracking-wider text-white">
+                  Legal
+                </h2>
+                <div className="mt-6 grid gap-3 text-sm">
+                  {legalLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="transition hover:text-teal-300"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
                 </div>
               </div>
-              <div className="mt-auto py-8 md:py-0">
-                <Image
-                  src="/footer/FSB-Member-Logo-White.png"
-                  width={100}
-                  height={100}
-                  alt="FSB Member Logo"
-                />
-              </div>
+              <Image
+                src="/footer/FSB-Member-Logo-White.png"
+                width={100}
+                height={100}
+                alt="FSB Member Logo"
+                className="h-auto w-24 opacity-80"
+              />
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-[80%,20%] lg:gap-8 max-w-screen-sm md:max-w-screen-xl p-10 md:p-0 text-[#FFF]">
-            <div className="text-center lg:text-start mt-5">
-              <h1 className="mb-4 text-2xl md:text-2xl">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <span className="text-sm font-semibold uppercase tracking-wider text-teal-300">
                 Ready to Validate Your Idea?
-              </h1>
-              {paragraphContent}
+              </span>
+              <div className="mt-3 max-w-3xl text-slate-300">
+                {paragraphContent}
+              </div>
             </div>
-            <div className="text-center lg:text-left">
-              <button
-                className="mt-12 font-medium rounded-full bg-[#31afa9] py-3 px-10 text-white"
-                type="button"
-                onClick={handleResetAndRedirect}
-              >
-                GET IN TOUCH
-              </button>
-            </div>
+            <button
+              className="w-full rounded-xl bg-teal-500 px-8 py-4 font-medium text-white shadow-lg shadow-teal-500/20 transition hover:bg-teal-400 sm:w-auto"
+              type="button"
+              onClick={handleResetAndRedirect}
+            >
+              Get in Touch
+            </button>
           </div>
         )}
       </div>
-      {/* <hr className="border-[#9C9C9C] dark:border-gray-700 max-w-screen-xl mx-auto" /> */}
-      <div className="w-full bg-[#343434] px-2">
-        <div className="flex flex-col lg:flex-row justify-between items-center max-w-screen-xl mx-auto py-8">
-          <div className="py-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
-            © 2023{" "}
-            <a href="https://blymo.co.uk/" className="hover:underline">
+
+      <div className="border-t border-white/10 bg-slate-950/90 px-6">
+        <div className="flex flex-col gap-4 py-7 text-sm text-slate-500 lg:flex-row lg:items-center lg:justify-between max-w-screen-xl mx-auto">
+          <div>
+            © {currentYear}{" "}
+            <a href="https://blymo.co.uk/" className="text-slate-300 transition hover:text-teal-300">
               BLYMO
             </a>
             . All Rights Reserved.
           </div>
-          <div className="flex flex-col lg:flex-row gap-4 px-4 lg:px-8 items-center justify-between">
-            <div className="pt-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
-              <Link href="/privacy-policy">Privacy Policy</Link>
-            </div>
-            <div className="pt-4 text-sm text-[#E3E3E3] text-center lg:text-left dark:text-gray-400">
-              <Link href="/terms-and-conditions">Terms & Conditions</Link>
-            </div>
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-6">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition hover:text-teal-300"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

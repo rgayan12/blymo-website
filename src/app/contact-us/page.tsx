@@ -129,32 +129,40 @@ export default function ContactUs() {
   return (
     <>
       <div>
-        <section className="relative bg-gray-100 px-6 py-10 sm:py-52 lg:px-0 bg-[url('/contact-us/header-image.jpeg')] bg-cover bg-center min-h-[60vh]">
-          <div className="absolute inset-0 bg-[#1D1D1D] opacity-35"></div>
-          <div className="relative py-5 lg:py-1 text-center mx-auto max-w-screen-xl">
-            <h2 className="mb-8 text-5xl font-medium font-poppins tracking-tight leading-tight text-white dark:text-white">
-              Connect with Us
-            </h2>
+        <section className="relative overflow-hidden px-6 py-24 sm:py-36 lg:px-0 bg-[url('/contact-us/header-image.jpeg')] bg-cover bg-center min-h-[60vh] flex items-center">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(20,184,166,0.35),transparent_34%),linear-gradient(115deg,rgba(2,6,23,0.96),rgba(15,23,42,0.84)_48%,rgba(4,47,46,0.62))]"></div>
+          <div className="relative mx-auto w-full max-w-screen-xl">
+            <span className="inline-block px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider bg-teal-500/10 text-teal-200 rounded-full border border-teal-300/20 mb-6">
+              Start a Conversation
+            </span>
+            <h1 className="max-w-3xl text-4xl sm:text-5xl md:text-6xl font-semibold font-poppins tracking-tight leading-tight text-white">
+              Let's build the next useful thing.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg sm:text-xl text-slate-300 font-light leading-relaxed">
+              Tell us about your venture, research project, or product challenge.
+              We will help you find the clearest route from idea to launch.
+            </p>
           </div>
         </section>
 
-        <section className="bg-white dark:bg-gray-900">
-          <div className="px-4 mx-auto max-w-screen-xl py-8 lg:py-16">
-            <Card className="w-full bg-[#FBFBFB] rounded-3xl mx-auto border-0 shadow-md">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 p-5">
+        <section className="bg-white dark:bg-gray-950">
+          <div className="px-4 mx-auto max-w-screen-xl py-12 lg:py-20">
+            <Card className="w-full bg-white rounded-2xl mx-auto border border-slate-100 shadow-2xl shadow-teal-950/5 overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
                 <div className="col-span-5">
-                  <Card className="w-full min-h-full bg-[#31AFA9] rounded-3xl p-6">
+                  <Card className="w-full min-h-full bg-slate-950 rounded-none p-6 md:p-8 border-0 text-white relative overflow-hidden">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(20,184,166,0.28),transparent_34%),linear-gradient(145deg,rgba(15,23,42,0.98),rgba(4,47,46,0.76))]" />
                     <CardHeader>
-                      <CardTitle className="text-2xl md:text-4xl font-medium font-poppins text-white">
+                      <CardTitle className="relative text-2xl md:text-4xl font-semibold font-poppins text-white">
                         Get in touch
                       </CardTitle>
-                      <CardDescription className="text-lg md:text-xl font-normal font-poppins py-8 text-white">
+                      <CardDescription className="relative text-base md:text-lg font-normal font-poppins py-8 text-slate-300 leading-relaxed">
                         If you've got a question for us, want to discuss
                         business opportunities, or want to discover how BLYMO
                         can assist you, don't hesitate to get in touch.
                       </CardDescription>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="relative">
                       <form>
                         <div className="grid w-full items-center gap-8">
                           <div className="flex items-center gap-8">
@@ -165,7 +173,7 @@ export default function ContactUs() {
                               alt="Logo"
                               className="ms-2 icon-white"
                             />
-                            <p className="w-[90%] font-normal font-poppins text-lg text-white">
+                            <p className="w-[90%] font-normal font-poppins text-base text-slate-200">
                               +44 749 332 5738
                             </p>
                           </div>
@@ -177,7 +185,7 @@ export default function ContactUs() {
                               alt="Logo"
                               className="ms-2 icon-white"
                             />
-                            <p className="w-[90%] font-normal font-poppins text-lg text-white">
+                            <p className="w-[90%] font-normal font-poppins text-base text-slate-200">
                               info@blymo.co.uk
                             </p>
                           </div>
@@ -189,7 +197,7 @@ export default function ContactUs() {
                               alt="Logo"
                               className="ms-2 icon-white"
                             />
-                            <p className="w-[90%] font-normal font-poppins text-lg text-white">
+                            <p className="w-[90%] font-normal font-poppins text-base text-slate-200 leading-relaxed">
                               BLYMO Ltd, International House, 142 Cromwell Road,
                               London, SW7 4EF
                             </p>
@@ -201,8 +209,8 @@ export default function ContactUs() {
                 </div>
                 <div className="col-span-7">
                   <form onSubmit={handleSubmit}>
-                    <div className="grid w-full items-center gap-1 md:p-8">
-                      <h2 className="my-6 lg:mb-8 text-lg md:text-xl font-normal font-poppins text-black dark:text-white">
+                    <div className="grid w-full items-center gap-1 p-5 md:p-10">
+                      <h2 className="my-6 lg:mb-8 text-lg md:text-xl font-normal font-poppins text-slate-900 dark:text-white">
                         Fill in your details and we'll be in touch
                       </h2>
                       <div className="flex flex-col mb-3">
@@ -212,7 +220,7 @@ export default function ContactUs() {
                           placeholder="Name*"
                           value={formData.name}
                           onChange={handleChange}
-                          className="text-xl text-[#98999A]"
+                          className="text-base text-slate-700 h-12 rounded-xl border-slate-200 focus-visible:ring-teal-500"
                         />
                         {nameError && (
                           <p className="ms-2 ml-2 text-red-500 text-xs">
@@ -227,7 +235,7 @@ export default function ContactUs() {
                           placeholder="Email*"
                           value={formData.email}
                           onChange={handleChange}
-                          className="text-xl text-[#98999A]"
+                          className="text-base text-slate-700 h-12 rounded-xl border-slate-200 focus-visible:ring-teal-500"
                         />
                         {emailError && (
                           <p className="ms-2 mt-2 text-red-500 text-xs">
@@ -242,7 +250,7 @@ export default function ContactUs() {
                           placeholder="Phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          className="text-xl text-[#98999A]"
+                          className="text-base text-slate-700 h-12 rounded-xl border-slate-200 focus-visible:ring-teal-500"
                         />
                       </div>
                       <div className="flex flex-col mb-3">
@@ -252,7 +260,7 @@ export default function ContactUs() {
                           value={formData.message}
                           onChange={handleChange}
                           placeholder="Tell us more about your project*"
-                          className="text-xl text-[#98999A]"
+                          className="text-base text-slate-700 rounded-xl border-slate-200 focus-visible:ring-teal-500"
                           rows={6}
                         />
                         {messageError && (
@@ -291,7 +299,7 @@ export default function ContactUs() {
                           </div>
                         ) : (
                           <button
-                            className="mt-9 w-[150px] bg-[#31afa9] hover:bg-[#31afa9]/90 text-white font-semibold py-2 px-4 border rounded-full"
+                            className="mt-9 w-full sm:w-auto min-w-[150px] bg-teal-500 hover:bg-teal-400 text-white font-semibold py-3 px-6 rounded-xl shadow-lg shadow-teal-500/20 transition"
                             type="submit"
                           >
                             Submit
@@ -306,54 +314,41 @@ export default function ContactUs() {
           </div>
         </section>
 
-        <section className="bg-white dark:bg-gray-900 border border-t border-b">
-          <div className="px-4 mx-auto max-w-screen-xl py-8 lg:py-16">
-            <div className="min-w-screen-xl w-full grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="relative">
-                <Image
-                  src="/members/bastiyan-bg-white.png"
-                  width={500}
-                  height={500}
-                  alt="luchie"
-                  className="mt-3 object-cover h-full"
-                />
-                <div className="absolute w-[60%] bottom-24 right-0 bg-[#494D4A] bg-opacity-70 text-white p-4 rounded-md">
-                  <div className="text-2xl font-bold">Bastiyan Rodrigo</div>
-                  <div className="text-md font-semibold">FOUNDER</div>
-                </div>
-              </div>
-              <div>
-                <div className="grid w-full gap-4 px-8 md:px-16 mt-10">
-                  <h2 className="my-7 lg:mb-8 text-xl md:text-2xl font-semibold font-poppins text-black dark:text-white">
-                    Not a fan of emails?
-                  </h2>
-                  <p className="font-normal font-poppins text-xl text-black dark:text-white">
-                    Would you rather have a call to explain your needs than
-                    email us?
-                  </p>
-                  <p className="font-normal font-poppins text-xl text-black dark:text-white">
-                    Schedule a one-on-one call with Lucie to discuss your needs
-                    in detail.
-                  </p>
-                  <div className="flex items-center justify-start space-y-2">
-                    <GoogleCalendarButton />
-                  </div>
-                </div>
+        <section className="bg-[#F7FFFF] dark:bg-gray-950 border-y border-teal-100/60 dark:border-slate-800">
+          <div className="px-4 mx-auto max-w-screen-xl py-16 lg:py-24">
+            <div className="max-w-3xl mx-auto text-center">
+              <span className="text-sm font-semibold tracking-wider text-teal-600 dark:text-teal-400 uppercase">
+                Prefer a call?
+              </span>
+              <h2 className="mt-3 text-3xl md:text-4xl font-semibold font-poppins tracking-tight text-slate-900 dark:text-white">
+                Not a fan of emails?
+              </h2>
+              <p className="mt-4 font-normal font-poppins text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                Would you rather have a call to explain your needs than email us?
+              </p>
+              <p className="mt-2 font-normal font-poppins text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                Schedule a one-on-one call with our team to discuss your project and needs in detail.
+              </p>
+              <div className="flex items-center justify-center mt-6">
+                <GoogleCalendarButton />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-white dark:bg-gray-900">
-          <div className="px-4 mx-auto max-w-screen-xl py-8 lg:py-16">
-            <h2 className="max-w-2xl lg:mb-8 mb-4 font-medium font-poppins text-xl md:text-3xl text-gray-900 dark:text-white">
+        <section className="bg-white dark:bg-gray-950">
+          <div className="px-4 mx-auto max-w-screen-xl py-12 lg:py-20">
+            <span className="text-sm font-semibold tracking-wider text-teal-600 uppercase">
+              Useful Details
+            </span>
+            <h2 className="max-w-2xl mt-2 lg:mb-8 mb-4 font-semibold font-poppins text-3xl md:text-4xl tracking-tight text-slate-900 dark:text-white">
               Frequently Asked Questions
             </h2>
             <div>
               <Accordion
                 type="single"
                 collapsible
-                className="w-full bg-[#FFF]"
+                className="w-full bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-xl shadow-teal-950/5"
                 onValueChange={handleAccordionChange}
               >
                 <AccordionItem
@@ -362,7 +357,7 @@ export default function ContactUs() {
                     openItem === "item-1" ? "bg-[#F2FFFE]" : "bg-white"
                   } transition-colors duration-300`}
                 >
-                  <AccordionTrigger className="font-poppins font-normal px-4 py-8 hover:no-underline">
+                  <AccordionTrigger className="font-poppins font-normal px-5 md:px-6 py-7 hover:no-underline">
                     <div className="flex items-center gap-8">
                       <span
                         className={`${
@@ -379,7 +374,7 @@ export default function ContactUs() {
                       </p>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="font-poppins font-normal px-16">
+                  <AccordionContent className="font-poppins font-normal px-6 md:px-20">
                     <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white mb-4">
                       We provide services in three ways:
                     </p>
@@ -419,7 +414,7 @@ export default function ContactUs() {
                     openItem === "item-2" ? "bg-[#F2FFFE]" : "bg-white"
                   } transition-colors duration-300`}
                 >
-                  <AccordionTrigger className="font-poppins font-normal px-4 py-8 hover:no-underline">
+                  <AccordionTrigger className="font-poppins font-normal px-5 md:px-6 py-7 hover:no-underline">
                     <div className="flex items-center gap-8">
                       <span
                         className={`${
@@ -435,7 +430,7 @@ export default function ContactUs() {
                       </p>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="font-poppins font-normal px-16">
+                  <AccordionContent className="font-poppins font-normal px-6 md:px-20">
                     <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white">
                       Our pricing varies based on the scope and complexity of
                       the project. Please contact our commercial director for a
@@ -445,7 +440,7 @@ export default function ContactUs() {
                       Lucie -{" "}
                       <a
                         className="text-[#31AFA9] underline"
-                        href="mailto:lucielaure.mukendi@blymo.co.uk"
+                        href="mailto:bastiyan@blymo.co.uk"
                       >
                         lucielaure.mukendi@blymo.co.uk
                       </a>
@@ -454,7 +449,7 @@ export default function ContactUs() {
                       Bastiyan -{" "}
                       <a
                         className="text-[#31AFA9] underline"
-                        href="mailto:lucielaure.mukendi@blymo.co.uk"
+                        href="mailto:bastiyan@blymo.co.uk"
                       >
                         bastiyan@blymo.co.uk
                       </a>
@@ -467,7 +462,7 @@ export default function ContactUs() {
                     openItem === "item-3" ? "bg-[#F2FFFE]" : "bg-white"
                   } transition-colors duration-300`}
                 >
-                  <AccordionTrigger className="font-poppins font-normal px-4 py-8 hover:no-underline">
+                  <AccordionTrigger className="font-poppins font-normal px-5 md:px-6 py-7 hover:no-underline">
                     <div className="flex items-center gap-8">
                       <span
                         className={`${
@@ -483,7 +478,7 @@ export default function ContactUs() {
                       </p>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="font-poppins font-normal px-16">
+                  <AccordionContent className="font-poppins font-normal px-6 md:px-20">
                     <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white">
                       For partnership inquiries, please contact our commercial
                       director Bastiyan at{" "}
@@ -502,7 +497,7 @@ export default function ContactUs() {
                     openItem === "item-4" ? "bg-[#F2FFFE]" : "bg-white"
                   } transition-colors duration-300`}
                 >
-                  <AccordionTrigger className="font-poppins font-normal px-4 py-8 hover:no-underline">
+                  <AccordionTrigger className="font-poppins font-normal px-5 md:px-6 py-7 hover:no-underline">
                     <div className="flex items-center gap-8">
                       <span
                         className={`${
@@ -518,27 +513,26 @@ export default function ContactUs() {
                       </p>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="font-poppins font-normal px-16">
+                  <AccordionContent className="font-poppins font-normal px-6 md:px-20">
                     <p className="font-poppins font-normal text-lg text-[#6B6B6B] dark:text-white">
                       The easiest way to get support is to send us an email at{" "}
                       <a
                         className="text-[#31AFA9] underline"
-                        href="mailto:lucielaure.mukendi@blymo.co.uk"
+                        href="mailto:info@blymo.co.uk"
                       >
                         info@blymo.co.uk
                       </a>{" "}
                       or{" "}
                       <a
                         className="text-[#31AFA9] underline"
-                        href="mailto:lucielaure.mukendi@blymo.co.uk"
+                        href="mailto:bastiyan@blymo.co.uk"
                       >
                         bastiyan@blymo.co.uk
                       </a>
-                      . Alternatively, you can give us a call at +44 7493 325738
+                      . Alternatively, you can give us a call at +44 749 332 5738
                       if you prefer speaking directly with us. You can also
-                      schedule a call with Lucie using our Contact Us page,
-                      where you will have the option to choose a date and time
-                      in her calendar.
+                      schedule a call using our Contact Us page, where you will
+                      have the option to choose a date and time in our calendar.
                     </p>
                   </AccordionContent>
                 </AccordionItem>
