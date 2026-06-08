@@ -1,5 +1,39 @@
 export const services = [
   {
+    id: 4,
+    name: "AI Engineering",
+    description: "Scale backend systems and workflows using custom-trained LLMs and vector databases.",
+    image: "/home-screen/ai-integration.jpg",
+    customStyle: "text-white dark:text-white",
+    route: "ai-engineering",
+    long_description: `
+    <p>Do you possess a wealth of data waiting to be unlocked for your customers or employees? At Blymo, we specialize in harnessing the power of advanced AI integrations to extract actionable insights and revolutionize user interactions.</p>
+    <p>Picture this: a world where complex data relationships unfold like stories, where every chart and graph is a portal to understanding, and where even the most intricate datasets are decoded with ease.</p>
+
+    <h5 class="mt-6 text-xl font-bold dark:text-white">Unlocking Insights with RAG - Retrieval Augmented Generation:<h5>
+    <p class="ml-4">Retrieval-Augmented Generation (RAG) optimizes large language models (LLMs) by incorporating external knowledge bases into their responses. By seamlessly integrating authoritative external sources, RAG ensures responses remain relevant, accurate, and tailored to specific domains or internal knowledge bases.</p>
+    
+    <h5 class="mt-6 text-xl font-bold dark:text-white">How It Works:<h5>
+    <ul class="list-disc ml-6">
+      <li class="mt-3"><b>Data Extraction:</b> We extract meaningful data from your existing collections, unlocking valuable insights.</li>
+      <li class="mt-3"><b>Generative AI:</b> Using Generative AI, we transform extracted data into dynamic responses that engage and inform your users.</li>
+      <li class="mt-3"><b>RAG Implementation:</b> Seamlessly integrating external knowledge bases into AI-generated responses for enhanced relevance and accuracy.</li>
+    </ul>
+
+    <h5 class="mt-6 text-xl font-bold dark:text-white">Alexa Skill Development:<h5>
+    <p class="ml-4">Looking to enhance user interactions through Alexa? Our team can develop custom Alexa skills that directly communicate with your business knowledge center or answer customer queries. From scoping to implementation, we ensure your Alexa skill leverages cutting-edge technology to meet your needs.</p>
+
+    <h5 class="mt-6 text-xl font-bold dark:text-white">Why Choose BLYMO?</h5>
+    <ul class="list-disc ml-6">
+      <li class="mt-3"><b>Cutting-Edge Technology:</b> Stay ahead with AI integrations leveraging Generative AI and RAG.</li>
+      <li class="mt-3"><b>Customized Solutions:</b> Tailored to your business objectives and user requirements.</li>
+      <li class="mt-3"><b>Expert Guidance:</b> Our AI experts provide support throughout the development process.</li>
+    </ul>
+
+    <p class="mt-5">Unlock the full potential of your data with AI integrations from Blymo. Contact us today to explore how we can enhance your customer experiences and drive business growth through the power of AI, including custom Alexa skill development.</p>
+    `,
+  },
+  {
     id: 1,
     name: "Product Design",
     route: "product-design",
@@ -21,25 +55,25 @@ export const services = [
     
     <ol class="list-decimal mt-6 ml-10">
       <li class="text-lg font-bold dark:text-white">Wireframing:</li>
-        <ul class="list-disc ml-6">
-          <li>Wireframing lays the groundwork for your product's design, focusing on structure and functionality rather than aesthetics.</li>
-          <li>We utilize cutting-edge tools to create detailed blueprints, ensuring every aspect of your product is strategically mapped out.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>Wireframing lays the groundwork for your product's design, focusing on structure and functionality rather than aesthetics.</li>
+        <li>We utilize cutting-edge tools to create detailed blueprints, ensuring every aspect of your product is strategically mapped out.</li>
+      </ul>
       <li class="mt-4 text-lg font-bold dark:text-white">Low-Fidelity Prototypes:</li>
-        <ul class="list-disc ml-6">
-          <li>In the early stages, we develop low-fidelity prototypes to showcase core features and interactions.</li>
-          <li>These prototypes are quick, inexpensive, and perfect for gathering valuable feedback and iterating rapidly.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>In the early stages, we develop low-fidelity prototypes to showcase core features and interactions.</li>
+        <li>These prototypes are quick, inexpensive, and perfect for gathering valuable feedback and iterating rapidly.</li>
+      </ul>
       <li class="mt-4 text-lg font-bold dark:text-white">High-Fidelity Prototypes:</li>
-        <ul class="list-disc ml-6">
-          <li>As your vision takes shape, we transition to high-fidelity prototypes that closely resemble the final product.</li>
-          <li>Detailed visuals and realistic interactions provide a comprehensive preview of the user experience.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>As your vision takes shape, we transition to high-fidelity prototypes that closely resemble the final product.</li>
+        <li>Detailed visuals and realistic interactions provide a comprehensive preview of the user experience.</li>
+      </ul>
       <li class="mt-4 text-lg font-bold dark:text-white">Revisioning:</li>
-        <ul class="list-disc ml-6">
-          <li>Iteration is key to success. We continuously refine and reimagine your design based on feedback and testing results.</li>
-          <li>Our iterative approach ensures your product evolves to meet the ever-changing needs of your target audience.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>Iteration is key to success. We continuously refine and reimagine your design based on feedback and testing results.</li>
+        <li>Our iterative approach ensures your product evolves to meet the ever-changing needs of your target audience.</li>
+      </ul>
     </ol>
 
     <h5 class="mt-6 text-xl font-bold dark:text-white">Why Choose BLYMO?</h5>
@@ -77,21 +111,21 @@ export const services = [
 
     <ol class="list-decimal mt-6 ml-10">
       <li class="text-lg font-bold dark:text-white">Boil it Down:</li>
-        <ul class="list-disc ml-6">
-          <li>We start by listening intently to your vision and objectives, distilling them into the most essential components. Our goal is to create a lean, focused MVP that addresses your core value proposition.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>We start by listening intently to your vision and objectives, distilling them into the most essential components. Our goal is to create a lean, focused MVP that addresses your core value proposition.</li>
+      </ul>
       <li class="mt-4 text-lg font-bold dark:text-white">Tech Stack:</li>
-        <ul class="list-disc ml-6">
-          <li>Choosing the right tech stack is crucial for the success of your project. We eschew one-size-fits-all solutions like WordPress in favour of tailor-made tech stacks that align perfectly with your unique requirements. Whether it's web, mobile, or desktop applications, we carefully select technologies that lay a solid foundation for future scalability and innovation.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>Choosing the right tech stack is crucial for the success of your project. We eschew one-size-fits-all solutions like WordPress in favour of tailor-made tech stacks that align perfectly with your unique requirements. Whether it's web, mobile, or desktop applications, we carefully select technologies that lay a solid foundation for future scalability and innovation.</li>
+      </ul>
       <li class="mt-4 text-lg font-bold dark:text-white">Agile Development:</li>
-        <ul class="list-disc ml-6">
-          <li>We embrace the Agile methodology, breaking down development into iterative cycles that prioritize collaboration, adaptability, and rapid delivery. This approach allows us to remain responsive to your evolving needs and market feedback, ensuring we stay on track to meet your goals.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>We embrace the Agile methodology, breaking down development into iterative cycles that prioritize collaboration, adaptability, and rapid delivery. This approach allows us to remain responsive to your evolving needs and market feedback, ensuring we stay on track to meet your goals.</li>
+      </ul>
       <li class="mt-4 text-lg font-bold dark:text-white">Integration with External Services:</li>
-        <ul class="list-disc ml-6">
-          <li>Time is of the essence when building an MVP. Rather than reinventing the wheel, we leverage existing APIs and external services to accelerate development and enhance functionality. By tapping into a rich ecosystem of tools and resources, we maximize efficiency without compromising quality.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>Time is of the essence when building an MVP. Rather than reinventing the wheel, we leverage existing APIs and external services to accelerate development and enhance functionality. By tapping into a rich ecosystem of tools and resources, we maximize efficiency without compromising quality.</li>
+      </ul>
     </ol>
 
     <h5 class="mt-6 text-xl font-bold dark:text-white">Why Choose BLYMO?</h5>
@@ -125,21 +159,21 @@ export const services = [
     
     <ol class="list-decimal mt-6 ml-10">
       <li class="text-lg font-bold dark:text-white">Research:</li>
-        <ul class="list-disc ml-6">
-          <li>We begin by thoroughly understanding your goals, target audience, and market landscape. Our research-driven approach ensures that every decision is rooted in data and insights.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>We begin by thoroughly understanding your goals, target audience, and market landscape. Our research-driven approach ensures that every decision is rooted in data and insights.</li>
+      </ul>
       <li class="mt-4 text-lg font-bold dark:text-white">Design:</li>
-        <ul class="list-disc ml-6">
-          <li>Next, we craft pixel-perfect designs that prioritize user experience and functionality. Our collaborative design process ensures that your vision is brought to life in a way that resonates with your audience.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>Next, we craft pixel-perfect designs that prioritize user experience and functionality. Our collaborative design process ensures that your vision is brought to life in a way that resonates with your audience.</li>
+      </ul>
       <li class="mt-4 text-lg font-bold dark:text-white">Development:</li>
-        <ul class="list-disc ml-6">
-          <li>With a mutually agreed-upon tech stack and a team of skilled developers ready to tackle any challenge, we bring your designs to life with clean, scalable code.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>With a mutually agreed-upon tech stack and a team of skilled developers ready to tackle any challenge, we bring your designs to life with clean, scalable code.</li>
+      </ul>
       <li class="mt-4 text-lg font-bold dark:text-white">Test and Review:</li>
-        <ul class="list-disc ml-6">
-          <li>Rigorous testing ensures that your application meets the highest standards of quality and reliability. We iterate based on feedback, ensuring that your application is finely tuned for success.</li>
-        </ul>
+      <ul class="list-disc ml-6">
+        <li>Rigorous testing ensures that your application meets the highest standards of quality and reliability. We iterate based on feedback, ensuring that your application is finely tuned for success.</li>
+      </ul>
     </ol>
 
     <h5 class="mt-6 text-xl font-bold dark:text-white">Why Choose BLYMO?</h5>
@@ -152,40 +186,6 @@ export const services = [
     <p class="mt-5">
       With mutually agreed tech stacks, pixel-perfect designs, and developers eager for challenges, we're ready to help you bring your product to market. Contact us today to get started.
     </p>
-    `,
-  },
-  {
-    id: 4,
-    name: "AI Integration",
-    description: "Elevating Customer Experiences with Cutting-Edge Technology.",
-    image: "/home-screen/ai-integration.jpg",
-    customStyle: "text-white dark:text-white",
-    route: "ai-integration",
-    long_description: `
-    <p>Do you possess a wealth of data waiting to be unlocked for your customers or employees? At Blymo, we specialize in harnessing the power of advanced AI integrations to extract actionable insights and revolutionize user interactions.</p>
-    <p>Picture this: a world where complex data relationships unfold like stories, where every chart and graph is a portal to understanding, and where even the most intricate datasets are decoded with ease.</p>
-
-    <h5 class="mt-6 text-xl font-bold dark:text-white">Unlocking Insights with RAG - Retrieval Augmented Generation:<h5>
-    <p class="ml-4">Retrieval-Augmented Generation (RAG) optimizes large language models (LLMs) by incorporating external knowledge bases into their responses. By seamlessly integrating authoritative external sources, RAG ensures responses remain relevant, accurate, and tailored to specific domains or internal knowledge bases.</p>
-    
-    <h5 class="mt-6 text-xl font-bold dark:text-white">How It Works:<h5>
-    <ul class="list-disc ml-6">
-      <li class="mt-3"><b>Data Extraction:</b> We extract meaningful data from your existing collections, unlocking valuable insights.</li>
-      <li class="mt-3"><b>Generative AI:</b> Using Generative AI, we transform extracted data into dynamic responses that engage and inform your users.</li>
-      <li class="mt-3"><b>RAG Implementation:</b> Seamlessly integrating external knowledge bases into AI-generated responses for enhanced relevance and accuracy.</li>
-    </ul>
-
-    <h5 class="mt-6 text-xl font-bold dark:text-white">Alexa Skill Development:<h5>
-    <p class="ml-4">Looking to enhance user interactions through Alexa? Our team can develop custom Alexa skills that directly communicate with your business knowledge center or answer customer queries. From scoping to implementation, we ensure your Alexa skill leverages cutting-edge technology to meet your needs.</p>
-
-    <h5 class="mt-6 text-xl font-bold dark:text-white">Why Choose BLYMO?</h5>
-    <ul class="list-disc ml-6">
-      <li class="mt-3"><b>Cutting-Edge Technology:</b> Stay ahead with AI integrations leveraging Generative AI and RAG.</li>
-      <li class="mt-3"><b>Customized Solutions:</b> Tailored to your business objectives and user requirements.</li>
-      <li class="mt-3"><b>Expert Guidance:</b> Our AI experts provide support throughout the development process.</li>
-    </ul>
-
-    <p class="mt-5">Unlock the full potential of your data with AI integrations from Blymo. Contact us today to explore how we can enhance your customer experiences and drive business growth through the power of AI, including custom Alexa skill development.</p>
     `,
   },
   {
@@ -219,36 +219,6 @@ export const services = [
       <li class="mt-3"><b>Customized Solutions for Maximum Impact:</b> We offer bespoke solutions that cater specifically to your business needs. By combining innovative visualization techniques with deep market insights, we ensure that our analyses are not only accurate but also actionable, driving tangible results for your business.</li>
       <li class="mt-3"><b>Global Team of Experts:</b> Our international team of experts brings extensive experience across various industries. This global perspective allows us to anticipate market trends and customer behaviours effectively, providing strategic guidance to help you stay ahead of the competition and achieve long-term success.</li>
     </ul>
-    `,
-  },
-  {
-    id: 6,
-    name: "Websites",
-    description: "Fast, Secure, and Easy-to-Manage Websites.",
-    image: "/home-screen/website.jpg",
-    customStyle: "text-gray-800 dark:text-white",
-    route: "websites",
-    long_description: `
-    <p>In need of a website to showcase your product or service? Look no further. At Blymo, we specialize in crafting compelling websites that not only promote your offerings but also engage your audience effectively. With our content-first approach and attention to detail, we bring your vision to life, helping you reach wider audiences and make a lasting impression.</p>
-    
-    <h5 class="mt-6 text-xl font-bold dark:text-white">Our Approach:<h5>
-    <ul class="list-disc ml-6">
-      <li class="mt-3"><b>Content First:</b> We start by understanding your content needs and defining the tone of voice that best represents your brand. By prioritizing content, we ensure that your website communicates your message effectively.</li>
-      <li class="mt-3"><b>Creative Designs:</b> Our team of designers creates stunning, user-friendly designs that captivate visitors and encourage interaction. Whether you need a sleek corporate site or a vibrant e-commerce platform, we deliver designs that align with your goals and resonate with your audience.</li>
-      <li class="mt-3"><b>Responsive Development:</b> We build websites that look and perform flawlessly on every device. With a mobile-first approach, we prioritize responsiveness, ensuring a seamless experience for users across desktops, tablets, and smartphones.</li>
-      <li class="mt-3"><b>SEO-Friendly:</b> Your website is your digital storefront. That's why we optimize every aspect of your site for search engines, helping you climb the ranks and attract organic traffic.</li>
-      <li class="mt-3"><b>Google Page Speed Optimization:</b> We understand the importance of speed in today's digital landscape. Our websites are optimized for Google Page Speed, ensuring fast load times and improved user experience.</li>
-      <li class="mt-3"><b>Maintenance Included:</b> With Blymo, you're not just getting a website; you're getting peace of mind. Maintenance is included in our long-term contracts, ensuring that your website stays up-to-date and secure, leaving you free to focus on what you do best.</li>
-    </ul>
-
-    <h5 class="mt-6 text-xl font-bold dark:text-white">Why Choose BLYMO?</h5>
-    <ul class="list-disc ml-6">
-      <li class="mt-3"><b>Custom Solutions:</b> We tailor our approach to meet your specific needs and objectives, delivering a website that reflects your unique identity and resonates with your audience.</li>
-      <li class="mt-3"><b>Proven Expertise:</b> With years of experience in website development, our team has the skills and know-how to bring your vision to life effectively.</li>
-      <li class="mt-3"><b>Long-Term Partnership:</b> Our commitment to long-term partnerships means that we're here for you every step of the way, providing ongoing support and guidance to help your website thrive.</li>
-    </ul>
-
-    <p class="mt-5">Ready to elevate your online presence? Contact us today to discuss your website development needs and take the first step toward digital success with Blymo.</p>
     `,
   },
 ];

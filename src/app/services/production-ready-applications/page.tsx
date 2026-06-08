@@ -1,3 +1,5 @@
+"use client";
+import React from "react";
 import Image from "next/image";
 import BreadcrumbComponent from "@/components/BreadcrumbComponent";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,28 +8,34 @@ import { Separator } from "@/components/ui/separator";
 export default function ProductionReadyApplications() {
   return (
     <>
-      <div>
-        <section className="bg-white dark:bg-gray-900">
-          <div className="py-4 px-4 mx-auto max-w-screen-xl">
-            <BreadcrumbComponent pageName="Production-Ready Application" />
-          </div>
-          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
-            <div>
-              <h1 className="mb-4 text-3xl md:text-5xl text-center font-poppins font-semibold">
-                Production -Ready Application
+      <div className="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden px-6 py-20 sm:py-28 bg-slate-950 text-white min-h-[50vh] flex items-center">
+          {/* Glowing background radial gradient */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(20,184,166,0.2),transparent_35%),linear-gradient(120deg,rgba(2,6,23,0.98),rgba(15,23,42,0.92)_50%,rgba(4,47,46,0.65))]"></div>
+          
+          <div className="relative mx-auto w-full max-w-screen-xl">
+            <div className="py-2">
+              <BreadcrumbComponent pageName="Production-Ready Applications" />
+            </div>
+            <div className="mt-8">
+              <h1 className="mb-4 text-4xl sm:text-5xl md:text-6xl font-poppins font-semibold tracking-tight">
+                Production-Ready Applications
               </h1>
-              <p className="mb-8 text-2xl md:text-4xl text-center text-gray-500 dark:text-gray-400 font-poppins font-medium">
-                Build applications that scale with your business.
+              <p className="max-w-2xl text-lg sm:text-xl text-slate-300 font-light font-poppins leading-relaxed">
+                Build high-availability applications that scale with your enterprise expansion.
               </p>
 
-              <div className="w-full max-w-full sm:max-w-screen-sm md:max-w-screen-xl rounded-2xl overflow-hidden">
-                <div className="relative pb-[50%]">
+              {/* Hero Image Container */}
+              <div className="mt-12 w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                <div className="relative pb-[45%] md:pb-[35%] bg-slate-900">
                   <Image
                     src="/services_cards/production_ready/production_ready.png"
-                    alt="websites hero image"
+                    alt="production ready applications hero"
                     layout="fill"
                     objectFit="cover"
-                    className="rounded-2xl px-4 md:px-0"
+                    className="opacity-95"
+                    priority
                   />
                 </div>
               </div>
@@ -35,179 +43,158 @@ export default function ProductionReadyApplications() {
           </div>
         </section>
 
-        <section className="bg-white dark:bg-gray-900">
-          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
-            <Card className="max-w-screen-sm md:max-w-screen-xl h-fit p-10">
-              <CardContent>
-                <p className="text-left text-xl font-light font-poppins md:text-3xl mr-8 md:mr-24">
-                  Are you <span className="text-[#31AFA9]">ready</span> to take
-                  your idea to the{" "}
-                  <span className="text-[#31AFA9]">next level?</span> Whether
-                  you've tested the waters with an MVP or you're prepared to
-                  dive headfirst into a new venture,{" "}
-                  <span className="text-[#31AFA9]">Blymo</span> is here to{" "}
-                  <span className="text-[#31AFA9]">help</span> you{" "}
-                  <span className="text-[#31AFA9]">
-                    build production-ready applications
-                  </span>{" "}
-                  that can <span className="text-[#31AFA9]">scale</span> with{" "}
-                  <span className="text-[#31AFA9]"> your business.</span>
+        {/* Intro Card */}
+        <section className="py-16 lg:py-24 px-6">
+          <div className="mx-auto max-w-screen-xl">
+            <Card className="bg-white dark:bg-slate-900/40 border border-slate-100 dark:border-teal-500/10 shadow-xl shadow-slate-200/50 dark:shadow-none backdrop-blur-md rounded-2xl p-8 md:p-12">
+              <CardContent className="p-0">
+                <p className="text-left text-xl font-light font-poppins md:text-3xl text-slate-700 dark:text-slate-200 leading-relaxed">
+                  Are you <span className="text-teal-600 dark:text-teal-400 font-medium">ready to expand</span> your venture? Whether you've outgrown your current codebase or are engineering a new, high-concurrency system from the ground up, we build platforms that scale.
                 </p>
-                <Separator className="my-8" />
-                <p className="text-left mt-4 lg:mt-8 text-xl font-normal font-poppins md:text-3xl">
-                  Enter BLYMO, your partner in swiftly bringing your Minimum
-                  Viable Product (MVP) to life. With our streamlined approach
-                  and expertise, we empower startups to validate their concepts
-                  and iterate quickly, without breaking the bank.
+                <Separator className="my-8 border-slate-100 dark:border-slate-800" />
+                <p className="text-left font-normal font-poppins text-lg md:text-2xl text-slate-600 dark:text-slate-400 leading-relaxed">
+                  BLYMO is your technical engineering partner. We combine robust cloud infrastructure, modular backends, and modular frontends to deliver software that handles thousands of requests per second with high availability and durability.
                 </p>
               </CardContent>
             </Card>
           </div>
         </section>
 
-        <section className=" bg-[#F7FFFF] dark:bg-gray-900">
-          <div className="py-2 px-4 mx-auto max-w-screen-lg lg:py-4 w-full">
-            <h2 className="max-w-2xl lg:mb-8 mb-4 text-4xl font-medium font-poppins md:text-5xl xl:text-4xl text-gray-900 dark:text-white">
-              Our Process
-            </h2>
-            <div className="grid md:grid-cols-2 gap-5">
-              <div className="mt-10 lg:mt-0 mx-auto md:mx-0">
-                <div className="flex items-center justify-center w-12 h-12 bg-teal-400 rounded-full">
-                  <p className="text-white">01</p>
+        {/* 4-Step Process Section */}
+        <section className="bg-slate-50 dark:bg-slate-900/20 border-y border-slate-100 dark:border-slate-900 py-16 lg:py-24 px-6">
+          <div className="mx-auto max-w-screen-xl">
+            <div className="mb-16">
+              <span className="text-sm font-semibold tracking-wider text-teal-600 dark:text-teal-400 uppercase">
+                Methodology
+              </span>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-semibold font-poppins tracking-tight">
+                Our Production Process
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Step 1 */}
+              <div className="bg-white dark:bg-slate-900/40 border border-slate-100 dark:border-teal-500/10 p-6 rounded-2xl shadow-sm hover:translate-y-[-4px] transition-transform duration-300">
+                <div className="flex items-center justify-center w-10 h-10 bg-teal-500/10 text-teal-600 dark:text-teal-400 font-bold rounded-lg border border-teal-500/20 mb-6">
+                  01
                 </div>
-                <div className="text-gray-400 mt-3 w-[300px]">
-                  <div>
-                    <Image
-                      src="/services_cards/production_ready/research.png"
-                      alt="hero image"
-                      height={300}
-                      width={300}
-                      className="rounded-2xl py-4"
-                    />
-                  </div>
-                  <h3 className="text-2xl font-medium font-poppins text-gray-700 dark:text-gray-500 md:text-4xl my-6">
-                    Research
-                  </h3>
-                  <p className="my-8 font-normal font-poppins text-gray-700 dark:text-gray-500 text-xl">
-                    We begin by thoroughly understanding your goals, target
-                    audience, and market landscape. Our research-driven approach
-                    ensures that every decision is rooted in data and insights.
-                  </p>
+                <div className="relative aspect-video rounded-xl overflow-hidden mb-6 bg-slate-950">
+                  <Image
+                    src="/services_cards/production_ready/research.png"
+                    alt="research stage"
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
+                <h3 className="text-xl font-semibold font-poppins mb-3">
+                  Research & Scoping
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  We analyze user metrics and system traffic profiles. We scope database transaction rates and API scaling boundaries before write phase.
+                </p>
               </div>
 
-              <div className="mt-10 lg:mt-0 mx-auto md:mx-0">
-                <div className="flex items-center justify-center w-12 h-12 bg-teal-400 rounded-full">
-                  <p className="text-white">02</p>
+              {/* Step 2 */}
+              <div className="bg-white dark:bg-slate-900/40 border border-slate-100 dark:border-teal-500/10 p-6 rounded-2xl shadow-sm hover:translate-y-[-4px] transition-transform duration-300">
+                <div className="flex items-center justify-center w-10 h-10 bg-teal-500/10 text-teal-600 dark:text-teal-400 font-bold rounded-lg border border-teal-500/20 mb-6">
+                  02
                 </div>
-                <div className="text-gray-400 mt-3 w-[300px]">
-                  <div>
-                    <Image
-                      src="/services_cards/production_ready/design.png"
-                      alt="hero image"
-                      height={300}
-                      width={300}
-                      className="rounded-2xl py-4"
-                    />
-                  </div>
-                  <h3 className="text-2xl font-medium font-poppins text-gray-700 dark:text-gray-500 md:text-4xl my-6">
-                    Design
-                  </h3>
-                  <p className="my-8 font-normal font-poppins text-gray-700 dark:text-gray-500 text-xl">
-                    Next, we craft pixel-perfect designs that prioritize user
-                    experience and functionality. Our collaborative design
-                    process ensures that your vision is brought to life in a way
-                    that resonates with your audience.
-                  </p>
+                <div className="relative aspect-video rounded-xl overflow-hidden mb-6 bg-slate-950">
+                  <Image
+                    src="/services_cards/production_ready/design.png"
+                    alt="design stage"
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
+                <h3 className="text-xl font-semibold font-poppins mb-3">
+                  System Architecture
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  We model clean database structures, design REST/GraphQL APIs, configure load-balancing triggers, and lock down authentication.
+                </p>
               </div>
 
-              <div className="mt-10 lg:mt-0 mx-auto md:mx-0 md:order-2">
-                <div className="flex items-center justify-center w-12 h-12 bg-teal-400 rounded-full">
-                  <p className="text-white">03</p>
+              {/* Step 3 */}
+              <div className="bg-white dark:bg-slate-900/40 border border-slate-100 dark:border-teal-500/10 p-6 rounded-2xl shadow-sm hover:translate-y-[-4px] transition-transform duration-300">
+                <div className="flex items-center justify-center w-10 h-10 bg-teal-500/10 text-teal-600 dark:text-teal-400 font-bold rounded-lg border border-teal-500/20 mb-6">
+                  03
                 </div>
-                <div className="text-gray-400 mt-3 w-[300px]">
-                  <div>
-                    <Image
-                      src="/services_cards/production_ready/development.png"
-                      alt="hero image"
-                      height={300}
-                      width={300}
-                      className="rounded-2xl py-4"
-                    />
-                  </div>
-                  <h3 className="text-2xl font-medium font-poppins text-gray-700 dark:text-gray-500 md:text-4xl my-6">
-                    Development
-                  </h3>
-                  <p className="my-8 font-normal font-poppins text-gray-700 dark:text-gray-500 text-xl">
-                    With a mutually agreed-upon tech stack and a team of skilled
-                    developers ready to tackle any challenge, we bring your
-                    designs to life with clean, scalable code.
-                  </p>
+                <div className="relative aspect-video rounded-xl overflow-hidden mb-6 bg-slate-950">
+                  <Image
+                    src="/services_cards/production_ready/development.png"
+                    alt="development stage"
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
+                <h3 className="text-xl font-semibold font-poppins mb-3">
+                  Clean Engineering
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Our developers construct application frontends and backends using TypeScript, compiling code with high type-safety and unit test coverage.
+                </p>
               </div>
 
-              <div className="mt-10 lg:mt-0 mx-auto md:mx-0 md:order-1">
-                <div className="flex items-center justify-center w-12 h-12 bg-teal-400 rounded-full">
-                  <p className="text-white">04</p>
+              {/* Step 4 */}
+              <div className="bg-white dark:bg-slate-900/40 border border-slate-100 dark:border-teal-500/10 p-6 rounded-2xl shadow-sm hover:translate-y-[-4px] transition-transform duration-300">
+                <div className="flex items-center justify-center w-10 h-10 bg-teal-500/10 text-teal-600 dark:text-teal-400 font-bold rounded-lg border border-teal-500/20 mb-6">
+                  04
                 </div>
-                <div className="text-gray-400 mt-3 w-[300px]">
-                  <div>
-                    <Image
-                      src="/services_cards/production_ready/test.png"
-                      alt="hero image"
-                      height={300}
-                      width={300}
-                      className="rounded-2xl py-4"
-                    />
-                  </div>
-                  <h3 className="text-2xl font-medium font-poppins text-gray-700 dark:text-gray-500 md:text-4xl my-6">
-                    Test & Review
-                  </h3>
-                  <p className="my-8 font-normal font-poppins text-gray-700 dark:text-gray-500 text-xl">
-                    Rigorous testing ensures that your application meets the
-                    highest standards of quality and reliability. We iterate
-                    based on feedback, ensuring that your application is finely
-                    tuned for success.
-                  </p>
+                <div className="relative aspect-video rounded-xl overflow-hidden mb-6 bg-slate-950">
+                  <Image
+                    src="/services_cards/production_ready/test.png"
+                    alt="testing stage"
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
+                <h3 className="text-xl font-semibold font-poppins mb-3">
+                  Verification & Launch
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  We perform stress testing, cross-browser compatibility checks, and load diagnostics to audit availability before deploy.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-white dark:bg-gray-900">
-          <div className="mx-auto max-w-screen-xl py-8 lg:py-16">
-            <Card className="max-w-screen-sm md:max-w-screen-xl h-fit p-10">
-              <CardContent>
-                <p className="text-left font-medium font-poppins mt-4 lg:mt-8 text-2xl md:text-3xl">
+        {/* Why choose BLYMO */}
+        <section className="py-16 lg:py-24 px-6">
+          <div className="mx-auto max-w-screen-xl">
+            <Card className="bg-white dark:bg-slate-900/40 border border-slate-100 dark:border-teal-500/10 shadow-xl shadow-slate-200/50 dark:shadow-none backdrop-blur-md rounded-2xl p-8 md:p-12">
+              <CardContent className="p-0">
+                <h3 className="text-2xl md:text-3xl font-semibold font-poppins text-slate-900 dark:text-white mb-8">
                   Why choose BLYMO?
-                </p>
-                <p className="text-left font-light font-poppins mt-4 lg:mt-8 text-xl md:text-2xl">
-                  <span className="font-normal font-poppins">
-                    {" "}
-                    Scalable Solutions:{" "}
-                  </span>
-                  Our applications are built to grow with your business,
-                  ensuring that you're prepared for whatever the future holds.
-                </p>
-                <p className="text-left font-light font-poppins mt-4 lg:mt-8 text-xl md:text-2xl">
-                  <span className="font-normal font-poppins">
-                    {" "}
-                    Agile Development:{" "}
-                  </span>
-                  We prioritize flexibility and adaptability, delivering value
-                  to you quickly and continuously.
-                </p>
-                <p className="text-left font-light font-poppins mt-4 lg:mt-8 text-xl md:text-2xl">
-                  <span className="font-normal font-poppins">
-                    Expertise and Collaboration:
-                  </span>
-                  With a team of experienced developers and designers by your
-                  side, you can trust that your project is in good hands. Plus,
-                  our commitment to long-term collaboration means that you can
-                  rely on us to support you every step of the way.
-                </p>
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-teal-600 dark:text-teal-400 font-poppins">
+                      Autoscaling Architecture
+                    </h4>
+                    <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                      We configure server parameters and databases to scale automatically with traffic fluctuations, preventing resource starvation.
+                    </p>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-teal-600 dark:text-teal-400 font-poppins">
+                      Agile Deployment Loops
+                    </h4>
+                    <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                      We automate release workflows through staging environments, ensuring smooth features rolling updates with zero downtime.
+                    </p>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-semibold text-teal-600 dark:text-teal-400 font-poppins">
+                      Long-Term Tech Partnership
+                    </h4>
+                    <p className="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                      We support systems past release, checking diagnostics, running code audits, and adapting components as user demands expand.
+                    </p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>

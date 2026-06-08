@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import { Poppins as FontSans } from "next/font/google";
 import Footer from "@/app/partials/footer";
 import NavLinks from "./nav-links";
+import PageTransition from "@/app/partials/page-transition";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import { cn } from "@/lib/utils";
@@ -58,7 +59,7 @@ export default function RootLayout({
             reCaptchaKey={process.env.RECAPTCHA_SITE_KEY}
           >
             <NavLinks />
-            {children}
+            <PageTransition>{children}</PageTransition>
             <Analytics />
             <Footer />
           </ReCaptchaProvider>
