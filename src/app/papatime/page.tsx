@@ -488,7 +488,7 @@ export default function PapaTimePage() {
       >
         <h3 className="text-2xl md:text-3xl font-semibold mb-4 text-white">Academic & Scientific Backing</h3>
         <p className="text-slate-400 max-w-2xl mx-auto mb-8 font-light text-sm md:text-base leading-relaxed">
-          Our director previously held positions at the World Class Research Institutes and continues to coordinate with academic, health-service, and behavioral advisory specialists to ensure all activities are developmentally and psychologically structured for early-years impact.
+          Our director previously held positions at World Class Research Institutes and continues to coordinate with academic, health-service, and behavioral advisory specialists to ensure all activities are developmentally and psychologically structured for early-years impact.
         </p>
         <Link href="/about-us">
           <button className="px-6 py-3 border border-slate-700 hover:border-slate-500 hover:bg-slate-800/50 rounded-xl transition duration-200 text-white font-medium">
