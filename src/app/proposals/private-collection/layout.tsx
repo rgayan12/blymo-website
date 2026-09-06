@@ -12,8 +12,8 @@ const proposalDisplay = Oswald({
 });
 
 export const metadata: Metadata = {
-  title: "Private Collection Platform — BLYMO Proposal",
-  description: "A confidential proposal prepared by BLYMO.",
+  title: "Private Collection Platform — Confidential Proposal",
+  description: "A confidential proposal for a private collection platform.",
   robots: {
     index: false,
     follow: false,

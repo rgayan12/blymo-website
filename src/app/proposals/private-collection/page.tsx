@@ -12,7 +12,7 @@ function AccessGate({ invalid }: { invalid: boolean }) {
       <div className="grid min-h-screen lg:grid-cols-[0.92fr_1.08fr]">
         <section className="relative z-10 flex flex-col justify-between px-6 py-8 sm:px-12 sm:py-12 lg:px-16">
           <div className="text-xs font-semibold uppercase tracking-[0.28em] text-[#c3a464]">
-            BLYMO · Confidential
+            Confidential Proposal
           </div>
 
           <div className="my-20 max-w-xl">
@@ -66,15 +66,17 @@ function AccessGate({ invalid }: { invalid: boolean }) {
           </p>
         </section>
 
-        <div className="relative hidden min-h-screen lg:block">
-          <Image
-            src="/proposals/private-collection/hero.webp"
-            alt="A prominent emerald with fine jewellery on black velvet"
-            fill
-            priority
-            className="object-cover object-right"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0a] via-transparent to-transparent" />
+        <div className="relative hidden min-h-screen items-center justify-center overflow-hidden bg-[#10100f] px-10 lg:flex">
+          <div className="relative aspect-video w-full max-w-4xl overflow-hidden border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.55)]">
+            <Image
+              src="/proposals/private-collection/hero.webp"
+              alt="A prominent emerald with fine jewellery on black velvet"
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0b0b0a] via-transparent to-transparent" />
         </div>
       </div>
     </main>

@@ -9,8 +9,10 @@ const sections = [
   { id: "experience", label: "Experience" },
   { id: "control", label: "Control" },
   { id: "intelligence", label: "Intelligence" },
-  { id: "delivery", label: "Delivery" },
+  { id: "architecture", label: "Architecture" },
+  { id: "delivery", label: "Plan" },
   { id: "investment", label: "Investment" },
+  { id: "next-steps", label: "Next steps" },
 ];
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
@@ -68,7 +70,7 @@ export default function ProposalExperience() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#f4f0e7] text-[#0b0b0a] [font-family:var(--font-proposal-body)]">
+    <main className="min-h-screen scroll-smooth bg-[#f4f0e7] text-[#0b0b0a] [font-family:var(--font-proposal-body)]">
       <div
         className="fixed left-0 top-0 z-[80] h-[3px] bg-[#c3a464] transition-[width] duration-100"
         style={{ width: `${progress}%` }}
@@ -88,7 +90,7 @@ export default function ProposalExperience() {
                 className="object-cover object-right"
               />
             </span>
-            <span>BLYMO · Private Proposal</span>
+            <span>Private Collection Proposal</span>
           </a>
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Proposal sections">
             {sections.map((section) => (
@@ -116,21 +118,22 @@ export default function ProposalExperience() {
         aria-hidden="true"
         className="pointer-events-none fixed bottom-0 right-0 top-16 z-20 hidden w-[30vw] overflow-hidden bg-[#0b0b0a] xl:block"
       >
-        <Image
-          src="/proposals/private-collection/hero.webp"
-          alt=""
-          fill
-          priority
-          className="object-cover object-right"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0a]/65 via-transparent to-transparent" />
+        <div className="absolute inset-x-8 top-1/2 aspect-video -translate-y-1/2 overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
+          <Image
+            src="/proposals/private-collection/hero.webp"
+            alt=""
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b0b0a]/85 to-transparent" />
         <p className="absolute bottom-8 left-8 text-xs font-bold uppercase tracking-[0.24em] text-[#c3a464]">
           Exceptional objects · Privately presented
         </p>
       </aside>
 
-      <section id="top" className="relative min-h-screen overflow-hidden bg-[#0b0b0a] text-white xl:mr-[30vw]">
+      <section id="top" className="relative min-h-screen scroll-mt-16 overflow-hidden bg-[#0b0b0a] text-white xl:mr-[30vw]">
         <Image
           src="/proposals/private-collection/hero.webp"
           alt="A prominent emerald with fine jewellery on black velvet"
@@ -162,7 +165,7 @@ export default function ProposalExperience() {
       <section
         id="experience"
         data-proposal-section="experience"
-        className="opacity-0 translate-y-8 transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto grid max-w-screen-2xl gap-14 px-6 py-24 sm:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:px-16 lg:py-36">
           <div>
@@ -195,7 +198,7 @@ export default function ProposalExperience() {
       <section
         id="control"
         data-proposal-section="control"
-        className="opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <SectionLabel>Private by design</SectionLabel>
@@ -206,7 +209,7 @@ export default function ProposalExperience() {
           <div className="mt-16 grid border-y border-white/15 md:grid-cols-3 md:divide-x md:divide-white/15">
             {[
               ["01", "Invite", "Create private client accounts and control their lifecycle."],
-              ["02", "Authorise", "Grant or revoke access at collection level."],
+              ["02", "Authorise", "Grant or revoke access at both collection and object level."],
               ["03", "Present", "Reveal only approved objects, imagery and documents."],
             ].map(([number, title, copy]) => (
               <article key={number} className="border-b border-white/15 py-9 md:border-b-0 md:px-8 md:first:pl-0 md:last:pr-0">
@@ -241,7 +244,7 @@ export default function ProposalExperience() {
       <section
         id="intelligence"
         data-proposal-section="intelligence"
-        className="opacity-0 translate-y-8 transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <SectionLabel>Commercial intelligence</SectionLabel>
@@ -280,23 +283,92 @@ export default function ProposalExperience() {
       </section>
 
       <section
+        id="architecture"
+        data-proposal-section="architecture"
+        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#151412] text-white transition duration-1000 ease-out xl:mr-[30vw]"
+      >
+        <div className="mx-auto grid min-h-screen max-w-screen-2xl items-center gap-16 px-6 py-24 sm:px-12 lg:grid-cols-[0.78fr_1.22fr] lg:px-16 lg:py-32">
+          <div>
+            <SectionLabel>High-level architecture</SectionLabel>
+            <h2 className="mt-6 max-w-2xl text-5xl font-light uppercase leading-[1.02] tracking-[-0.02em] sm:text-6xl [font-family:var(--font-proposal-display)]">
+              Secure at the edge. Simple at the centre.
+            </h2>
+            <p className="mt-8 max-w-xl text-lg leading-8 text-stone-300">
+              A focused architecture keeps private access, collection management,
+              media and viewing intelligence clearly separated while remaining easy to extend.
+            </p>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-3xl">
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                ["Private clients", "Invitation-only collection experience"],
+                ["Administrators", "Collections, objects and access control"],
+              ].map(([title, copy]) => (
+                <div key={title} className="border border-white/15 bg-white/[0.04] p-5 sm:p-6">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c3a464]">{title}</p>
+                  <p className="mt-3 text-sm leading-6 text-stone-300">{copy}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mx-auto h-8 w-px bg-[#c3a464]/60" />
+
+            <div className="border border-[#c3a464]/50 bg-[#12382f] p-6 sm:p-8">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#d6bb7e]">Secure application layer</p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                {[
+                  "Identity & permissions",
+                  "Private presentation",
+                  "Viewing intelligence",
+                ].map((item) => (
+                  <div key={item} className="border border-white/15 bg-black/10 px-4 py-4 text-sm leading-5 text-stone-100">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mx-auto h-8 w-px bg-[#c3a464]/60" />
+
+            <div className="grid grid-cols-3 gap-3">
+              {[
+                ["Data", "Collections & access"],
+                ["Media", "Images & documents"],
+                ["Operations", "Hosting & monitoring"],
+              ].map(([title, copy]) => (
+                <div key={title} className="border border-white/15 bg-white/[0.04] p-4 sm:p-5">
+                  <p className="text-sm font-semibold uppercase tracking-[0.08em]">{title}</p>
+                  <p className="mt-2 text-xs leading-5 text-stone-400">{copy}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-5 text-center text-xs uppercase tracking-[0.16em] text-stone-500">
+              Encrypted transport · Role-based access · Audit-ready activity
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
         id="delivery"
         data-proposal-section="delivery"
-        className="opacity-0 translate-y-8 bg-[#e9e3d8] transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#e9e3d8] transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
             <div>
-              <SectionLabel>Defined MVP</SectionLabel>
+              <SectionLabel>Implementation plan</SectionLabel>
               <h2 className="mt-6 text-5xl font-light uppercase leading-[1.02] tracking-[-0.02em] sm:text-6xl [font-family:var(--font-proposal-display)]">
-                Focused enough to launch. Built to grow.
+                Four weeks. Four decisive stages.
               </h2>
             </div>
             <div className="grid gap-4 sm:grid-cols-3 lg:pt-12">
               {[
                 ["3", "initial collections"],
                 ["30", "objects or lots"],
-                ["30", "days of defect cover"],
+                ["1 year", "hosting included"],
               ].map(([value, label]) => (
                 <div key={label} className="border border-stone-300 bg-[#f8f5ef] p-7">
                   <div className="text-6xl text-[#12382f] [font-family:var(--font-proposal-display)]">{value}</div>
@@ -307,12 +379,13 @@ export default function ProposalExperience() {
           </div>
 
           <div className="mt-24">
-            <SectionLabel>Nine-week delivery</SectionLabel>
-            <div className="mt-8 grid gap-px bg-stone-300 md:grid-cols-3">
+            <SectionLabel>Four-week delivery</SectionLabel>
+            <div className="mt-8 grid gap-px bg-stone-300 sm:grid-cols-2 xl:grid-cols-4">
               {[
-                ["Weeks 1–3", "Foundation", "Scope confirmation · Infrastructure · Production UX"],
-                ["Weeks 4–6", "Core platform", "Authentication · Collections · Permissions · Initial content"],
-                ["Weeks 7–9", "Release", "Acceptance testing · Production launch · Handover"],
+                ["Week 1", "Foundation", "Scope confirmation · Architecture · Production UX"],
+                ["Week 2", "Core platform", "Authentication · Collections · Object permissions"],
+                ["Week 3", "Intelligence", "Administration · Viewer activity · Initial content"],
+                ["Week 4", "Release", "Acceptance testing · Launch · Handover"],
               ].map(([weeks, title, copy]) => (
                 <article key={weeks} className="bg-[#f4f0e7] p-8">
                   <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#b89654]">{weeks}</span>
@@ -328,7 +401,7 @@ export default function ProposalExperience() {
       <section
         id="investment"
         data-proposal-section="investment"
-        className="opacity-0 translate-y-8 bg-[#0b0b0a] text-white transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#0b0b0a] text-white transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto grid max-w-screen-2xl gap-16 px-6 py-24 sm:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:px-16 lg:py-36">
           <div>
@@ -336,18 +409,18 @@ export default function ProposalExperience() {
             <h2 className="mt-6 max-w-xl text-5xl font-light uppercase leading-[1.02] tracking-[-0.02em] sm:text-6xl [font-family:var(--font-proposal-display)]">
               One fixed fee, tied to delivery.
             </h2>
-            <p className="mt-10 text-7xl text-[#c3a464] sm:text-8xl [font-family:var(--font-proposal-display)]">£9,500</p>
+            <p className="mt-10 text-7xl text-[#c3a464] sm:text-8xl [font-family:var(--font-proposal-display)]">£7,500</p>
             <p className="mt-9 max-w-lg leading-7 text-stone-400">
-              Third-party domain, hosting and service fees are paid directly by
-              the client. Material changes are estimated and approved in writing.
+              Hosting is included for the first year. The client is responsible
+              for purchasing the chosen domain. Material changes are estimated and approved in writing.
             </p>
           </div>
 
           <div className="bg-[#f4f0e7] p-8 text-[#0b0b0a] sm:p-12">
             {[
-              ["40%", "£3,800", "On acceptance and commencement"],
-              ["40%", "£3,800", "Feature-complete staging"],
-              ["20%", "£1,900", "Production launch and handover"],
+              ["40%", "£3,000", "On acceptance and commencement"],
+              ["40%", "£3,000", "Feature-complete staging"],
+              ["20%", "£1,500", "Production launch and handover"],
             ].map(([percentage, amount, timing], index) => (
               <div key={timing} className={index ? "border-t border-stone-300 py-9" : "pb-9"}>
                 <div className="flex items-baseline justify-between gap-5">
@@ -362,14 +435,15 @@ export default function ProposalExperience() {
       </section>
 
       <section
+        id="next-steps"
         data-proposal-section="next-step"
-        className="opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
-          <SectionLabel>Next step</SectionLabel>
+          <SectionLabel>Next steps</SectionLabel>
           <div className="mt-7 grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
             <h2 className="max-w-4xl text-5xl font-light uppercase leading-[1.02] tracking-[-0.02em] sm:text-7xl [font-family:var(--font-proposal-display)]">
-              Approve the proposal. Confirm the scope. Begin the build.
+              From approval to delivery in four weeks.
             </h2>
             <a
               href="mailto:info@blymo.co.uk?subject=Private%20Collection%20Platform%20Proposal"
@@ -384,12 +458,27 @@ export default function ProposalExperience() {
               Discuss the proposal →
             </a>
           </div>
+          <ol className="mt-16 grid gap-px bg-white/15 sm:grid-cols-2 xl:grid-cols-5">
+            {[
+              ["01", "Proposal approval"],
+              ["02", "Contracts signed"],
+              ["03", "In-person meeting"],
+              ["04", "Work commencement"],
+              ["05", "Delivery", "Within four weeks"],
+            ].map(([number, title, detail]) => (
+              <li key={number} className="bg-[#12382f] p-6">
+                <span className="text-xs font-bold text-[#c3a464]">{number}</span>
+                <p className="mt-6 text-lg font-semibold uppercase tracking-[0.04em]">{title}</p>
+                {detail && <p className="mt-3 text-sm text-stone-300">{detail}</p>}
+              </li>
+            ))}
+          </ol>
           <p className="mt-16 max-w-3xl leading-7 text-stone-300">
             The supplied client brief and this proposal define the agreed MVP.
             Any material change is estimated and approved in writing before work begins.
           </p>
           <div className="mt-20 border-t border-white/15 pt-7 text-xs uppercase tracking-[0.18em] text-stone-500">
-            BLYMO · Private Collection Platform · Commercially confidential
+            Private Collection Platform · Commercially confidential
           </div>
         </div>
       </section>
