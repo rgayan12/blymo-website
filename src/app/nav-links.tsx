@@ -25,6 +25,8 @@ export default function NavLinks() {
   const navLinkBase = "text-sm tracking-wide transition-all duration-300";
   const isActive = (path: string) => pathname === path;
 
+  if (pathname.startsWith("/proposals/")) return null;
+
   return (
     <nav
       className={`sticky top-0 z-50 transition-all duration-500 ${

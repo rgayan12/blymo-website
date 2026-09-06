@@ -26,6 +26,8 @@ export default function Footer() {
     }
   }, [path]);
 
+  if (path.startsWith("/proposals/")) return null;
+
   let paragraphContent;
 
   switch (URLSegments[2]) {
