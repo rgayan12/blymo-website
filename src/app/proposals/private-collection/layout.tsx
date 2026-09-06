@@ -31,6 +31,14 @@ export default function ProposalLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <div className={`${proposalBody.variable} ${proposalDisplay.variable}`}>
+      <style>{`
+        html,
+        body {
+          height: auto !important;
+          overflow-x: clip !important;
+          overflow-y: visible !important;
+        }
+      `}</style>
       {children}
     </div>
   );

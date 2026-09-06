@@ -63,51 +63,14 @@ export default function ProposalExperience() {
     updateProgress();
     window.addEventListener("scroll", updateProgress, { passive: true });
 
-    let wheelLocked = false;
-    let wheelUnlockTimer: ReturnType<typeof setTimeout> | undefined;
-
-    const handleWheel = (event: WheelEvent) => {
-      if (!window.matchMedia("(min-width: 1280px)").matches || event.ctrlKey) return;
-      if (Math.abs(event.deltaY) < 12 || wheelLocked) return;
-
-      const slides = Array.from(
-        document.querySelectorAll<HTMLElement>("[data-proposal-slide]")
-      );
-      if (!slides.length) return;
-
-      const marker = window.scrollY + window.innerHeight * 0.3;
-      let currentIndex = 0;
-      slides.forEach((slide, index) => {
-        if (slide.offsetTop <= marker) currentIndex = index;
-      });
-
-      const direction = event.deltaY > 0 ? 1 : -1;
-      const nextIndex = Math.max(0, Math.min(slides.length - 1, currentIndex + direction));
-      if (nextIndex === currentIndex) return;
-
-      event.preventDefault();
-      wheelLocked = true;
-      window.scrollTo({
-        top: Math.max(0, slides[nextIndex].offsetTop - 64),
-        behavior: "smooth",
-      });
-      wheelUnlockTimer = setTimeout(() => {
-        wheelLocked = false;
-      }, 850);
-    };
-
-    window.addEventListener("wheel", handleWheel, { passive: false });
-
     return () => {
       observer.disconnect();
       window.removeEventListener("scroll", updateProgress);
-      window.removeEventListener("wheel", handleWheel);
-      if (wheelUnlockTimer) clearTimeout(wheelUnlockTimer);
     };
   }, []);
 
   return (
-    <main className="min-h-screen scroll-smooth bg-[#f4f0e7] text-[#0b0b0a] [font-family:var(--font-proposal-body)]">
+    <main className="min-h-screen bg-[#f4f0e7] text-[#0b0b0a] [font-family:var(--font-proposal-body)]">
       <div
         className="fixed left-0 top-0 z-[80] h-[3px] bg-[#c3a464] transition-[width] duration-100"
         style={{ width: `${progress}%` }}
@@ -139,7 +102,7 @@ export default function ProposalExperience() {
 
       <section data-proposal-slide id="top" className="relative min-h-screen scroll-mt-16 overflow-hidden bg-[#0b0b0a] text-white">
         <Image
-          src="/proposals/private-collection/proposal-opening-gems.webp"
+          src="/proposals/private-collection/proposal-opening-gems-v2.webp"
           alt="A private selection of sapphire, ruby, yellow diamond and emerald gemstones"
           fill
           priority
