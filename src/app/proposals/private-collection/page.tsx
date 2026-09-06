@@ -1,10 +1,7 @@
 import { cookies } from "next/headers";
 import Image from "next/image";
-import {
-  PROPOSAL_COOKIE,
-  proposalSessionToken,
-  unlockProposal,
-} from "./actions";
+import { unlockProposal } from "./actions";
+import { PROPOSAL_COOKIE, proposalSessionToken } from "./auth";
 import ProposalExperience from "./proposal-experience";
 
 export const dynamic = "force-dynamic";
