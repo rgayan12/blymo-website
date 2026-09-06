@@ -117,16 +117,8 @@ export default function ProposalExperience() {
         <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-5 sm:px-8">
           <a
             href="#top"
-            className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#c3a464]"
+            className="text-xs font-bold uppercase tracking-[0.25em] text-[#c3a464]"
           >
-            <span className="relative h-9 w-9 overflow-hidden border border-[#c3a464]/50 xl:hidden">
-              <Image
-                src="/proposals/private-collection/hero-portrait.webp"
-                alt=""
-                fill
-                className="object-cover object-[56%_43%]"
-              />
-            </span>
             <span>Private Collection Proposal</span>
           </a>
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Proposal sections">
@@ -151,32 +143,15 @@ export default function ProposalExperience() {
         </div>
       </header>
 
-      <aside
-        aria-hidden="true"
-        className="pointer-events-none fixed bottom-0 right-0 top-16 z-20 hidden w-[30vw] overflow-hidden bg-[#0b0b0a] xl:block"
-      >
+      <section data-proposal-slide id="top" className="relative min-h-screen scroll-mt-16 overflow-hidden bg-[#0b0b0a] text-white">
         <Image
-          src="/proposals/private-collection/hero-portrait.webp"
-          alt=""
+          src="/proposals/private-collection/proposal-opening-gems.webp"
+          alt="A private selection of sapphire, ruby, yellow diamond and emerald gemstones"
           fill
           priority
-          className="object-cover object-[56%_43%]"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b0b0a]/85 to-transparent" />
-        <p className="absolute bottom-8 left-8 text-xs font-bold uppercase tracking-[0.24em] text-[#c3a464]">
-          Exceptional objects · Privately presented
-        </p>
-      </aside>
-
-      <section data-proposal-slide id="top" className="relative min-h-screen scroll-mt-16 overflow-hidden bg-[#0b0b0a] text-white xl:mr-[30vw]">
-        <Image
-          src="/proposals/private-collection/hero-portrait.webp"
-          alt="A prominent emerald with fine jewellery on black velvet"
-          fill
-          priority
-          className="object-cover object-[56%_43%] xl:hidden"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,11,10,0.98)_0%,rgba(11,11,10,0.92)_42%,rgba(11,11,10,0.12)_78%)] xl:bg-[#0b0b0a]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,11,10,0.98)_0%,rgba(11,11,10,0.9)_42%,rgba(11,11,10,0.2)_76%,rgba(11,11,10,0.08)_100%)]" />
         <div className="relative mx-auto flex min-h-screen max-w-screen-2xl items-center px-6 pb-16 pt-28 sm:px-12 lg:px-16">
           <div className="max-w-3xl">
             <SectionLabel>Private Collection Platform</SectionLabel>
@@ -201,7 +176,7 @@ export default function ProposalExperience() {
         data-proposal-slide
         id="experience"
         data-proposal-section="experience"
-        className="scroll-mt-16 opacity-0 translate-y-8 transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 transition duration-1000 ease-out"
       >
         <div className="mx-auto grid max-w-screen-2xl gap-14 px-6 py-24 sm:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:px-16 lg:py-36">
           <div>
@@ -235,7 +210,7 @@ export default function ProposalExperience() {
         data-proposal-slide
         id="control"
         data-proposal-section="control"
-        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <SectionLabel>Private by design</SectionLabel>
@@ -282,7 +257,7 @@ export default function ProposalExperience() {
         data-proposal-slide
         id="intelligence"
         data-proposal-section="intelligence"
-        className="scroll-mt-16 opacity-0 translate-y-8 transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 transition duration-1000 ease-out"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <SectionLabel>Commercial intelligence</SectionLabel>
@@ -324,7 +299,7 @@ export default function ProposalExperience() {
         data-proposal-slide
         id="architecture"
         data-proposal-section="architecture"
-        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#151412] text-white transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#151412] text-white transition duration-1000 ease-out"
       >
         <div className="mx-auto grid min-h-screen max-w-screen-2xl items-center gap-16 px-6 py-24 sm:px-12 lg:grid-cols-[0.78fr_1.22fr] lg:px-16 lg:py-32">
           <div>
@@ -394,7 +369,7 @@ export default function ProposalExperience() {
         data-proposal-slide
         id="delivery"
         data-proposal-section="delivery"
-        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#e9e3d8] transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#e9e3d8] transition duration-1000 ease-out"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
@@ -442,7 +417,7 @@ export default function ProposalExperience() {
         data-proposal-slide
         id="investment"
         data-proposal-section="investment"
-        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#0b0b0a] text-white transition duration-1000 ease-out xl:mr-[30vw]"
+        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#0b0b0a] text-white transition duration-1000 ease-out"
       >
         <div className="mx-auto grid max-w-screen-2xl gap-16 px-6 py-24 sm:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:px-16 lg:py-36">
           <div>
@@ -479,9 +454,16 @@ export default function ProposalExperience() {
         data-proposal-slide
         id="next-steps"
         data-proposal-section="next-step"
-        className="scroll-mt-16 opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out xl:mr-[30vw]"
+        className="relative scroll-mt-16 overflow-hidden opacity-0 translate-y-8 bg-[#0b0b0a] text-white transition duration-1000 ease-out"
       >
-        <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
+        <Image
+          src="/proposals/private-collection/proposal-royal-close.webp"
+          alt="A royal-purple heirloom gemstone displayed in a private gallery"
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,11,10,0.98)_0%,rgba(11,11,10,0.93)_48%,rgba(11,11,10,0.4)_78%,rgba(11,11,10,0.16)_100%)]" />
+        <div className="relative z-10 mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <SectionLabel>Next steps</SectionLabel>
           <div className="mt-7 grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
             <h2 className="max-w-4xl text-5xl font-light uppercase leading-[1.02] tracking-[-0.02em] sm:text-7xl [font-family:var(--font-proposal-display)]">
@@ -508,7 +490,7 @@ export default function ProposalExperience() {
               ["04", "Work commencement"],
               ["05", "Delivery", "Within four weeks"],
             ].map(([number, title, detail]) => (
-              <li key={number} className="bg-[#12382f] p-6">
+              <li key={number} className="bg-[#0b0b0a]/80 p-6 backdrop-blur-sm">
                 <span className="text-xs font-bold text-[#c3a464]">{number}</span>
                 <p className="mt-6 text-lg font-semibold uppercase tracking-[0.04em]">{title}</p>
                 {detail && <p className="mt-3 text-sm text-stone-300">{detail}</p>}
