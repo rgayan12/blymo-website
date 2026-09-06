@@ -66,16 +66,14 @@ function AccessGate({ invalid }: { invalid: boolean }) {
           </p>
         </section>
 
-        <div className="relative hidden min-h-screen items-center justify-center overflow-hidden bg-[#10100f] px-10 lg:flex">
-          <div className="relative aspect-video w-full max-w-4xl overflow-hidden border border-white/10 shadow-[0_35px_90px_rgba(0,0,0,0.55)]">
-            <Image
-              src="/proposals/private-collection/hero.webp"
-              alt="A prominent emerald with fine jewellery on black velvet"
-              fill
-              priority
-              className="object-cover"
-            />
-          </div>
+        <div className="relative hidden min-h-screen overflow-hidden bg-[#10100f] lg:block">
+          <Image
+            src="/proposals/private-collection/hero-portrait.png"
+            alt="A prominent emerald with fine jewellery on black velvet"
+            fill
+            priority
+            className="object-cover object-center"
+          />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0b0b0a] via-transparent to-transparent" />
         </div>
       </div>

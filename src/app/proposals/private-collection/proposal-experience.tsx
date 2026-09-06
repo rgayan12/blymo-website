@@ -63,9 +63,46 @@ export default function ProposalExperience() {
     updateProgress();
     window.addEventListener("scroll", updateProgress, { passive: true });
 
+    let wheelLocked = false;
+    let wheelUnlockTimer: ReturnType<typeof setTimeout> | undefined;
+
+    const handleWheel = (event: WheelEvent) => {
+      if (!window.matchMedia("(min-width: 1280px)").matches || event.ctrlKey) return;
+      if (Math.abs(event.deltaY) < 12 || wheelLocked) return;
+
+      const slides = Array.from(
+        document.querySelectorAll<HTMLElement>("[data-proposal-slide]")
+      );
+      if (!slides.length) return;
+
+      const marker = window.scrollY + window.innerHeight * 0.3;
+      let currentIndex = 0;
+      slides.forEach((slide, index) => {
+        if (slide.offsetTop <= marker) currentIndex = index;
+      });
+
+      const direction = event.deltaY > 0 ? 1 : -1;
+      const nextIndex = Math.max(0, Math.min(slides.length - 1, currentIndex + direction));
+      if (nextIndex === currentIndex) return;
+
+      event.preventDefault();
+      wheelLocked = true;
+      window.scrollTo({
+        top: Math.max(0, slides[nextIndex].offsetTop - 64),
+        behavior: "smooth",
+      });
+      wheelUnlockTimer = setTimeout(() => {
+        wheelLocked = false;
+      }, 850);
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
+
     return () => {
       observer.disconnect();
       window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("wheel", handleWheel);
+      if (wheelUnlockTimer) clearTimeout(wheelUnlockTimer);
     };
   }, []);
 
@@ -84,10 +121,10 @@ export default function ProposalExperience() {
           >
             <span className="relative h-9 w-9 overflow-hidden border border-[#c3a464]/50 xl:hidden">
               <Image
-                src="/proposals/private-collection/hero.webp"
+                src="/proposals/private-collection/hero-portrait.png"
                 alt=""
                 fill
-                className="object-cover object-right"
+                className="object-cover object-center"
               />
             </span>
             <span>Private Collection Proposal</span>
@@ -118,28 +155,26 @@ export default function ProposalExperience() {
         aria-hidden="true"
         className="pointer-events-none fixed bottom-0 right-0 top-16 z-20 hidden w-[30vw] overflow-hidden bg-[#0b0b0a] xl:block"
       >
-        <div className="absolute inset-x-8 top-1/2 aspect-video -translate-y-1/2 overflow-hidden border border-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
-          <Image
-            src="/proposals/private-collection/hero.webp"
-            alt=""
-            fill
-            priority
-            className="object-cover"
-          />
-        </div>
+        <Image
+          src="/proposals/private-collection/hero-portrait.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+        />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b0b0a]/85 to-transparent" />
         <p className="absolute bottom-8 left-8 text-xs font-bold uppercase tracking-[0.24em] text-[#c3a464]">
           Exceptional objects · Privately presented
         </p>
       </aside>
 
-      <section id="top" className="relative min-h-screen scroll-mt-16 overflow-hidden bg-[#0b0b0a] text-white xl:mr-[30vw]">
+      <section data-proposal-slide id="top" className="relative min-h-screen scroll-mt-16 overflow-hidden bg-[#0b0b0a] text-white xl:mr-[30vw]">
         <Image
-          src="/proposals/private-collection/hero.webp"
+          src="/proposals/private-collection/hero-portrait.png"
           alt="A prominent emerald with fine jewellery on black velvet"
           fill
           priority
-          className="object-cover object-right xl:hidden"
+          className="object-cover object-center xl:hidden"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,11,10,0.98)_0%,rgba(11,11,10,0.92)_42%,rgba(11,11,10,0.12)_78%)] xl:bg-[#0b0b0a]" />
         <div className="relative mx-auto flex min-h-screen max-w-screen-2xl items-center px-6 pb-16 pt-28 sm:px-12 lg:px-16">
@@ -163,6 +198,7 @@ export default function ProposalExperience() {
       </section>
 
       <section
+        data-proposal-slide
         id="experience"
         data-proposal-section="experience"
         className="scroll-mt-16 opacity-0 translate-y-8 transition duration-1000 ease-out xl:mr-[30vw]"
@@ -196,6 +232,7 @@ export default function ProposalExperience() {
       </section>
 
       <section
+        data-proposal-slide
         id="control"
         data-proposal-section="control"
         className="scroll-mt-16 opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out xl:mr-[30vw]"
@@ -242,6 +279,7 @@ export default function ProposalExperience() {
       </section>
 
       <section
+        data-proposal-slide
         id="intelligence"
         data-proposal-section="intelligence"
         className="scroll-mt-16 opacity-0 translate-y-8 transition duration-1000 ease-out xl:mr-[30vw]"
@@ -283,6 +321,7 @@ export default function ProposalExperience() {
       </section>
 
       <section
+        data-proposal-slide
         id="architecture"
         data-proposal-section="architecture"
         className="scroll-mt-16 opacity-0 translate-y-8 bg-[#151412] text-white transition duration-1000 ease-out xl:mr-[30vw]"
@@ -352,6 +391,7 @@ export default function ProposalExperience() {
       </section>
 
       <section
+        data-proposal-slide
         id="delivery"
         data-proposal-section="delivery"
         className="scroll-mt-16 opacity-0 translate-y-8 bg-[#e9e3d8] transition duration-1000 ease-out xl:mr-[30vw]"
@@ -399,6 +439,7 @@ export default function ProposalExperience() {
       </section>
 
       <section
+        data-proposal-slide
         id="investment"
         data-proposal-section="investment"
         className="scroll-mt-16 opacity-0 translate-y-8 bg-[#0b0b0a] text-white transition duration-1000 ease-out xl:mr-[30vw]"
@@ -435,6 +476,7 @@ export default function ProposalExperience() {
       </section>
 
       <section
+        data-proposal-slide
         id="next-steps"
         data-proposal-section="next-step"
         className="scroll-mt-16 opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out xl:mr-[30vw]"
