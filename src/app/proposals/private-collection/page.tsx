@@ -68,11 +68,11 @@ function AccessGate({ invalid }: { invalid: boolean }) {
 
         <div className="relative hidden min-h-screen overflow-hidden bg-[#10100f] lg:block">
           <Image
-            src="/proposals/private-collection/hero-portrait.png"
+            src="/proposals/private-collection/hero.webp"
             alt="A prominent emerald with fine jewellery on black velvet"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-right"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0b0b0a] via-transparent to-transparent" />
         </div>
