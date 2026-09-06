@@ -1,32 +1,13 @@
 "use server";
 
-import { createHmac, timingSafeEqual } from "crypto";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-
-export const PROPOSAL_COOKIE = "blymo_private_collection_access";
-const PROPOSAL_PATH = "/proposals/private-collection";
-
-function secureEqual(left: string, right: string) {
-  const leftBuffer = Buffer.from(left);
-  const rightBuffer = Buffer.from(right);
-
-  return (
-    leftBuffer.length === rightBuffer.length &&
-    timingSafeEqual(leftBuffer, rightBuffer)
-  );
-}
-
-export function proposalSessionToken() {
-  const password = process.env.PRIVATE_COLLECTION_PROPOSAL_PASSWORD;
-  const secret = process.env.PROPOSAL_SESSION_SECRET;
-
-  if (!password || !secret) return null;
-
-  return createHmac("sha256", secret)
-    .update(`private-collection:${password}`)
-    .digest("hex");
-}
+import {
+  PROPOSAL_COOKIE,
+  PROPOSAL_PATH,
+  proposalSessionToken,
+  secureEqual,
+} from "./auth";
 
 export async function unlockProposal(formData: FormData) {
   const submittedPassword = String(formData.get("password") ?? "");
