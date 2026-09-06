@@ -82,10 +82,10 @@ export default function ProposalExperience() {
           >
             <span className="relative h-9 w-9 overflow-hidden border border-[#c3a464]/50 xl:hidden">
               <Image
-                src="/proposals/private-collection/hero.svg"
+                src="/proposals/private-collection/hero.webp"
                 alt=""
                 fill
-                className="object-cover"
+                className="object-cover object-right"
               />
             </span>
             <span>BLYMO · Private Proposal</span>
@@ -117,11 +117,11 @@ export default function ProposalExperience() {
         className="pointer-events-none fixed bottom-0 right-0 top-16 z-20 hidden w-[30vw] overflow-hidden bg-[#0b0b0a] xl:block"
       >
         <Image
-          src="/proposals/private-collection/hero.svg"
+          src="/proposals/private-collection/hero.webp"
           alt=""
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-right"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0a]/65 via-transparent to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b0b0a]/85 to-transparent" />
@@ -132,11 +132,11 @@ export default function ProposalExperience() {
 
       <section id="top" className="relative min-h-screen overflow-hidden bg-[#0b0b0a] text-white xl:mr-[30vw]">
         <Image
-          src="/proposals/private-collection/hero.svg"
+          src="/proposals/private-collection/hero.webp"
           alt="A prominent emerald with fine jewellery on black velvet"
           fill
           priority
-          className="object-cover object-center xl:hidden"
+          className="object-cover object-right xl:hidden"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,11,10,0.98)_0%,rgba(11,11,10,0.92)_42%,rgba(11,11,10,0.12)_78%)] xl:bg-[#0b0b0a]" />
         <div className="relative mx-auto flex min-h-screen max-w-screen-2xl items-center px-6 pb-16 pt-28 sm:px-12 lg:px-16">

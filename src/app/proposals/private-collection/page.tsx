@@ -68,11 +68,11 @@ function AccessGate({ invalid }: { invalid: boolean }) {
 
         <div className="relative hidden min-h-screen lg:block">
           <Image
-            src="/proposals/private-collection/hero.svg"
+            src="/proposals/private-collection/hero.webp"
             alt="A prominent emerald with fine jewellery on black velvet"
             fill
             priority
-            className="object-cover"
+            className="object-cover object-right"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0a] via-transparent to-transparent" />
         </div>
