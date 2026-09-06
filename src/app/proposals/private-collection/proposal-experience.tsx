@@ -114,14 +114,8 @@ export default function ProposalExperience() {
       />
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b0b0a]/90 text-white backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-5 sm:px-8">
-          <a
-            href="#top"
-            className="text-xs font-bold uppercase tracking-[0.25em] text-[#c3a464]"
-          >
-            <span>Private Collection Proposal</span>
-          </a>
-          <nav className="hidden items-center gap-7 lg:flex" aria-label="Proposal sections">
+        <div className="relative mx-auto flex h-16 max-w-screen-2xl items-center justify-center px-5 sm:px-8">
+          <nav className="hidden items-center gap-8 lg:flex" aria-label="Proposal sections">
             {sections.map((section) => (
               <a
                 key={section.id}
@@ -132,7 +126,7 @@ export default function ProposalExperience() {
               </a>
             ))}
           </nav>
-          <form action={lockProposal}>
+          <form action={lockProposal} className="absolute right-5 sm:right-8">
             <button
               type="submit"
               className="text-xs uppercase tracking-[0.16em] text-stone-400 transition hover:text-white"
@@ -470,7 +464,7 @@ export default function ProposalExperience() {
               From approval to delivery in four weeks.
             </h2>
             <a
-              href="mailto:info@blymo.co.uk?subject=Private%20Collection%20Platform%20Proposal"
+              href="mailto:bastiyan@blymo.co.uk?subject=Private%20Collection%20Platform%20Proposal"
               onClick={() =>
                 track("proposal_cta_clicked", {
                   proposal: "private-collection",
