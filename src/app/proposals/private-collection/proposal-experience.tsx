@@ -78,9 +78,17 @@ export default function ProposalExperience() {
         <div className="mx-auto flex h-16 max-w-screen-2xl items-center justify-between px-5 sm:px-8">
           <a
             href="#top"
-            className="text-xs font-bold uppercase tracking-[0.25em] text-[#c3a464]"
+            className="flex items-center gap-3 text-xs font-bold uppercase tracking-[0.25em] text-[#c3a464]"
           >
-            BLYMO · Private Proposal
+            <span className="relative h-9 w-9 overflow-hidden border border-[#c3a464]/50 xl:hidden">
+              <Image
+                src="/proposals/private-collection/hero.svg"
+                alt=""
+                fill
+                className="object-cover"
+              />
+            </span>
+            <span>BLYMO · Private Proposal</span>
           </a>
           <nav className="hidden items-center gap-7 lg:flex" aria-label="Proposal sections">
             {sections.map((section) => (
@@ -104,15 +112,33 @@ export default function ProposalExperience() {
         </div>
       </header>
 
-      <section id="top" className="relative min-h-screen overflow-hidden bg-[#0b0b0a] text-white">
+      <aside
+        aria-hidden="true"
+        className="pointer-events-none fixed bottom-0 right-0 top-16 z-20 hidden w-[30vw] overflow-hidden bg-[#0b0b0a] xl:block"
+      >
+        <Image
+          src="/proposals/private-collection/hero.svg"
+          alt=""
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0a]/65 via-transparent to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#0b0b0a]/85 to-transparent" />
+        <p className="absolute bottom-8 left-8 text-xs font-bold uppercase tracking-[0.24em] text-[#c3a464]">
+          Exceptional objects · Privately presented
+        </p>
+      </aside>
+
+      <section id="top" className="relative min-h-screen overflow-hidden bg-[#0b0b0a] text-white xl:mr-[30vw]">
         <Image
           src="/proposals/private-collection/hero.svg"
           alt="A prominent emerald with fine jewellery on black velvet"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-center xl:hidden"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,11,10,0.98)_0%,rgba(11,11,10,0.92)_42%,rgba(11,11,10,0.12)_78%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,11,10,0.98)_0%,rgba(11,11,10,0.92)_42%,rgba(11,11,10,0.12)_78%)] xl:bg-[#0b0b0a]" />
         <div className="relative mx-auto flex min-h-screen max-w-screen-2xl items-center px-6 pb-16 pt-28 sm:px-12 lg:px-16">
           <div className="max-w-3xl">
             <SectionLabel>Private Collection Platform</SectionLabel>
@@ -136,7 +162,7 @@ export default function ProposalExperience() {
       <section
         id="experience"
         data-proposal-section="experience"
-        className="opacity-0 translate-y-8 transition duration-1000 ease-out"
+        className="opacity-0 translate-y-8 transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto grid max-w-screen-2xl gap-14 px-6 py-24 sm:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:px-16 lg:py-36">
           <div>
@@ -169,7 +195,7 @@ export default function ProposalExperience() {
       <section
         id="control"
         data-proposal-section="control"
-        className="opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out"
+        className="opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <SectionLabel>Private by design</SectionLabel>
@@ -215,7 +241,7 @@ export default function ProposalExperience() {
       <section
         id="intelligence"
         data-proposal-section="intelligence"
-        className="opacity-0 translate-y-8 transition duration-1000 ease-out"
+        className="opacity-0 translate-y-8 transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <SectionLabel>Commercial intelligence</SectionLabel>
@@ -256,7 +282,7 @@ export default function ProposalExperience() {
       <section
         id="delivery"
         data-proposal-section="delivery"
-        className="opacity-0 translate-y-8 bg-[#e9e3d8] transition duration-1000 ease-out"
+        className="opacity-0 translate-y-8 bg-[#e9e3d8] transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
@@ -302,7 +328,7 @@ export default function ProposalExperience() {
       <section
         id="investment"
         data-proposal-section="investment"
-        className="opacity-0 translate-y-8 bg-[#0b0b0a] text-white transition duration-1000 ease-out"
+        className="opacity-0 translate-y-8 bg-[#0b0b0a] text-white transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto grid max-w-screen-2xl gap-16 px-6 py-24 sm:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:px-16 lg:py-36">
           <div>
@@ -337,7 +363,7 @@ export default function ProposalExperience() {
 
       <section
         data-proposal-section="next-step"
-        className="opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out"
+        className="opacity-0 translate-y-8 bg-[#12382f] text-white transition duration-1000 ease-out xl:mr-[30vw]"
       >
         <div className="mx-auto max-w-screen-2xl px-6 py-24 sm:px-12 lg:px-16 lg:py-36">
           <SectionLabel>Next step</SectionLabel>
