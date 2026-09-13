@@ -25,7 +25,9 @@ export default function NavLinks() {
   const navLinkBase = "text-sm tracking-wide transition-all duration-300";
   const isActive = (path: string) => pathname === path;
 
-  if (pathname.startsWith("/proposals/")) return null;
+  if (pathname.startsWith("/proposals/") || pathname.startsWith("/snapflex")) {
+    return null;
+  }
 
   return (
     <nav

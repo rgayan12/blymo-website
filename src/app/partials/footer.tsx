@@ -100,6 +100,10 @@ export default function Footer() {
     { label: "Terms & Conditions", href: "/terms-and-conditions" },
   ];
 
+  if (path.startsWith("/snapflex")) {
+    return null;
+  }
+
   return (
     <footer className="font-poppins bg-slate-950 text-slate-300">
       <div className="h-px w-full bg-gradient-to-r from-transparent via-teal-400/60 to-transparent" />
