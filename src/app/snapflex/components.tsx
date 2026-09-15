@@ -88,8 +88,8 @@ export function PhoneMockup() {
   ];
 
   return (
-    <div className="mx-auto w-full max-w-[340px] rounded-[2.5rem] border border-white/70 bg-slate-100 p-4 shadow-2xl shadow-emerald-950/20">
-      <div className="rounded-[2rem] bg-[#f7f8fb] p-5">
+    <div className="mx-auto w-full max-w-[520px] rounded-[2.5rem] border border-white/70 bg-slate-100 p-4 shadow-2xl shadow-emerald-950/20">
+      <div className="rounded-[2rem] bg-[#f7f8fb] p-5 sm:p-6">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-3xl font-bold text-slate-200">SnapFlex</p>
@@ -102,14 +102,12 @@ export function PhoneMockup() {
           </span>
         </div>
 
-        <div className="mt-7 rounded-[1.75rem] bg-gradient-to-br from-emerald-50 to-white p-5 text-center">
-          <ReceiptText className="mx-auto h-14 w-14 text-emerald-500" />
-          <p className="mt-5 text-4xl font-bold tracking-tight text-slate-950">
-            Snap it.
-            <br />
-            Store it.
-            <br />
-            Sorted.
+        <div className="mt-7 flex items-center gap-5 rounded-[1.75rem] bg-gradient-to-br from-emerald-50 to-white p-5 sm:p-6">
+          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl bg-white text-emerald-500 shadow-sm">
+            <ReceiptText className="h-10 w-10" />
+          </div>
+          <p className="text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+            Snap it. Store it. Sorted.
           </p>
         </div>
 
@@ -154,7 +152,7 @@ export function PhoneMockup() {
           </div>
         </div>
 
-        <div className="mt-6 grid gap-3">
+        <div className="mt-6 grid gap-3 sm:grid-cols-2">
           <div className="flex items-center gap-3 rounded-2xl bg-emerald-50 p-4">
             <Cloud className="h-5 w-5 text-emerald-500" />
             <div>

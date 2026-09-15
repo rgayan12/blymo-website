@@ -25,7 +25,7 @@ export default function SnapFlexPage() {
       <>
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(34,197,94,0.22),transparent_34%),radial-gradient(circle_at_84%_20%,rgba(14,165,233,0.12),transparent_28%)]" />
-          <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-5 py-16 md:grid-cols-2 lg:py-24">
+          <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-5 py-16 md:grid-cols-[0.9fr_1.1fr] lg:py-24">
             <div>
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-emerald-700">
                 <Sparkles className="h-3.5 w-3.5" />
