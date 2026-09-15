@@ -8,6 +8,7 @@ export default function NavLinks() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isSnapFlexHost, setIsSnapFlexHost] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,10 @@ export default function NavLinks() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setIsSnapFlexHost(window.location.hostname.endsWith("snapflex.blymo.co.uk"));
+  }, []);
+
   const handleMenuToggle = (menuState = !isMenuOpen) => {
     setIsMenuOpen(menuState);
   };
@@ -25,7 +30,11 @@ export default function NavLinks() {
   const navLinkBase = "text-sm tracking-wide transition-all duration-300";
   const isActive = (path: string) => pathname === path;
 
-  if (pathname.startsWith("/proposals/") || pathname.startsWith("/snapflex")) {
+  if (
+    pathname.startsWith("/proposals/") ||
+    pathname.startsWith("/snapflex") ||
+    isSnapFlexHost
+  ) {
     return null;
   }
 

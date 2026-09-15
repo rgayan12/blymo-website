@@ -5,12 +5,18 @@ import {
   BarChart3,
   Camera,
   CheckCircle2,
+  Cloud,
+  Crown,
+  FileArchive,
   LifeBuoy,
   Lock,
   Mail,
+  PlugZap,
   ReceiptText,
+  RefreshCw,
   ShieldCheck,
   Sparkles,
+  UploadCloud,
 } from "lucide-react";
 
 export const snapflexEmail = "support@blymo.co.uk";
@@ -34,6 +40,9 @@ export function SnapFlexHeader() {
           <Link className="transition hover:text-emerald-600" href="/support">
             Support
           </Link>
+          <Link className="transition hover:text-emerald-600" href="/terms">
+            Terms
+          </Link>
         </nav>
       </div>
     </header>
@@ -51,6 +60,9 @@ export function SnapFlexFooter() {
           </Link>
           <Link className="transition hover:text-emerald-600" href="/support">
             Support
+          </Link>
+          <Link className="transition hover:text-emerald-600" href="/terms">
+            Terms
           </Link>
         </div>
       </div>
@@ -70,8 +82,9 @@ export function SnapFlexShell({ children }: { children: ReactNode }) {
 
 export function PhoneMockup() {
   const rows = [
-    { label: "Meals", amount: "£9.12", color: "bg-emerald-400" },
-    { label: "Travel", amount: "£9.12", color: "bg-blue-500" },
+    { label: "Fuel", amount: "£45.00", color: "bg-red-400" },
+    { label: "Travel", amount: "£9.12", color: "bg-blue-400" },
+    { label: "Meals", amount: "£4.00", color: "bg-emerald-400" },
   ];
 
   return (
@@ -96,9 +109,9 @@ export function PhoneMockup() {
 
         <div className="mt-6 grid grid-cols-3 gap-3">
           {[
-            ["Logged", "2"],
-            ["Deductions", "£18.24"],
-            ["Synced", "0"],
+            ["Logged", "3"],
+            ["Deductions", "£58.12"],
+            ["Synced", "3"],
           ].map(([label, value]) => (
             <div key={label} className="rounded-2xl bg-white p-3 shadow-sm">
               <p className="text-xs text-slate-400">{label}</p>
@@ -136,20 +149,60 @@ export function PhoneMockup() {
 
 export const featureCards = [
   {
-    title: "Snap receipts fast",
-    description: "Capture paper receipts and turn them into clean expense records.",
+    title: "Fast receipt capture",
+    description: "Use your iPhone camera to save a receipt while the purchase is still fresh.",
     icon: Camera,
   },
   {
-    title: "Review deductions",
-    description: "Keep an eye on categories, totals, and records before filing.",
+    title: "On-device recognition",
+    description: "Apple Vision helps extract useful receipt details without sending images to a third-party AI service.",
+    icon: Sparkles,
+  },
+  {
+    title: "VAT-ready records",
+    description: "Keep supplier, date, total, tax amount, currency, category, and the original receipt together.",
     icon: BarChart3,
   },
   {
-    title: "Built for privacy",
-    description: "Clear app support and privacy pages for App Store review.",
-    icon: ShieldCheck,
+    title: "Private cloud backup",
+    description: "Securely back up expense records and receipt images so they are not tied to one physical device.",
+    icon: Cloud,
   },
+  {
+    title: "CSV and ZIP exports",
+    description: "Create accountant-ready CSV data or a ZIP that includes your saved receipt images.",
+    icon: FileArchive,
+  },
+  {
+    title: "Works offline",
+    description: "Capture and save receipts without a connection, then back them up when your device is online.",
+    icon: UploadCloud,
+  },
+];
+
+export const workflowSteps = [
+  {
+    title: "Snap",
+    description: "Capture a receipt directly inside SnapFlex.",
+  },
+  {
+    title: "Check",
+    description:
+      "Review merchant, date, total, VAT, and category before saving the expense.",
+  },
+  {
+    title: "Sync",
+    description:
+      "Back up the record securely and, with Pro, deliver it to connected accounting software.",
+  },
+];
+
+export const proFeatures = [
+  "Connect a Xero organisation",
+  "Create draft or approved bills",
+  "Attach original receipt images",
+  "Track waiting, processing, synced, and attention states",
+  "Restore purchases on eligible Apple devices",
 ];
 
 export const supportCards = [
@@ -170,4 +223,14 @@ export const supportCards = [
   },
 ];
 
-export { ArrowRight, CheckCircle2, LifeBuoy, Lock, ShieldCheck, Sparkles };
+export {
+  ArrowRight,
+  CheckCircle2,
+  Crown,
+  LifeBuoy,
+  Lock,
+  PlugZap,
+  RefreshCw,
+  ShieldCheck,
+  Sparkles,
+};

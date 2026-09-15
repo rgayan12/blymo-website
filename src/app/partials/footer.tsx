@@ -9,6 +9,7 @@ export default function Footer() {
   const path = usePathname();
   const URLSegments = path.split("/");
   const [showMainFooter, setShowMainFooter] = useState(true);
+  const [isSnapFlexHost, setIsSnapFlexHost] = useState(false);
   const currentYear = new Date().getFullYear();
 
   const handleResetAndRedirect = () => {
@@ -25,6 +26,10 @@ export default function Footer() {
       setShowMainFooter(true);
     }
   }, [path]);
+
+  useEffect(() => {
+    setIsSnapFlexHost(window.location.hostname.endsWith("snapflex.blymo.co.uk"));
+  }, []);
 
   if (path.startsWith("/proposals/")) return null;
 
@@ -100,7 +105,7 @@ export default function Footer() {
     { label: "Terms & Conditions", href: "/terms-and-conditions" },
   ];
 
-  if (path.startsWith("/snapflex")) {
+  if (path.startsWith("/snapflex") || isSnapFlexHost) {
     return null;
   }
 
