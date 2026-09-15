@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, LifeBuoy, SnapFlexShell, snapflexEmail, supportCards } from "../components";
+import { LifeBuoy, Mail, MessageSquareText } from "lucide-react";
+import { SnapFlexShell, snapflexEmail } from "../components";
+import SupportForm from "./support-form";
 
 export const metadata = {
   title: "SnapFlex Support",
@@ -10,53 +12,38 @@ export const metadata = {
 export default function SnapFlexSupportPage() {
   return (
     <SnapFlexShell>
-      <section className="relative overflow-hidden bg-slate-950 text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgba(34,197,94,0.28),transparent_34%),linear-gradient(135deg,rgba(15,23,42,0.98),rgba(4,47,46,0.72))]" />
-        <div className="relative mx-auto max-w-5xl px-5 py-16 lg:py-24">
-          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-emerald-200">
-            <LifeBuoy className="h-3.5 w-3.5" />
-            Support
-          </span>
-          <h1 className="mt-6 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
-            Need help with SnapFlex?
-          </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-            For app help, receipt scanning questions, privacy requests, or
-            general support, contact the BLYMO team.
-          </p>
-          <a
-            href={`mailto:${snapflexEmail}`}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-emerald-500 px-6 py-3 font-semibold text-white shadow-lg shadow-emerald-500/25 transition hover:bg-emerald-400"
-          >
-            Email support
-            <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
-      </section>
+      <section className="relative overflow-hidden bg-[#f7f8fb]">
+        <div className="absolute inset-x-0 top-0 h-72 bg-gradient-to-b from-emerald-50 to-transparent" />
+        <div className="relative mx-auto grid max-w-6xl gap-10 px-5 py-12 lg:grid-cols-[0.86fr_1.14fr] lg:py-20">
+          <div className="lg:pt-8">
+            <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-emerald-700 shadow-sm">
+              <LifeBuoy className="h-3.5 w-3.5" />
+              SnapFlex support
+            </span>
+            <h1 className="mt-7 max-w-xl text-4xl font-bold tracking-tight text-slate-950 sm:text-5xl">
+              Tell us what you need.
+            </h1>
+            <p className="mt-5 max-w-xl text-lg leading-8 text-slate-600">
+              Report a bug, suggest a feature, or send us a quick message. Keep
+              it simple and we will route it to the right place.
+            </p>
 
-      <section className="py-14 lg:py-20">
-        <div className="mx-auto max-w-6xl px-5">
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {supportCards.map((card) => {
-              const Icon = card.icon;
-
-              return (
-                <article
-                  key={card.title}
-                  className="rounded-2xl border border-slate-100 bg-white p-6 shadow-xl shadow-emerald-950/5"
-                >
-                  <Icon className="h-8 w-8 text-emerald-500" />
-                  <h2 className="mt-5 text-xl font-semibold tracking-tight">
-                    {card.title}
-                  </h2>
-                  <p className="mt-3 leading-7 text-slate-600">{card.description}</p>
-                </article>
-              );
-            })}
+            <div className="mt-8 grid gap-3 text-sm text-slate-600 sm:max-w-md">
+              <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                <MessageSquareText className="h-5 w-5 text-emerald-500" />
+                <span>Choose Bug, Feature Request, or Message.</span>
+              </div>
+              <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                <Mail className="h-5 w-5 text-emerald-500" />
+                <span>For v1, every request opens a ready-to-send email.</span>
+              </div>
+            </div>
           </div>
 
-          <div className="mt-8 rounded-2xl border border-slate-100 bg-white p-6 shadow-xl shadow-emerald-950/5">
-            <h2 className="text-2xl font-semibold tracking-tight">
+          <SupportForm />
+
+          <div className="rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-xl shadow-slate-950/5 lg:col-start-2">
+            <h2 className="text-xl font-semibold tracking-tight">
               Contact details
             </h2>
             <p className="mt-3 leading-7 text-slate-600">
