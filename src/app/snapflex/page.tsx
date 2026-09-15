@@ -9,6 +9,7 @@ import {
   SnapFlexShell,
   Sparkles,
   featureCards,
+  integrationCards,
   proFeatures,
   workflowSteps,
 } from "./components";
@@ -136,38 +137,126 @@ export default function SnapFlexPage() {
         </section>
 
         <section className="py-16 lg:py-20">
-          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
             <div className="rounded-3xl bg-slate-950 p-8 text-white shadow-2xl shadow-emerald-950/20">
               <PlugZap className="h-10 w-10 text-emerald-300" />
               <h2 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
-                Connect SnapFlex to Xero.
+                Connect SnapFlex to the tools behind your books.
               </h2>
               <p className="mt-5 leading-8 text-slate-300">
-                SnapFlex Pro can send completed expenses directly to your chosen
-                Xero organisation. Choose draft bills for review, or approved
-                bills for trusted repeat workflows.
+                Xero is the first connected accounting workflow in SnapFlex
+                Pro, but it is only the start. We are shaping SnapFlex around
+                the way receipts actually move through a business: accounting
+                software, bookkeeping inboxes, exports, and review queues.
+              </p>
+              <p className="mt-4 leading-8 text-slate-300">
+                You choose whether completed expenses arrive as drafts for
+                review or approved bills for trusted repeat workflows.
               </p>
             </div>
-            <div className="rounded-3xl border border-emerald-100 bg-emerald-50 p-6">
-              <div className="grid gap-4">
-                {[
-                  "Create or match the supplier",
-                  "Create the bill and check totals",
-                  "Attach the original receipt image",
-                  "Continue sync through the SnapFlex backend",
-                  "Disconnect your Xero organisation whenever you want",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-emerald-600" />
-                    <p className="font-medium text-slate-800">{item}</p>
-                  </div>
-                ))}
+
+            <div className="rounded-3xl border border-slate-100 bg-white p-5 shadow-xl shadow-emerald-950/5">
+              <div className="flex items-center gap-3 px-2 pb-4">
+                <PlugZap className="h-6 w-6 text-slate-950" />
+                <h3 className="text-2xl font-bold tracking-tight">
+                  Integrations
+                </h3>
+              </div>
+              <div className="grid gap-3">
+                {integrationCards.map((integration, index) => {
+                  const Icon = integration.icon;
+
+                  return (
+                    <div
+                      key={integration.name}
+                      className={`rounded-2xl border p-4 transition ${
+                        index === 0
+                          ? "border-emerald-200 bg-emerald-50"
+                          : "border-slate-100 bg-white"
+                      }`}
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-slate-100 bg-white">
+                          <Icon className={`h-6 w-6 ${integration.accent}`} />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <div className="flex flex-wrap items-center gap-2">
+                            <h4 className="text-lg font-bold tracking-tight text-slate-950">
+                              {integration.name}
+                            </h4>
+                            <span
+                              className={`rounded-full px-3 py-1 text-xs font-bold ${integration.badgeClass}`}
+                            >
+                              {integration.status}
+                            </span>
+                          </div>
+                          <p className="mt-1 text-sm leading-6 text-slate-500">
+                            {integration.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="mt-5 rounded-2xl bg-slate-50 p-5">
+                <div className="grid gap-3">
+                  {[
+                    "Create or match suppliers where supported",
+                    "Attach original receipt images",
+                    "Track waiting, processing, synced, and attention states",
+                    "Prevent duplicate delivery attempts",
+                  ].map((item) => (
+                    <div key={item} className="flex items-start gap-3">
+                      <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-emerald-600" />
+                      <p className="font-medium text-slate-800">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         <section className="bg-white py-16 lg:py-20">
+          <div className="mx-auto max-w-6xl px-5">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+              {[
+                {
+                  title: "Accounting sync",
+                  description:
+                    "Start with Xero, then expand into other accounting packages as SnapFlex grows.",
+                },
+                {
+                  title: "Bookkeeping inboxes",
+                  description:
+                    "Forward receipts to the places your accountant or bookkeeper already checks.",
+                },
+                {
+                  title: "Exports for every setup",
+                  description:
+                    "CSV and ZIP exports keep SnapFlex useful even before a direct integration exists.",
+                },
+              ].map((item) => (
+                <article
+                  key={item.title}
+                  className="rounded-3xl border border-slate-100 bg-white p-7 shadow-xl shadow-emerald-950/5"
+                >
+                  <Sparkles className="h-8 w-8 text-emerald-500" />
+                  <h3 className="mt-5 text-xl font-bold tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 leading-7 text-slate-600">
+                    {item.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 lg:py-20">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-5 md:grid-cols-2">
             <article className="rounded-3xl border border-slate-100 p-7 shadow-xl shadow-emerald-950/5">
               <RefreshCw className="h-9 w-9 text-emerald-500" />
@@ -188,9 +277,9 @@ export default function SnapFlexPage() {
               </h2>
               <p className="mt-4 leading-8 text-slate-600">
                 Upgrade to unlock connected accounting features, including
-                automatic Xero delivery. Pricing is displayed in the app before
-                purchase and subscriptions are managed securely through your
-                Apple ID.
+                automatic delivery to supported accounting tools. Pricing is
+                displayed in the app before purchase and subscriptions are
+                managed securely through your Apple ID.
               </p>
               <div className="mt-5 grid gap-3">
                 {proFeatures.map((feature) => (

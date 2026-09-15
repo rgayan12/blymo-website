@@ -8,12 +8,14 @@ import {
   Cloud,
   Crown,
   FileArchive,
+  Inbox,
   LifeBuoy,
   Lock,
   Mail,
   PlugZap,
   ReceiptText,
   RefreshCw,
+  Send,
   ShieldCheck,
   Sparkles,
   UploadCloud,
@@ -224,11 +226,54 @@ export const workflowSteps = [
 ];
 
 export const proFeatures = [
-  "Connect a Xero organisation",
+  "Connect supported accounting tools",
   "Create draft or approved bills",
   "Attach original receipt images",
   "Track waiting, processing, synced, and attention states",
   "Restore purchases on eligible Apple devices",
+];
+
+export const integrationCards = [
+  {
+    name: "Xero",
+    status: "Pro",
+    description: "Draft bills with receipt attachments",
+    accent: "text-sky-500",
+    badgeClass: "bg-emerald-100 text-emerald-700",
+    icon: PlugZap,
+  },
+  {
+    name: "QuickBooks",
+    status: "Coming soon",
+    description: "Purchases, expenses, and attachables",
+    accent: "text-green-600",
+    badgeClass: "bg-slate-100 text-slate-500",
+    icon: RefreshCw,
+  },
+  {
+    name: "Sage",
+    status: "Coming soon",
+    description: "Accounting sync for Sage users",
+    accent: "text-emerald-500",
+    badgeClass: "bg-slate-100 text-slate-500",
+    icon: RefreshCw,
+  },
+  {
+    name: "Email Forward",
+    status: "Coming soon",
+    description: "Forward receipts to bookkeeping inboxes",
+    accent: "text-orange-500",
+    badgeClass: "bg-orange-100 text-orange-600",
+    icon: Send,
+  },
+  {
+    name: "Email In",
+    status: "Coming soon",
+    description: "A dedicated receipt inbox for incoming expenses",
+    accent: "text-fuchsia-500",
+    badgeClass: "bg-fuchsia-100 text-fuchsia-600",
+    icon: Inbox,
+  },
 ];
 
 export const supportCards = [
@@ -257,6 +302,7 @@ export {
   Lock,
   PlugZap,
   RefreshCw,
+  Send,
   ShieldCheck,
   Sparkles,
 };
