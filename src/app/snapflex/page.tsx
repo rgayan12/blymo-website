@@ -16,7 +16,7 @@ import {
 export const metadata = {
   title: "SnapFlex - Receipt Scanner & Expense Tracker",
   description:
-    "SnapFlex is a simple iOS expense tracker for snapping receipts, reviewing deductions, and keeping records organised.",
+    "SnapFlex is a simple expense tracker for snapping receipts, reviewing deductions, and keeping records organised.",
 };
 
 export default function SnapFlexPage() {
@@ -29,7 +29,7 @@ export default function SnapFlexPage() {
             <div>
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-emerald-700">
                 <Sparkles className="h-3.5 w-3.5" />
-                iOS expense tracker
+                Expense tracker
               </span>
               <h1 className="mt-6 max-w-3xl text-5xl font-bold tracking-tight text-slate-950 sm:text-6xl">
                 Snap receipts. Keep records. Stay ready.

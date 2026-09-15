@@ -94,12 +94,23 @@ export function PhoneMockup() {
           <div>
             <p className="text-3xl font-bold text-slate-200">SnapFlex</p>
             <p className="mt-1 text-sm font-semibold text-slate-400">
-              Camera, OCR, review, ka-ching.
+              Scan it. Store it. Sorted.
             </p>
           </div>
           <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-emerald-500 shadow-sm">
             <Camera className="h-6 w-6" />
           </span>
+        </div>
+
+        <div className="mt-7 rounded-[1.75rem] bg-gradient-to-br from-emerald-50 to-white p-5 text-center">
+          <ReceiptText className="mx-auto h-14 w-14 text-emerald-500" />
+          <p className="mt-5 text-4xl font-bold tracking-tight text-slate-950">
+            Snap it.
+            <br />
+            Store it.
+            <br />
+            Sorted.
+          </p>
         </div>
 
         <button className="mt-7 flex w-full items-center justify-center gap-3 rounded-full bg-emerald-500 px-5 py-4 text-lg font-semibold text-white shadow-lg shadow-emerald-500/25">
@@ -111,7 +122,7 @@ export function PhoneMockup() {
           {[
             ["Logged", "3"],
             ["Deductions", "£58.12"],
-            ["Synced", "3"],
+            ["Sorted", "3"],
           ].map(([label, value]) => (
             <div key={label} className="rounded-2xl bg-white p-3 shadow-sm">
               <p className="text-xs text-slate-400">{label}</p>
@@ -142,6 +153,23 @@ export function PhoneMockup() {
             ))}
           </div>
         </div>
+
+        <div className="mt-6 grid gap-3">
+          <div className="flex items-center gap-3 rounded-2xl bg-emerald-50 p-4">
+            <Cloud className="h-5 w-5 text-emerald-500" />
+            <div>
+              <p className="text-sm font-bold text-slate-950">Automatic backup</p>
+              <p className="text-xs text-slate-500">Receipts saved securely in the background.</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 rounded-2xl bg-blue-50 p-4">
+            <PlugZap className="h-5 w-5 text-blue-500" />
+            <div>
+              <p className="text-sm font-bold text-slate-950">Xero sync</p>
+              <p className="text-xs text-slate-500">Send completed expenses when Pro is connected.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -155,7 +183,7 @@ export const featureCards = [
   },
   {
     title: "On-device recognition",
-    description: "Apple Vision helps extract useful receipt details without sending images to a third-party AI service.",
+    description: "SnapFlex extracts useful receipt details on your device without sending images to a third-party AI service.",
     icon: Sparkles,
   },
   {
