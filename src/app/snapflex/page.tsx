@@ -1,6 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight,
   CheckCircle2,
   Crown,
   PhoneMockup,
@@ -41,14 +41,21 @@ export default function SnapFlexPage() {
                 paperwork ready for bookkeeping, tax time, and connected
                 accounting workflows.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/support"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-emerald-500 px-6 py-3 font-semibold text-white shadow-lg shadow-emerald-500/25 transition hover:bg-emerald-400"
-                >
-                  Download on the App Store
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+              <div className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+                <div className="flex flex-col items-start gap-2">
+                  <Image
+                    src="/images/snapflex/download-on-the-app-store.svg"
+                    alt="Download on the App Store"
+                    width={180}
+                    height={60}
+                    priority
+                    className="h-[60px] w-auto"
+                  />
+                  <span className="inline-flex items-center gap-2 text-sm font-medium text-slate-500">
+                    <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                    Preparing for App Store release
+                  </span>
+                </div>
                 <Link
                   href="/privacy"
                   className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 font-semibold text-slate-700 transition hover:border-emerald-200 hover:text-emerald-700"
